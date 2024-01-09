@@ -1,33 +1,29 @@
 package org.cryptodata.service;
 
 import org.cryptodata.api.CoinMarketCapClient;
-import org.cryptodata.api.ICoinMarketCapService;
 import org.cryptodata.dto.ResponseDTO;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.models.Listing;
 
-import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class ListingService extends CoinMarketCapClient {
-    private final ICoinMarketCapService service;
 
     public ListingService(String apiKey) {
         super(apiKey);
-
-        service = getRetrofit().create(ICoinMarketCapService.class);
     }
 
-    public Listing getListing(int id) throws CoinMarketCapException {
+    public Listing getListing(Integer id) throws CoinMarketCapException {
         ResponseDTO body;
+
         try {
-            body = service.latestQuotes(id, getApiKey()).execute().body();
+            body = sendRequest(buildURI(CoinMarketCapClient.PARAM_ID, String.valueOf(id), CoinMarketCapClient.LATEST_QUOTES_URL));
+        } catch (URISyntaxException e) {
+            throw new CoinMarketCapException("Could not build the URI", e.getCause());
+        }
 
-            if (body == null || body.getData() == null || body.getData().isEmpty()) {
-                throw new CoinMarketCapException("No data found for the requested ID");
-            }
-
-        } catch (IOException e) {
-            throw new CoinMarketCapException(e.getMessage());
+        if (body == null || body.getData() == null || body.getData().isEmpty()) {
+            throw new CoinMarketCapException(body.getStatus().getErrorMessage());
         }
 
         return Listing.from(body);
