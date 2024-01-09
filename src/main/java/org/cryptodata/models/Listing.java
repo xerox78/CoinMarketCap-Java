@@ -1,11 +1,15 @@
 package org.cryptodata.models;
 
+import lombok.Builder;
 import lombok.Data;
+import org.cryptodata.dto.DataDTO;
 import org.cryptodata.dto.ResponseDTO;
 
 @Data
+@Builder
 public class Listing {
 
+    private long id;
     private String name;
     private String symbol;
     private int rank;
@@ -13,13 +17,16 @@ public class Listing {
     private double totalSupply;
     private double maxSupply;
     public static Listing from(ResponseDTO body) {
-        Listing listing = new Listing();
-        listing.setName(body.getData().firstEntry().getValue().getName());
-        listing.setSymbol(body.getData().firstEntry().getValue().getSymbol());
-        listing.setRank(body.getData().firstEntry().getValue().getCmcRank());
-        listing.setCirculatingSupply(body.getData().firstEntry().getValue().getCirculatingSupply());
-        listing.setTotalSupply(body.getData().firstEntry().getValue().getTotalSupply());
-        listing.setMaxSupply(body.getData().firstEntry().getValue().getMaxSupply());
-        return listing;
+        DataDTO dataDTO = body.getData().firstEntry().getValue();
+
+        return new ListingBuilder()
+                .id(dataDTO.getId())
+                .name(dataDTO.getName())
+                .symbol(dataDTO.getSymbol())
+                .rank(dataDTO.getCmcRank())
+                .circulatingSupply(dataDTO.getCirculatingSupply())
+                .totalSupply(dataDTO.getTotalSupply())
+                .maxSupply(dataDTO.getMaxSupply())
+                .build();
     }
 }
