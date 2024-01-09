@@ -1,6 +1,6 @@
 package org.cryptodata.dto;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.Map;
@@ -17,33 +17,33 @@ public class DataDTO {
 
     private String slug;
 
-    @SerializedName("num_market_pairs")
+    @JsonProperty("num_market_pairs")
     private Long numMarketPairs;
 
-    @SerializedName("max_supply")
+    @JsonProperty("max_supply")
     private Double maxSupply;
 
-    @SerializedName("circulating_supply")
+    @JsonProperty("circulating_supply")
     private Double circulatingSupply;
 
-    @SerializedName("total_supply")
+    @JsonProperty("total_supply")
     private Double totalSupply;
 
-    @SerializedName("is_active")
+    @JsonProperty("is_active")
     private Integer isActive;
 
-    @SerializedName("infinite_supply")
+    @JsonProperty("infinite_supply")
     private boolean infiniteSupply;
 
     private String platform;
 
-    @SerializedName("cmc_rank")
+    @JsonProperty("cmc_rank")
     private Integer cmcRank;
 
-    @SerializedName("is_fiat")
+    @JsonProperty("is_fiat")
     private Integer isFiat;
 
-    @SerializedName("tvl_ratio")
+    @JsonProperty("tvl_ratio")
     private String tvlRatio;
 
     private Map<String, QuoteDTO> quote;
