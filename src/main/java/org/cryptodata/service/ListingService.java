@@ -5,25 +5,27 @@ import org.cryptodata.dto.ResponseDTO;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.models.Listing;
 
-import java.net.URISyntaxException;
+import java.net.URI;
 
-public class ListingService extends CoinMarketCapClient {
+public class ListingService {
 
-    public ListingService(String apiKey) {
-        super(apiKey);
+    private CoinMarketCapClient client;
+
+    public ListingService(CoinMarketCapClient client) {
+        this.client = client;
+    }
+
+    public ListingService(String key) {
+        this(new CoinMarketCapClient(key));
     }
 
     public Listing getListing(Integer id) throws CoinMarketCapException {
-        ResponseDTO body;
 
-        try {
-            body = sendRequest(buildURI(CoinMarketCapClient.PARAM_ID, String.valueOf(id), CoinMarketCapClient.LATEST_QUOTES_URL));
-        } catch (URISyntaxException e) {
-            throw new CoinMarketCapException("Could not build the URI", e.getCause());
-        }
+        URI uri = client.buildURI(CoinMarketCapClient.PARAM_ID, String.valueOf(id), CoinMarketCapClient.LATEST_QUOTES_URL);
+        ResponseDTO body = client.sendRequest(uri);
 
         if (body == null || body.getData() == null || body.getData().isEmpty()) {
-            throw new CoinMarketCapException(body.getStatus().getErrorMessage());
+            throw new CoinMarketCapException("Failed to retrieve listing details");
         }
 
         return Listing.from(body);
