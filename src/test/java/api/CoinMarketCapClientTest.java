@@ -104,4 +104,13 @@ public class CoinMarketCapClientTest {
 
         Assert.assertNull(responseDTO);
     }
+
+    @Test
+    public void buildUri_Success() {
+        CoinMarketCapClient client = new CoinMarketCapClient("key");
+        URI uri = client.buildURI("key", "value", "/crypto");
+
+        Assert.assertEquals("https://pro-api.coinmarketcap.com/v2/crypto?key=value", uri.toString());
+    }
+
 }

@@ -25,10 +25,14 @@ public class CoinMarketCapClient {
         this.apiKey = apiKey;
     }
 
-    public URI buildURI(String queryParameter, String queryValue, String methodPath) throws URISyntaxException {
-        return new URIBuilder(URI.create(COINMARKETCAP_V2_BASE_URL + methodPath))
-                .addParameter(queryParameter, queryValue)
-                .build();
+    public URI buildURI(String queryParameter, String queryValue, String methodPath)  {
+        try {
+            return new URIBuilder(URI.create(COINMARKETCAP_V2_BASE_URL + methodPath))
+                    .addParameter(queryParameter, queryValue)
+                    .build();
+        } catch (URISyntaxException e) {
+            return null;
+        }
     }
 
     public ResponseDTO sendRequest(URI uri) throws CoinMarketCapException {
