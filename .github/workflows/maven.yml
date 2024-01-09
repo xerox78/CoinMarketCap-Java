@@ -2,11 +2,11 @@ name: JUnit test report
 on:
   push:
     branches:
-      - master
+      - main
       - CMC-0.1
   pull_request:
     branches:
-      - master
+      - main
       - CMC-0.1
 jobs:
   build:
