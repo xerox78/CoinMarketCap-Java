@@ -27,7 +27,7 @@ public class ListingService {
         if (body == null || body.getData() == null || body.getData().isEmpty()) {
             throw new CoinMarketCapException("Failed to retrieve listing details");
         }
+        return Listing.fromDto(body);
 
-        return Listing.from(body);
     }
 }

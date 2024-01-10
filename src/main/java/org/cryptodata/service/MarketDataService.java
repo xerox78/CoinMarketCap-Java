@@ -6,4 +6,6 @@ public class MarketDataService extends CoinMarketCapClient {
     public MarketDataService(String apiKey) {
         super(apiKey);
     }
+
+
 }

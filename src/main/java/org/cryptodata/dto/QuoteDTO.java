@@ -34,7 +34,7 @@ public class QuoteDTO {
     private Double percentChange90d;
 
     @JsonProperty("market_cap")
-    private Double marketCap;
+    private Integer marketCap;
 
     @JsonProperty("market_cap_dominance")
     private Double marketCapDominance;

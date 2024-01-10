@@ -53,8 +53,8 @@ public class ListingServiceTest {
         ListingService listingService = new ListingService(client);
         Listing actualResponse = listingService.getListing(1);
 
-        Assert.assertEquals(1, actualResponse.getId());
-        Assert.assertEquals(1, actualResponse.getRank());
+        Assert.assertEquals(Integer.valueOf(1), actualResponse.getId());
+        Assert.assertEquals(Integer.valueOf(1), actualResponse.getRank());
         Assert.assertEquals("Bitcoin", actualResponse.getName());
         Assert.assertEquals("BTC", actualResponse.getSymbol());
         Assert.assertEquals(2.01, actualResponse.getTotalSupply(), 0);
