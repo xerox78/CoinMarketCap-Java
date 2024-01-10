@@ -3,13 +3,13 @@ package org.cryptodata.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.Map;
+import java.util.TreeMap;
 
 
 @Data
 public class DataDTO {
 
-    private long id;
+    private Integer id;
 
     private String name;
 
@@ -33,7 +33,7 @@ public class DataDTO {
     private Integer isActive;
 
     @JsonProperty("infinite_supply")
-    private boolean infiniteSupply;
+    private Boolean infiniteSupply;
 
     private String platform;
 
@@ -46,5 +46,5 @@ public class DataDTO {
     @JsonProperty("tvl_ratio")
     private String tvlRatio;
 
-    private Map<String, QuoteDTO> quote;
+    private TreeMap<String, QuoteDTO> quote;
 }

@@ -73,7 +73,7 @@ public class CoinMarketCapClientTest {
                 .build());
 
         Assert.assertNotNull(responseDTO.getData());
-        Assert.assertEquals(1, responseDTO.getData().firstEntry().getValue().getId());
+        Assert.assertEquals(Integer.valueOf(1), responseDTO.getData().firstEntry().getValue().getId());
     }
 
     @Test(expected = CoinMarketCapException.class)
