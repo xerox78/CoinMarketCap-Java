@@ -36,7 +36,7 @@ public class CoinMarketCapUrl {
             url = new StringBuilder("https://pro-api.coinmarketcap.com");
         }
 
-        public void addParameter(String key, String value) {
+        protected void addParameter(String key, String value) {
             parameterList.add(new BasicNameValuePair(key, value));
         }
 
