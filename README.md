@@ -1,7 +1,8 @@
 ﻿# CoinMarketCap-Java
 
-#### A comprehensive Java library for interacting with the CoinMarketCap API and retrieving cryptocurrency data.
+#### A comprehensive Java library for interacting with the CoinMarketCap API and retrieving data.
 
+ Please refear to  **CoinMarketCap Api official documentation**
  
 Methods available:
 

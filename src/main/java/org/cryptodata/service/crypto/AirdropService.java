@@ -3,14 +3,15 @@ package org.cryptodata.service.crypto;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.models.data.AirdropData;
+import org.cryptodata.models.data.AirdropData;
 
 import java.util.List;
 
 public class AirdropService extends ServiceOperation {
 
-    public AirdropService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+    public AirdropService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
         this.coinMarketCap = coinMarketCap;
         this.urlBuilder = cryptocurrencyUrl;
     }

@@ -1,4 +1,4 @@
-package org.cryptodata.service.models;
+package org.cryptodata.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

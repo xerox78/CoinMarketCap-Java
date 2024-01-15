@@ -1,8 +1,8 @@
-package org.cryptodata.service.models.data;
+package org.cryptodata.models.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.cryptodata.service.models.data.enums.AirdropStatus;
+import org.cryptodata.models.data.enums.AirdropStatus;
 
 import java.util.Date;
 

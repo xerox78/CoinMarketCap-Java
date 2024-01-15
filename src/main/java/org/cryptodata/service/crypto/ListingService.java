@@ -4,7 +4,7 @@ import org.cryptodata.CoinMarketCap;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.models.data.ListingData;
+import org.cryptodata.models.data.ListingData;
 
 import java.util.List;
 

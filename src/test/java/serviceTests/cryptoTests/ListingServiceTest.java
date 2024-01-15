@@ -1,4 +1,4 @@
-package service;
+package serviceTests.cryptoTests;
 
 import static org.mockito.ArgumentMatchers.any;
 

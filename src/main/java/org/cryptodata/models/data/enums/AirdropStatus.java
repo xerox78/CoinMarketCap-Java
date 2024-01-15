@@ -1,4 +1,4 @@
-package org.cryptodata.service.models.data.enums;
+package org.cryptodata.models.data.enums;
 
 public enum AirdropStatus {
     ONGOING,

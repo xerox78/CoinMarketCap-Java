@@ -21,7 +21,7 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
         return this;
     }
 
-    public CoinMarketCapFilter<R> startIndex(String value) {
+    public CoinMarketCapFilter<R> start(String value) {
         instance.urlBuilder.addParameter(PARAM_START_INDEX.value, value);
         return this;
     }

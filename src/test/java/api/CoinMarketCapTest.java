@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CoinMarketCapClientTest {
+public class CoinMarketCapTest {
 //    private MockedStatic<HttpClient> httpClientMockedStatic;
 //    @Mock
 //    private HttpResponse<String> httpResponse;

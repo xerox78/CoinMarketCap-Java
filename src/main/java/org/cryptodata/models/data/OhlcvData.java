@@ -1,4 +1,4 @@
-package org.cryptodata.service.models.data;
+package org.cryptodata.models.data;
 
 import lombok.Data;
 

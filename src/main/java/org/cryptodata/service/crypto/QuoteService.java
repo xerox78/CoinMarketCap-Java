@@ -3,7 +3,7 @@ package org.cryptodata.service.crypto;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.models.data.QuoteData;
+import org.cryptodata.models.data.QuoteData;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 
 public class QuoteService extends ServiceOperation {

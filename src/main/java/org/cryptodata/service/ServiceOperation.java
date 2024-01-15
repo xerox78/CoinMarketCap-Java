@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.http.HttpHeaders;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.models.ResponseAPI;
+import org.cryptodata.models.ResponseAPI;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 
 import java.io.IOException;
@@ -20,9 +20,12 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class ServiceOperation {
-
     protected CoinMarketCapUrlBuilder urlBuilder;
     protected CoinMarketCap coinMarketCap;
+
+    public CoinMarketCapUrlBuilder getUrlBuilder() {
+        return urlBuilder;
+    }
 
     protected <R> R getResponse(String response, JavaType dataClass) throws CoinMarketCapException {
         ResponseAPI<R> responseAPI;
@@ -33,12 +36,11 @@ public abstract class ServiceOperation {
             throw new CoinMarketCapException("Couldn't parse Json", e.getCause());
         }
 
-        if (!responseAPI.getStatus().getErrorCode().equals(0L))
-        {
+        if (!responseAPI.getStatus().getErrorCode().equals(0L)) {
             throw new CoinMarketCapException(responseAPI.getStatus().getErrorCode(), responseAPI.getStatus().getErrorMessage());
         }
 
-        if (responseAPI.getData() == null ) {
+        if (responseAPI.getData() == null) {
             throw new CoinMarketCapException("Failed to retrieve data");
         }
 
@@ -70,8 +72,7 @@ public abstract class ServiceOperation {
         return TypeFactory.defaultInstance().constructParametricType(ResponseAPI.class, javaType);
     }
 
-    protected <R> R sendRequest(URI uri, String apiKey, JavaType javaType) throws CoinMarketCapException
-    {
+    protected <R> R sendRequest(URI uri, String apiKey, JavaType javaType) throws CoinMarketCapException {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .uri(uri)
