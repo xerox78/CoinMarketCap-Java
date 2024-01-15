@@ -1,25 +1,44 @@
 package org.cryptodata;
 
-import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.Listing;
-import org.cryptodata.service.ListingService;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 
 public class CoinMarketCap {
-    private final ListingService listingService;
+
+    private final String apiKey;
 
     public CoinMarketCap(String apiKey) {
-        this.listingService = new ListingService(apiKey);
+        this.apiKey = apiKey;
     }
 
+    public String getApiKey() {
+        return apiKey;
+    }
 
     /**
-     * Get listing with corresponding ID
+     * AirdropService class
      *
-     * @param id CoinMarketCap id
-     * @return Listing
-     * @throws CoinMarketCapException on error.
+     * @return AirdropService
      */
-    public Listing getListings(int id) throws CoinMarketCapException {
-        return listingService.getListing(id);
+    public CryptocurrencyService cryptocurrencyV1() {
+        return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v1().cryptocurrency());
     }
+
+    /**
+     * CryptocurrencyService class
+     *
+     * @return CryptocurrencyService
+     */
+    public CryptocurrencyService cryptocurrencyV2() {
+        return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v2().cryptocurrency());
+    }
+
+    /**
+     * CryptocurrencyService class
+     *
+     * @return CryptocurrencyService
+     */
+    public CryptocurrencyService cryptocurrencyV3() {
+        return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v3().cryptocurrency());
+    }
+
 }

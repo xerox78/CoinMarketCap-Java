@@ -1,11 +1,10 @@
-package org.cryptodata.dto;
+package org.cryptodata.service.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class StatusDTO {
-
+public class ResponseStatus {
     @JsonProperty("error_code")
     private Long errorCode;
 

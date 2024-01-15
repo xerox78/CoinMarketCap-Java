@@ -1,11 +1,12 @@
-package org.cryptodata.dto;
+package org.cryptodata.service.models.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-@Data
-public class QuoteDTO {
+import java.util.Date;
 
+@Data
+public class QuoteData {
     @JsonProperty("price")
     private Double price;
 
@@ -34,7 +35,7 @@ public class QuoteDTO {
     private Double percentChange90d;
 
     @JsonProperty("market_cap")
-    private Integer marketCap;
+    private Double marketCap;
 
     @JsonProperty("market_cap_dominance")
     private Double marketCapDominance;
@@ -44,4 +45,7 @@ public class QuoteDTO {
 
     @JsonProperty("tvl")
     private Double tvl;
+
+    @JsonProperty("last_updated")
+    private Date lastUpdated;
 }

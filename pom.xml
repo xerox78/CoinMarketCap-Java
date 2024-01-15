@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>oi.github.xerox78</groupId>
-    <artifactId>cmc-v2-api</artifactId>
+    <artifactId>cmc-api</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 

@@ -1,10 +1,8 @@
-package org.cryptodata.models;
+package org.cryptodata.service.models.data;
 
-import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
 public class MarketData {
 
     private String symbol;
