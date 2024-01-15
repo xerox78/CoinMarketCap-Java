@@ -22,6 +22,11 @@ import java.util.Map;
 public abstract class ServiceOperation {
     protected CoinMarketCapUrlBuilder urlBuilder;
     protected CoinMarketCap coinMarketCap;
+    private HttpClient httpClient = HttpClient.newHttpClient();
+
+    public void setHttpClient(HttpClient httpClient) {
+        this.httpClient = httpClient;
+    }
 
     public CoinMarketCapUrlBuilder getUrlBuilder() {
         return urlBuilder;
@@ -35,7 +40,7 @@ public abstract class ServiceOperation {
             System.out.println(e.getMessage());
             throw new CoinMarketCapException("Couldn't parse Json", e.getCause());
         }
-
+        System.out.println(responseAPI);
         if (!responseAPI.getStatus().getErrorCode().equals(0L)) {
             throw new CoinMarketCapException(responseAPI.getStatus().getErrorCode(), responseAPI.getStatus().getErrorMessage());
         }
@@ -73,18 +78,15 @@ public abstract class ServiceOperation {
     }
 
     protected <R> R sendRequest(URI uri, String apiKey, JavaType javaType) throws CoinMarketCapException {
-        HttpRequest request = HttpRequest.newBuilder()
-                .GET()
-                .uri(uri)
-                .header("X-CMC_PRO_API_KEY", apiKey)
-                .header(HttpHeaders.ACCEPT, "application/json")
-                .build();
+        HttpRequest request = HttpRequest.newBuilder().GET().uri(uri).header("X-CMC_PRO_API_KEY", apiKey).header(HttpHeaders.ACCEPT, "application/json").build();
         HttpResponse<String> response;
         try {
-            response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+            response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (InterruptedException | IOException e) {
             throw new CoinMarketCapException("Connection Error", e.getCause());
         }
         return getResponse(response.body(), javaType);
     }
+
+
 }

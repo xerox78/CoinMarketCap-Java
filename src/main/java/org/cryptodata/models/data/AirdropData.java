@@ -30,10 +30,10 @@ public class AirdropData {
     private Date endDate;
 
     @JsonProperty("total_prize")
-    private long totalPrize;
+    private Long totalPrize;
 
     @JsonProperty("winner_count")
-    private int winnerCount;
+    private Integer winnerCount;
 
     @JsonProperty("link")
     private String link;

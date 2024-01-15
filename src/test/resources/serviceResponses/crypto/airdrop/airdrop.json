@@ -1,0 +1,27 @@
+{
+  "status": {
+    "timestamp": "2024-01-15T22:21:37.952Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 8,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "id": "635facd06f4bfc7d9bee85d8",
+    "project_name": "Astra Protocol x CoinMarketCap: The Mega Airdrop Campaign!",
+    "description": "description",
+    "status": "ENDED",
+    "coin": {
+      "id": 18519,
+      "name": "ASTRA Protocol",
+      "slug": "astra-protocol",
+      "symbol": "ASTRA"
+    },
+    "start_date": "2022-11-01T10:00:00.000Z",
+    "end_date": "2022-11-21T23:45:00.000Z",
+    "total_prize": "100000",
+    "winner_count": 5000,
+    "link": "https://coinmarketcap.com/currencies/astra-protocol/airdrop"
+  }
+}
