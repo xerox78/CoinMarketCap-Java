@@ -58,7 +58,6 @@ public class AirdropServiceTest {
     // Helper method to create a mocked HttpResponse
     private HttpResponse<String> createMockedResponse(String body) {
 
-        System.out.println(body);
         return new HttpResponse<>() {
             @Override
             public int statusCode() {
