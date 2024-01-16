@@ -11,8 +11,10 @@ import java.util.List;
 import java.util.Map;
 
 public class MetadataService extends ServiceOperation {
+    private final CoinMarketCapUrlBuilder urlBuilder;
+
     public MetadataService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -23,7 +25,7 @@ public class MetadataService extends ServiceOperation {
      * @return list of MetadataData
      */
     public List<MetadataMapData> map() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.map().build(), coinMarketCap.apiKey(), getJavaTypeList(MetadataMapData.class));
+        return sendRequest(urlBuilder.map().build(), getJavaTypeList(MetadataMapData.class));
     }
 
 
@@ -33,6 +35,6 @@ public class MetadataService extends ServiceOperation {
      * @return map with id as Key and MetadataData
      */
     public Map<String, MetadataInfoData> info() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.info().build(), coinMarketCap.apiKey(), getJavaTypeMap(MetadataInfoData.class));
+        return sendRequest(urlBuilder.info().build(), getJavaTypeMap(MetadataInfoData.class));
     }
 }

@@ -1,15 +1,10 @@
 package org.cryptodata.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
-@Data
-public class ResponseAPI<T> {
+public record ResponseAPI<T>(
+        @JsonProperty("status") ResponseStatus status,
 
-
-    @JsonProperty("status")
-    private ResponseStatus status;
-
-    @JsonProperty("data")
-    private T data;
+        @JsonProperty("data") T data
+) {
 }

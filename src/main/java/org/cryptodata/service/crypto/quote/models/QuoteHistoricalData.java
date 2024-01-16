@@ -1,27 +1,20 @@
 package org.cryptodata.service.crypto.quote.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.List;
 
-@Data
-public class QuoteHistoricalData {
-    @JsonProperty("id")
-    private Integer id;
+public record QuoteHistoricalData(
+        @JsonProperty("id") Integer id,
 
-    @JsonProperty("name")
-    private String name;
+        @JsonProperty("name") String name,
 
-    @JsonProperty("symbol")
-    private String symbol;
+        @JsonProperty("symbol") String symbol,
 
-    @JsonProperty("is_active")
-    private boolean isActive;
+        @JsonProperty("is_active") boolean isActive,
 
-    @JsonProperty("is_fiat")
-    private boolean isFiat;
+        @JsonProperty("is_fiat") boolean isFiat,
 
-    @JsonProperty("quotes")
-    private List<QuoteData> quotes;
+        @JsonProperty("quotes") List<QuoteData> quotes
+) {
 }

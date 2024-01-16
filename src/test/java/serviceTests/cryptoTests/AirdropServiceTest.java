@@ -42,8 +42,8 @@ public class AirdropServiceTest {
         AirdropData result = myHttpClientWrapper.get();
 
         // Verify the result
-        assertEquals("635facd06f4bfc7d9bee85d8", result.getId());
-        assertEquals(18519, result.getCoinData().getId());
+        assertEquals("635facd06f4bfc7d9bee85d8", result.id());
+        assertEquals(18519, result.airdropCoin().id());
     }
 
     @Test
@@ -66,11 +66,11 @@ public class AirdropServiceTest {
         List<AirdropData> result = myHttpClientWrapper.list();
 
         // Verify the result
-        assertEquals("6343e82fca2d8657a887878d", result.get(0).getId());
-        assertEquals(5804, result.get(0).getCoinData().getId());
+        assertEquals("6343e82fca2d8657a887878d", result.get(0).id());
+        assertEquals(5804, result.get(0).airdropCoin().id());
 
-        assertEquals("633ff5e0558c5024ac5f2e5d", result.get(1).getId());
-        assertEquals(11198, result.get(1).getCoinData().getId());
+        assertEquals("633ff5e0558c5024ac5f2e5d", result.get(1).id());
+        assertEquals(11198, result.get(1).airdropCoin().id());
     }
 
 

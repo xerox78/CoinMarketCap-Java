@@ -1,71 +1,50 @@
 package org.cryptodata.service.crypto.quote.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-@Data
-public class QuoteLatestData {
-    @JsonProperty("id")
-    private Integer id;
+public record QuoteLatestData(
+        @JsonProperty("id") Integer id,
 
-    @JsonProperty("name")
-    private String name;
+        @JsonProperty("name") String name,
 
-    @JsonProperty("symbol")
-    private String symbol;
+        @JsonProperty("symbol") String symbol,
 
-    @JsonProperty("slug")
-    private String slug;
+        @JsonProperty("slug") String slug,
 
-    @JsonProperty("num_market_pairs")
-    private Integer numMarketPairs;
+        @JsonProperty("num_market_pairs") Integer numMarketPairs,
 
-    @JsonProperty("date_added")
-    private Date dateAdded;
+        @JsonProperty("date_added") Date dateAdded,
 
-    @JsonProperty("tags")
-    private List<QuoteTags> tags;
+        @JsonProperty("tags") List<QuoteTags> tags,
 
-    @JsonProperty("max_supply")
-    private Long maxSupply;
+        @JsonProperty("max_supply") Long maxSupply,
 
-    @JsonProperty("circulating_supply")
-    private Double circulatingSupply;
+        @JsonProperty("circulating_supply") Double circulatingSupply,
 
-    @JsonProperty("total_supply")
-    private Double totalSupply;
+        @JsonProperty("total_supply") Double totalSupply,
 
-    @JsonProperty("is_active")
-    private boolean isActive;
+        @JsonProperty("is_active") boolean isActive,
 
-    @JsonProperty("infinite_supply")
-    private boolean infiniteSupply;
+        @JsonProperty("infinite_supply") boolean infiniteSupply,
 
-    @JsonProperty("platform")
-    private QuotePlatform platform;
+        @JsonProperty("platform") QuotePlatform platform,
 
-    @JsonProperty("cmc_rank")
-    private Integer cmcRank;
+        @JsonProperty("cmc_rank") Integer cmcRank,
 
-    @JsonProperty("is_fiat")
-    private boolean isFiat;
+        @JsonProperty("is_fiat") boolean isFiat,
 
-    @JsonProperty("self_reported_circulating_supply")
-    private Double selfReportedCirculatingSupply;
+        @JsonProperty("self_reported_circulating_supply") Double selfReportedCirculatingSupply,
 
-    @JsonProperty("self_reported_market_cap")
-    private Double selfReportedMarketCap;
+        @JsonProperty("self_reported_market_cap") Double selfReportedMarketCap,
 
-    @JsonProperty("tvl_ratio")
-    private Double tvlRatio;
+        @JsonProperty("tvl_ratio") Double tvlRatio,
 
-    @JsonProperty("last_updated")
-    private Date lastUpdated;
+        @JsonProperty("last_updated") Date lastUpdated,
 
-    @JsonProperty("quote")
-    private Map<String, ConversionLatestData> quote;
+        @JsonProperty("quote") Map<String, ConversionLatestData> quote
+) {
 }

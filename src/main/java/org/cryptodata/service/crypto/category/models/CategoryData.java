@@ -1,43 +1,31 @@
 package org.cryptodata.service.crypto.category.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.Date;
 
-@Data
-public class CategoryData {
+public record CategoryData(
 
-    @JsonProperty("id")
-    private String id;
+        @JsonProperty("id") String id,
 
-    @JsonProperty("name")
-    private String name;
+        @JsonProperty("name") String name,
 
-    @JsonProperty("title")
-    private String title;
+        @JsonProperty("title") String title,
 
-    @JsonProperty("description")
-    private String description;
+        @JsonProperty("description") String description,
 
-    @JsonProperty("num_tokens")
-    private Integer numTokens;
+        @JsonProperty("num_tokens") Integer numTokens,
 
-    @JsonProperty("avg_price_change")
-    private Double avgPriceChange;
+        @JsonProperty("avg_price_change") Double avgPriceChange,
 
-    @JsonProperty("market_cap")
-    private Double marketCap;
+        @JsonProperty("market_cap") Double marketCap,
 
-    @JsonProperty("market_cap_change")
-    private Double marketCapChange;
+        @JsonProperty("market_cap_change") Double marketCapChange,
 
-    @JsonProperty("volume")
-    private Double volume;
+        @JsonProperty("volume") Double volume,
 
-    @JsonProperty("volume_change")
-    private Double volumeChange;
+        @JsonProperty("volume_change") Double volumeChange,
 
-    @JsonProperty("last_updated")
-    private Date lastUpdated;
+        @JsonProperty("last_updated") Date lastUpdated
+) {
 }

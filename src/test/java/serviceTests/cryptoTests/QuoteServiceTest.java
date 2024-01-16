@@ -42,8 +42,8 @@ public class QuoteServiceTest {
         Map<String, QuoteHistoricalData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").getId());
-        assertEquals(Integer.valueOf(2010), result.get("2010").getId());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Integer.valueOf(2010), result.get("2010").id());
     }
 
     @Test
@@ -66,9 +66,9 @@ public class QuoteServiceTest {
         Map<String, QuoteLatestData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").getId());
-        assertEquals(Integer.valueOf(2010), result.get("2010").getId());
-        assertEquals(Double.valueOf(117.32040778), result.get("2010").getQuote().get("USD").getPercentChange90d());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Integer.valueOf(2010), result.get("2010").id());
+        assertEquals(Double.valueOf(117.32040778), result.get("2010").quote().get("USD").percentChange90d());
     }
 
     @Test
@@ -91,9 +91,9 @@ public class QuoteServiceTest {
         Map<String, QuoteHistoricalData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").getId());
-        assertEquals(Integer.valueOf(5934), result.get("5934").getId());
-        assertEquals(10, result.get("5934").getQuotes().size());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Integer.valueOf(5934), result.get("5934").id());
+        assertEquals(10, result.get("5934").quotes().size());
     }
 
 

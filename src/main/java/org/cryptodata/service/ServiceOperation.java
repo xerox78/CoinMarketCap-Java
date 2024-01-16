@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import lombok.Getter;
 import org.apache.hc.core5.http.HttpHeaders;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
@@ -20,17 +19,23 @@ import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
 
-public abstract class ServiceOperation {
-
-    @Getter
-    protected CoinMarketCapUrlBuilder urlBuilder;
-    protected CoinMarketCap coinMarketCap;
+public class ServiceOperation {
+    final CoinMarketCapUrlBuilder urlBuilder;
+    private final CoinMarketCap coinMarketCap;
     private HttpClient httpClient = HttpClient.newHttpClient();
+
+    public ServiceOperation(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+        this.coinMarketCap = coinMarketCap;
+        this.urlBuilder = cryptocurrencyUrl;
+    }
+
+    public CoinMarketCapUrlBuilder getUrlBuilder() {
+        return urlBuilder;
+    }
 
     public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
-
 
     protected <R> R getResponse(String response, JavaType dataClass) throws CoinMarketCapException {
         ResponseAPI<R> responseAPI;
@@ -40,15 +45,15 @@ public abstract class ServiceOperation {
             System.out.println(e.getMessage());
             throw new CoinMarketCapException("Couldn't parse Json", e.getCause());
         }
-        if (!responseAPI.getStatus().getErrorCode().equals(0L)) {
-            throw new CoinMarketCapException(responseAPI.getStatus().getErrorCode(), responseAPI.getStatus().getErrorMessage());
+        if (!responseAPI.status().errorCode().equals(0L)) {
+            throw new CoinMarketCapException(responseAPI.status().errorCode(), responseAPI.status().errorMessage());
         }
 
-        if (responseAPI.getData() == null) {
+        if (responseAPI.data() == null) {
             throw new CoinMarketCapException("Failed to retrieve data");
         }
 
-        return responseAPI.getData();
+        return responseAPI.data();
     }
 
     protected <R> ResponseAPI<R> fromJson(String json, JavaType type) throws JsonProcessingException {
@@ -76,8 +81,8 @@ public abstract class ServiceOperation {
         return TypeFactory.defaultInstance().constructParametricType(ResponseAPI.class, javaType);
     }
 
-    protected <R> R sendRequest(URI uri, String apiKey, JavaType javaType) throws CoinMarketCapException {
-        HttpRequest request = HttpRequest.newBuilder().GET().uri(uri).header("X-CMC_PRO_API_KEY", apiKey).header(HttpHeaders.ACCEPT, "application/json").build();
+    protected <R> R sendRequest(URI uri, JavaType javaType) throws CoinMarketCapException {
+        HttpRequest request = HttpRequest.newBuilder().GET().uri(uri).header("X-CMC_PRO_API_KEY", coinMarketCap.apiKey()).header(HttpHeaders.ACCEPT, "application/json").build();
         HttpResponse<String> response;
         try {
             response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());

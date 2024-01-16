@@ -1,9 +1,8 @@
 package org.cryptodata.service.crypto.metadata.models;
 
-import lombok.Data;
+public record MetadataContractAddressPlatform(
+        String name,
+        MetadataCoin coin
+) {
 
-@Data
-public class MetadataContractAddressPlatform {
-    private String name;
-    private MetadataCoin coin;
 }

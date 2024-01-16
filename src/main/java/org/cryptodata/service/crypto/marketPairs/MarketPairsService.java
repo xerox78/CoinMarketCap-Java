@@ -2,14 +2,16 @@ package org.cryptodata.service.crypto.marketPairs;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.marketPairs.models.MarketPairsData;
 
 public class MarketPairsService extends ServiceOperation {
 
-    public MarketPairsService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+    private final CoinMarketCapUrlBuilder urlBuilder;
+
+    public MarketPairsService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -19,6 +21,6 @@ public class MarketPairsService extends ServiceOperation {
      * @return MarketPairsData
      */
     public MarketPairsData latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.marketPairs().latest().build(), coinMarketCap.apiKey(), getJavaType(MarketPairsData.class));
+        return sendRequest(urlBuilder.marketPairs().latest().build(), getJavaType(MarketPairsData.class));
     }
 }

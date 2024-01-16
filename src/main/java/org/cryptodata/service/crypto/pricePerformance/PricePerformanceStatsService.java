@@ -10,8 +10,10 @@ import java.util.Map;
 
 public class PricePerformanceStatsService extends ServiceOperation {
 
+    private final CoinMarketCapUrl.CoinMarketCapUrlBuilder urlBuilder;
+
     public PricePerformanceStatsService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -21,7 +23,7 @@ public class PricePerformanceStatsService extends ServiceOperation {
      * @return PricePerformanceStatsData
      */
     public Map<String, PricePerformanceStatsData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.pricePerformanceStats().latest().build(), coinMarketCap.apiKey(), getJavaTypeMap(PricePerformanceStatsData.class));
+        return sendRequest(urlBuilder.pricePerformanceStats().latest().build(), getJavaTypeMap(PricePerformanceStatsData.class));
 
     }
 }

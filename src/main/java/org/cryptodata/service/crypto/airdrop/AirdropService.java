@@ -10,9 +10,11 @@ import java.util.List;
 
 public class AirdropService extends ServiceOperation {
 
+    private final CoinMarketCapUrlBuilder cryptocurrencyUrl;
+
     public AirdropService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
-        this.urlBuilder = cryptocurrencyUrl;
+        super(coinMarketCap, cryptocurrencyUrl);
+        this.cryptocurrencyUrl = cryptocurrencyUrl;
     }
 
     /**
@@ -21,7 +23,7 @@ public class AirdropService extends ServiceOperation {
      * @return AirdropData
      */
     public AirdropData get() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.airdrop().build(), coinMarketCap.apiKey(), getJavaType(AirdropData.class));
+        return sendRequest(cryptocurrencyUrl.airdrop().build(), getJavaType(AirdropData.class));
 
     }
 
@@ -31,6 +33,6 @@ public class AirdropService extends ServiceOperation {
      * @return list of AirdropData
      */
     public List<AirdropData> list() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.airdrops().build(), coinMarketCap.apiKey(), getJavaTypeList(AirdropData.class));
+        return sendRequest(cryptocurrencyUrl.airdrops().build(), getJavaTypeList(AirdropData.class));
     }
 }

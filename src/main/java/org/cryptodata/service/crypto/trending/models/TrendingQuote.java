@@ -1,30 +1,22 @@
 package org.cryptodata.service.crypto.trending.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.Date;
 
-@Data
-public class TrendingQuote {
-    @JsonProperty("percent_change_1h")
-    private Double percentChange1h;
+public record TrendingQuote(
+        @JsonProperty("percent_change_1h") Double percentChange1h,
 
-    @JsonProperty("percent_change_24h")
-    private Double percentChange24h;
+        @JsonProperty("percent_change_24h") Double percentChange24h,
 
-    @JsonProperty("percent_change_7d")
-    private Double percentChange7d;
+        @JsonProperty("percent_change_7d") Double percentChange7d,
 
-    @JsonProperty("price")
-    private Double price;
+        @JsonProperty("price") Double price,
 
-    @JsonProperty("volume_24h")
-    private Double volume24h;
+        @JsonProperty("volume_24h") Double volume24h,
 
-    @JsonProperty("market_cap")
-    private Double marketCap;
+        @JsonProperty("market_cap") Double marketCap,
 
-    @JsonProperty("last_updated")
-    private Date lastUpdated;
+        @JsonProperty("last_updated") Date lastUpdated) {
+
 }

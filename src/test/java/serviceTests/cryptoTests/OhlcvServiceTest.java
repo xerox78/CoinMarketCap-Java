@@ -43,9 +43,9 @@ public class OhlcvServiceTest {
         Map<String, OhlcvLatestData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").getId());
-        assertEquals(Double.valueOf(0.9240667639195039), result.get("1").getQuote().get("USD").getOpen());
-        assertNotNull(result.get("1").getQuote().get("USD").getTimestamp());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Double.valueOf(0.9240667639195039), result.get("1").quote().get("USD").open());
+        assertNotNull(result.get("1").quote().get("USD").timestamp());
     }
 
 
@@ -68,9 +68,9 @@ public class OhlcvServiceTest {
         Map<String, OhlcvHistoricalData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").getId());
-        assertEquals(Double.valueOf(0.24158101162792245), result.get("1").getQuotes().get(0).getQuote().get("USD").getOpen());
-        assertNotNull(result.get("1").getQuotes().get(0).getQuote().get("USD").getTimestamp());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Double.valueOf(0.24158101162792245), result.get("1").quotes().get(0).quote().get("USD").open());
+        assertNotNull(result.get("1").quotes().get(0).quote().get("USD").timestamp());
     }
 
 

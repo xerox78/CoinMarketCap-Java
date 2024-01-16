@@ -42,8 +42,8 @@ public class CategoryServiceTest {
         CategoryData result = myHttpClientWrapper.get();
 
         // Verify the result
-        assertEquals("655c563a19d020516fba113a", result.getId());
-        assertEquals("eGirl Capital Portfolio", result.getName());
+        assertEquals("655c563a19d020516fba113a", result.id());
+        assertEquals("eGirl Capital Portfolio", result.name());
     }
 
     @Test
@@ -66,11 +66,11 @@ public class CategoryServiceTest {
         List<CategoryData> result = myHttpClientWrapper.list();
 
         // Verify the result
-        assertEquals("659f3fbb4c5ab81dba4bb8ba", result.get(0).getId());
+        assertEquals("659f3fbb4c5ab81dba4bb8ba", result.get(0).id());
 
-        assertEquals("659392fd54b2742440bf0dde", result.get(1).getId());
+        assertEquals("659392fd54b2742440bf0dde", result.get(1).id());
 
-        assertEquals("658e1127598b0275bafcb61c", result.get(2).getId());
+        assertEquals("658e1127598b0275bafcb61c", result.get(2).id());
     }
 
 
