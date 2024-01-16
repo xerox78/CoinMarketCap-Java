@@ -2,9 +2,9 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.CategoryData;
+import org.cryptodata.service.crypto.category.models.CategoryData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.CategoryService;
+import org.cryptodata.service.crypto.category.CategoryService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
@@ -45,6 +45,7 @@ public class CategoryServiceTest {
         assertEquals("655c563a19d020516fba113a", result.getId());
         assertEquals("eGirl Capital Portfolio", result.getName());
     }
+
     @Test
     public void test_categories_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient

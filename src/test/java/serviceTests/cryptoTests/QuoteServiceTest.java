@@ -2,10 +2,10 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.quotes.QuoteHistoricalData;
-import org.cryptodata.models.data.quotes.QuoteLatestData;
+import org.cryptodata.service.crypto.quote.models.QuoteHistoricalData;
+import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.QuoteService;
+import org.cryptodata.service.crypto.quote.QuoteService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
@@ -45,6 +45,7 @@ public class QuoteServiceTest {
         assertEquals(Integer.valueOf(1), result.get("1").getId());
         assertEquals(Integer.valueOf(2010), result.get("2010").getId());
     }
+
     @Test
     public void test_latestV2_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -69,6 +70,7 @@ public class QuoteServiceTest {
         assertEquals(Integer.valueOf(2010), result.get("2010").getId());
         assertEquals(Double.valueOf(117.32040778), result.get("2010").getQuote().get("USD").getPercentChange90d());
     }
+
     @Test
     public void test_historicalV3_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient

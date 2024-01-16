@@ -2,9 +2,9 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.listing.ListingData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.TrendingService;
+import org.cryptodata.service.crypto.trending.TrendingService;
+import org.cryptodata.service.crypto.trending.models.TrendingData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
@@ -38,13 +38,14 @@ public class TrendingServiceTest {
 
 
         // Perform the actual test
-        List<ListingData> result = myHttpClientWrapper.gainersLosers();
+        List<TrendingData> result = myHttpClientWrapper.gainersLosers();
 
         // Verify the result
         assertEquals("7ndcd0cx44a", result.get(0).getName());
         assertEquals(Double.valueOf(7791), result.get(0).getQuote().get("USD").getVolume24h());
         assertEquals(10, result.size());
     }
+
     @Test
     public void test_latest_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -62,7 +63,7 @@ public class TrendingServiceTest {
 
 
         // Perform the actual test
-        List<ListingData> result = myHttpClientWrapper.latest();
+        List<TrendingData> result = myHttpClientWrapper.latest();
 
         // Verify the result
         assertEquals("zl0703ku71", result.get(0).getName());
@@ -70,6 +71,7 @@ public class TrendingServiceTest {
         assertEquals("v7ztqlju0g", result.get(1).getName());
         assertEquals(10, result.size());
     }
+
     @Test
     public void test_mostVisited_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -86,7 +88,7 @@ public class TrendingServiceTest {
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
 
         // Perform the actual test
-        List<ListingData> result = myHttpClientWrapper.mostVisited();
+        List<TrendingData> result = myHttpClientWrapper.mostVisited();
 
         // Verify the result
         assertEquals("6do5unsmgis", result.get(0).getName());

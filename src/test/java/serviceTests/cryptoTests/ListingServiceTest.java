@@ -2,9 +2,9 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.listing.ListingData;
+import org.cryptodata.service.crypto.listing.models.ListingData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.ListingService;
+import org.cryptodata.service.crypto.listing.ListingService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
@@ -47,6 +47,7 @@ public class ListingServiceTest {
         assertEquals(Integer.valueOf(1027), result.get(1).getId());
         assertEquals(Integer.valueOf(825), result.get(2).getId());
     }
+
     @Test
     public void test_latest_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -71,6 +72,7 @@ public class ListingServiceTest {
         assertEquals(Integer.valueOf(1027), result.get(1).getId());
         assertEquals(Integer.valueOf(825), result.get(2).getId());
     }
+
     @Test
     public void test_new_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient

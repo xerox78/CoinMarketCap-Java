@@ -2,9 +2,9 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.airdrop.AirdropData;
+import org.cryptodata.service.crypto.airdrop.models.AirdropData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.AirdropService;
+import org.cryptodata.service.crypto.airdrop.AirdropService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
@@ -45,6 +45,7 @@ public class AirdropServiceTest {
         assertEquals("635facd06f4bfc7d9bee85d8", result.getId());
         assertEquals(18519, result.getCoinData().getId());
     }
+
     @Test
     public void test_airdrops_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient

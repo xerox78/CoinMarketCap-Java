@@ -12,32 +12,32 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
     }
 
     public CoinMarketCapFilter<R> id(String value) {
-        instance.urlBuilder.addParameter(PARAM_ID.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_ID.value, value);
         return this;
     }
 
     public CoinMarketCapFilter<R> symbol(String value) {
-        instance.urlBuilder.addParameter(PARAM_SYMBOL.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_SYMBOL.value, value);
         return this;
     }
 
     public CoinMarketCapFilter<R> start(String value) {
-        instance.urlBuilder.addParameter(PARAM_START_INDEX.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_START_INDEX.value, value);
         return this;
     }
 
     public CoinMarketCapFilter<R> limit(String value) {
-        instance.urlBuilder.addParameter(PARAM_LIMIT.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_LIMIT.value, value);
         return this;
     }
 
     public CoinMarketCapFilter<R> date(String value) {
-        instance.urlBuilder.addParameter(PARAM_DATE.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_DATE.value, value);
         return this;
     }
 
     public CoinMarketCapFilter<R> status(String value) {
-        instance.urlBuilder.addParameter(PARAM_STATUS.value, value);
+        instance.getUrlBuilder().addParameter(PARAM_STATUS.value, value);
         return this;
     }
 

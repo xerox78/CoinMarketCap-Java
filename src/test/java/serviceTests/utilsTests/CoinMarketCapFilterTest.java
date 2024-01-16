@@ -4,13 +4,12 @@ import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
-import org.cryptodata.service.crypto.AirdropService;
+import org.cryptodata.service.crypto.airdrop.AirdropService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CoinMarketCapFilterTest
-{
+public class CoinMarketCapFilterTest {
     private CoinMarketCapFilter<AirdropService> filter;
 
     @Before

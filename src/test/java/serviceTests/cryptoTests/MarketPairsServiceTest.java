@@ -2,9 +2,9 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.MarketPairsData;
+import org.cryptodata.service.crypto.marketPairs.models.MarketPairsData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.MarketPairsService;
+import org.cryptodata.service.crypto.marketPairs.MarketPairsService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;

@@ -2,7 +2,14 @@ package org.cryptodata;
 
 import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
-import org.cryptodata.service.crypto.*;
+import org.cryptodata.service.crypto.airdrop.AirdropService;
+import org.cryptodata.service.crypto.category.CategoryService;
+import org.cryptodata.service.crypto.listing.ListingService;
+import org.cryptodata.service.crypto.metadata.MetadataService;
+import org.cryptodata.service.crypto.ohlcv.OhlcvService;
+import org.cryptodata.service.crypto.pricePerformance.PricePerformanceStatsService;
+import org.cryptodata.service.crypto.quote.QuoteService;
+import org.cryptodata.service.crypto.trending.TrendingService;
 
 public class CryptocurrencyService {
 

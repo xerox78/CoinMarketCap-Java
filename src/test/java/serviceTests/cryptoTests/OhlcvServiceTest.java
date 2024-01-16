@@ -2,10 +2,10 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.OhlcvHistoricalData;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvHistoricalData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.OhlcvLatestData;
-import org.cryptodata.service.crypto.OhlcvService;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvLatestData;
+import org.cryptodata.service.crypto.ohlcv.OhlcvService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import serviceTests.ServiceTestHelper;
