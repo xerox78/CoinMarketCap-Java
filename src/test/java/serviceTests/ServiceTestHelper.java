@@ -56,7 +56,7 @@ public class ServiceTestHelper
             // Implementing the missing method
             @Override
             public Optional<HttpResponse<String>> previousResponse() {
-                return null;
+                return Optional.empty();
             }
         };
     }

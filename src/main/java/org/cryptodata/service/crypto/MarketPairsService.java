@@ -19,6 +19,6 @@ public class MarketPairsService extends ServiceOperation {
      * @return MarketPairsData
      */
     public MarketPairsData latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.marketPairs().latest().build(), coinMarketCap.getApiKey(), getJavaType(MarketPairsData.class));
+        return sendRequest(urlBuilder.marketPairs().latest().build(), coinMarketCap.apiKey(), getJavaType(MarketPairsData.class));
     }
 }

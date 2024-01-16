@@ -4,9 +4,9 @@ import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.models.data.OhlcvData;
+import org.cryptodata.models.data.OhlcvHistoricalData;
 
-import java.util.List;
+import java.util.Map;
 
 public class OhlcvService extends ServiceOperation {
 
@@ -20,8 +20,8 @@ public class OhlcvService extends ServiceOperation {
      *
      * @return OhlcvData
      */
-    public OhlcvData historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().historical().build(), coinMarketCap.getApiKey(), getJavaType(OhlcvData.class));
+    public Map<String, OhlcvHistoricalData> historical() throws CoinMarketCapException {
+        return sendRequest(urlBuilder.ohlcv().historical().build(), coinMarketCap.apiKey(), getJavaTypeMap(OhlcvHistoricalData.class));
     }
 
     /**
@@ -29,7 +29,7 @@ public class OhlcvService extends ServiceOperation {
      *
      * @return OhlcvData
      */
-    public List<OhlcvData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().latest().build(), coinMarketCap.getApiKey(), getJavaTypeList(OhlcvData.class));
+    public Map<String, OhlcvLatestData> latest() throws CoinMarketCapException {
+        return sendRequest(urlBuilder.ohlcv().latest().build(), coinMarketCap.apiKey(), getJavaTypeMap(OhlcvLatestData.class));
     }
 }

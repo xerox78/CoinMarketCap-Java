@@ -12,7 +12,7 @@ public class CoinMarketCapUrlTest
 {
     private CoinMarketCapUrl.CoinMarketCapUrlBuilder urlBuilder;
 
-    private String urlBase = "https://pro-api.coinmarketcap.com";
+    private final String urlBase = "https://pro-api.coinmarketcap.com";
 
     @Before
     public void initialize() {

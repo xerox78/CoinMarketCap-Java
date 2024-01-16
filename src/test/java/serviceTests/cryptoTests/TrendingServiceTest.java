@@ -2,10 +2,8 @@ package serviceTests.cryptoTests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.models.data.airdrop.AirdropData;
 import org.cryptodata.models.data.listing.ListingData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.TrendingService;
 import org.cryptodata.service.crypto.TrendingService;
 import org.junit.Test;
 import org.mockito.Mockito;

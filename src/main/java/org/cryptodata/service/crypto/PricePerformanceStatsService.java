@@ -6,6 +6,8 @@ import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.models.data.PricePerformanceStatsData;
 
+import java.util.Map;
+
 public class PricePerformanceStatsService extends ServiceOperation {
 
     public PricePerformanceStatsService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
@@ -18,8 +20,8 @@ public class PricePerformanceStatsService extends ServiceOperation {
      *
      * @return PricePerformanceStatsData
      */
-    public PricePerformanceStatsData latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.pricePerformanceStats().latest().build(), coinMarketCap.getApiKey(), getJavaTypeMap(PricePerformanceStatsData.class));
+    public Map<String, PricePerformanceStatsData> latest() throws CoinMarketCapException {
+        return sendRequest(urlBuilder.pricePerformanceStats().latest().build(), coinMarketCap.apiKey(), getJavaTypeMap(PricePerformanceStatsData.class));
 
     }
 }

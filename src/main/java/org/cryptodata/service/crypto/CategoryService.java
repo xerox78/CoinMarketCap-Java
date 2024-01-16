@@ -21,7 +21,7 @@ public class CategoryService extends ServiceOperation
      * @return instance of CoinMarketCapFilter
      */
     public CategoryData get() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.category().build(), coinMarketCap.getApiKey(), getJavaType(CategoryData.class));
+        return sendRequest(urlBuilder.category().build(), coinMarketCap.apiKey(), getJavaType(CategoryData.class));
     }
 
     /**
@@ -30,7 +30,7 @@ public class CategoryService extends ServiceOperation
      * @return instance of CoinMarketCapFilter
      */
     public List<CategoryData> list() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.categories().build(), coinMarketCap.getApiKey(), getJavaTypeList(CategoryData.class));
+        return sendRequest(urlBuilder.categories().build(), coinMarketCap.apiKey(), getJavaTypeList(CategoryData.class));
     }
 
 

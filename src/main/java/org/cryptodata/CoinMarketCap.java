@@ -2,17 +2,7 @@ package org.cryptodata;
 
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 
-public class CoinMarketCap {
-
-    private final String apiKey;
-
-    public CoinMarketCap(String apiKey) {
-        this.apiKey = apiKey;
-    }
-
-    public String getApiKey() {
-        return apiKey;
-    }
+public record CoinMarketCap(String apiKey) {
 
     /**
      * AirdropService class

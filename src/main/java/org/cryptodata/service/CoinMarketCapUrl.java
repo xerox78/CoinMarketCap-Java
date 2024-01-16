@@ -1,8 +1,8 @@
 package org.cryptodata.service;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.message.BasicNameValuePair;
+import org.apache.hc.core5.http.NameValuePair;
+import org.apache.hc.core5.http.message.BasicNameValuePair;
+import org.apache.hc.core5.net.URIBuilder;
 import org.cryptodata.exception.CoinMarketCapException;
 
 import java.net.URI;
@@ -17,6 +17,7 @@ public class CoinMarketCapUrl {
         private StringBuilder url;
 
         private List<NameValuePair> parameterList = new ArrayList<>();
+
         public URI build() throws CoinMarketCapException {
             URIBuilder builder;
             try {

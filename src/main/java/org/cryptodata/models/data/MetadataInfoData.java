@@ -7,12 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-public class MetadataData {
-        @JsonProperty("urls")
-        public Map<String, List<String>> urls;
-
-        @JsonProperty("logo")
-        public String logo;
+public class MetadataInfoData {
 
         @JsonProperty("id")
         public int id;
@@ -26,26 +21,47 @@ public class MetadataData {
         @JsonProperty("slug")
         public String slug;
 
+        @JsonProperty("category")
+        public String category;
+
         @JsonProperty("description")
         public String description;
+
+        @JsonProperty("logo")
+        public String logo;
+
+        @JsonProperty("subreddit")
+        public String subreddit;
 
         @JsonProperty("notice")
         public String notice;
 
-        @JsonProperty("date_added")
-        public String dateAdded;
-
-        @JsonProperty("date_launched")
-        public String dateLaunched;
-
         @JsonProperty("tags")
         public List<String> tags;
+
+        @JsonProperty("tag-groups")
+        public List<String> tagGroups;
+
+        @JsonProperty("tag-names")
+        public List<String> tagNames;
+
+        @JsonProperty("urls")
+        public Map<String, List<String>> urls;
 
         @JsonProperty("platform")
         public PlatformData platform;
 
-        @JsonProperty("category")
-        public String category;
+        @JsonProperty("date_added")
+        public String dateAdded;
+
+        @JsonProperty("twitter_username")
+        public String twitterUsername;
+
+        @JsonProperty("date_launched")
+        public String dateLaunched;
+
+        @JsonProperty("contract_address")
+        public List<ContractAddressData> contractAddress;
 
         @JsonProperty("self_reported_circulating_supply")
         public Double selfReportedCirculatingSupply;
@@ -57,7 +73,7 @@ public class MetadataData {
         public List<String> selfReportedTags;
 
         @JsonProperty("infinite_supply")
-        public boolean infiniteSupply;
+        public Boolean infiniteSupply;
 
 
 }

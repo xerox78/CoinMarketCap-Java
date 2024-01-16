@@ -7,19 +7,20 @@ import java.util.Date;
 import java.util.Map;
 
 @Data
-public class PricePerformanceStatsData {
-    @JsonProperty("open_timestamp")
+public class QuotesOhlcvData {
+
+    @JsonProperty("time_open")
     private Date timeOpen;
 
-    @JsonProperty("close_timestamp")
+    @JsonProperty("time_close")
     private Date timeClose;
 
-    @JsonProperty("high_timestamp")
+    @JsonProperty("time_high")
     private Date timeHigh;
 
-    @JsonProperty("low_timestamp")
+    @JsonProperty("time_low")
     private Date timeLow;
 
     @JsonProperty("quote")
-    private Map<String, PricePerformanceStatsQuoteData> quote;
+    private Map<String, QuoteOhlcv> quote;
 }

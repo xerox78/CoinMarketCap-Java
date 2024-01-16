@@ -2,8 +2,9 @@ package org.cryptodata.service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
+import org.cryptodata.models.data.MetadataMapData;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.models.data.MetadataData;
+import org.cryptodata.models.data.MetadataInfoData;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 
 import java.util.List;
@@ -21,8 +22,8 @@ public class MetadataService extends ServiceOperation {
      *
      * @return list of MetadataData
      */
-    public List<MetadataData> map() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.map().build(), coinMarketCap.getApiKey(), getJavaTypeList(MetadataData.class));
+    public List<MetadataMapData> map() throws CoinMarketCapException {
+        return sendRequest(urlBuilder.map().build(), coinMarketCap.apiKey(), getJavaTypeList(MetadataMapData.class));
     }
 
 
@@ -31,7 +32,7 @@ public class MetadataService extends ServiceOperation {
      *
      * @return map with id as Key and MetadataData
      */
-    public Map<String, MetadataData> info() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.info().build(), coinMarketCap.getApiKey(), getJavaTypeMap(MetadataData.class));
+    public Map<String, MetadataInfoData> info() throws CoinMarketCapException {
+        return sendRequest(urlBuilder.info().build(), coinMarketCap.apiKey(), getJavaTypeMap(MetadataInfoData.class));
     }
 }

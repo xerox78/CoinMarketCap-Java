@@ -5,7 +5,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import org.apache.http.HttpHeaders;
+import lombok.Getter;
+import org.apache.hc.core5.http.HttpHeaders;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.models.ResponseAPI;
@@ -20,6 +21,8 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class ServiceOperation {
+
+    @Getter
     protected CoinMarketCapUrlBuilder urlBuilder;
     protected CoinMarketCap coinMarketCap;
     private HttpClient httpClient = HttpClient.newHttpClient();
@@ -28,9 +31,6 @@ public abstract class ServiceOperation {
         this.httpClient = httpClient;
     }
 
-    public CoinMarketCapUrlBuilder getUrlBuilder() {
-        return urlBuilder;
-    }
 
     protected <R> R getResponse(String response, JavaType dataClass) throws CoinMarketCapException {
         ResponseAPI<R> responseAPI;

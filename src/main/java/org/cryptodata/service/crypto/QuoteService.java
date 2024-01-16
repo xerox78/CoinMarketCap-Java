@@ -23,7 +23,7 @@ public class QuoteService extends ServiceOperation {
      * @return QuoteData
      */
     public Map<String, QuoteHistoricalData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.quotes().historical().build(), coinMarketCap.getApiKey(), getJavaTypeMap(QuoteHistoricalData.class));
+        return sendRequest(urlBuilder.quotes().historical().build(), coinMarketCap.apiKey(), getJavaTypeMap(QuoteHistoricalData.class));
     }
 
 
@@ -33,7 +33,7 @@ public class QuoteService extends ServiceOperation {
      * @return QuoteData
      */
     public Map<String, QuoteLatestData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.quotes().latest().build(), coinMarketCap.getApiKey(), getJavaTypeMap(QuoteLatestData.class));
+        return sendRequest(urlBuilder.quotes().latest().build(), coinMarketCap.apiKey(), getJavaTypeMap(QuoteLatestData.class));
     }
 
 }
