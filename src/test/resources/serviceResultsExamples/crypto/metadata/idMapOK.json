@@ -1,0 +1,122 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:28:25.727Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 0,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": [
+    {
+      "id": 1469,
+      "rank": 4518,
+      "name": "dyvyxe0sdr7",
+      "symbol": "ahxahs4rxvp",
+      "slug": "0t1s3hrahrtf",
+      "is_active": 5565,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 5207,
+      "rank": 9193,
+      "name": "41y8twob5no",
+      "symbol": "s2f7ef9czib",
+      "slug": "pi1zmszmp",
+      "is_active": 9018,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 6627,
+      "rank": 3515,
+      "name": "pij0oy34to9",
+      "symbol": "lcf2ik7awp",
+      "slug": "pqwslxa765p",
+      "is_active": 1192,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 8331,
+      "rank": 2049,
+      "name": "vvchb8f58js",
+      "symbol": "kdsanf72vms",
+      "slug": "s46vw28vxxk",
+      "is_active": 8353,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 8457,
+      "rank": 9369,
+      "name": "r9a0r6k0lih",
+      "symbol": "bodfywf3p5",
+      "slug": "l6qbb4f9ft",
+      "is_active": 6426,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 4408,
+      "rank": 7706,
+      "name": "yl73sgpq5ue",
+      "symbol": "k96bdr3nwgp",
+      "slug": "06cy6amh1gbn",
+      "is_active": 7623,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 4112,
+      "rank": 1957,
+      "name": "2sg0vooi9br",
+      "symbol": "ck72a5t5up6",
+      "slug": "zkgt1caswql",
+      "is_active": 1505,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 4403,
+      "rank": 7718,
+      "name": "7lnjb5peni",
+      "symbol": "mt66e651kuq",
+      "slug": "s28cy7vf8b",
+      "is_active": 1372,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 5406,
+      "rank": 4517,
+      "name": "ugtgh5jasxg",
+      "symbol": "9ajt7c3gdhw",
+      "slug": "wa9rf9mpfx",
+      "is_active": 4848,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    },
+    {
+      "id": 7153,
+      "rank": 3286,
+      "name": "6ogk1ophjbi",
+      "symbol": "hb9lnab06ik",
+      "slug": "vkue3k2agnr",
+      "is_active": 544,
+      "first_historical_data": "2024-01-16T13:28:25.727Z",
+      "last_historical_data": "2024-01-16T13:28:25.727Z",
+      "platform": null
+    }
+  ]
+}

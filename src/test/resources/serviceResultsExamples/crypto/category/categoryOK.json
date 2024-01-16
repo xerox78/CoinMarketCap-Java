@@ -1,0 +1,187 @@
+{
+  "status": {
+    "timestamp": "2024-01-15T23:38:09.851Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 161,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "id": "655c563a19d020516fba113a",
+    "name": "eGirl Capital Portfolio",
+    "title": "eGirl Capital Portfolio",
+    "description": "eGirl Capital Portfolio",
+    "num_tokens": 12,
+    "last_updated": "2023-11-21T07:03:29.188Z",
+    "avg_price_change": 4.207113284,
+    "market_cap": 10095641670.840002,
+    "market_cap_change": 1.5894799999999998,
+    "volume": 1572606734.237822,
+    "volume_change": 7.3291200000000005,
+    "coins": [
+      {
+        "id": 22861,
+        "name": "Celestia",
+        "symbol": "TIA",
+        "slug": "celestia",
+        "num_market_pairs": 118,
+        "date_added": "2023-10-31T16:51:41.000Z",
+        "tags": [
+          "platform",
+          "modular-blockchain",
+          "egirl-capital-portfolio",
+          "data-availability"
+        ],
+        "max_supply": null,
+        "circulating_supply": 157701061.996516,
+        "total_supply": 1016657534.246516,
+        "platform": {
+          "id": 12220,
+          "name": "Osmosis",
+          "symbol": "OSMO",
+          "slug": "osmosis",
+          "token_address": "ibc/D79E7D83AB399BFFF93433E54FAA480C191248FC556924A2A8351AE2638B3877"
+        },
+        "is_active": 1,
+        "infinite_supply": false,
+        "cmc_rank": 31,
+        "is_fiat": 0,
+        "self_reported_circulating_supply": null,
+        "self_reported_market_cap": null,
+        "tvl_ratio": null,
+        "last_updated": "2024-01-15T23:37:00.000Z",
+        "quote": {
+          "USD": {
+            "price": 19.12298567432283,
+            "volume_24h": 458149466.2607005,
+            "volume_change_24h": 7.2123,
+            "percent_change_1h": -0.5060161,
+            "percent_change_24h": 5.50269456,
+            "percent_change_7d": 35.6983305,
+            "percent_change_30d": 47.77703058,
+            "percent_change_60d": 238.83076654,
+            "percent_change_90d": 810.30654033,
+            "market_cap": 3015715149.384872,
+            "market_cap_dominance": 0.18,
+            "fully_diluted_market_cap": 19441527463.09,
+            "tvl": null,
+            "last_updated": "2024-01-15T23:37:00.000Z"
+          }
+        }
+      },
+      {
+        "id": 8000,
+        "name": "Lido DAO",
+        "symbol": "LDO",
+        "slug": "lido-dao",
+        "num_market_pairs": 290,
+        "date_added": "2020-12-15T00:00:00.000Z",
+        "tags": [
+          "defi",
+          "dao",
+          "three-arrows-capital-portfolio",
+          "paradigm-portfolio",
+          "arbitrum-ecosytem",
+          "liquid-staking-derivatives",
+          "optimism-ecosystem",
+          "standard-crypto-portfolio",
+          "egirl-capital-portfolio"
+        ],
+        "max_supply": 1000000000,
+        "circulating_supply": 890185507.9785997,
+        "total_supply": 1000000000,
+        "platform": {
+          "id": 1027,
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "slug": "ethereum",
+          "token_address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32"
+        },
+        "is_active": 1,
+        "infinite_supply": false,
+        "cmc_rank": 33,
+        "is_fiat": 0,
+        "self_reported_circulating_supply": 890185558.5181954,
+        "self_reported_market_cap": 2901621776.8464723,
+        "tvl_ratio": 0.12448487,
+        "last_updated": "2024-01-15T23:36:00.000Z",
+        "quote": {
+          "USD": {
+            "price": 3.25956959094744,
+            "volume_24h": 108281836.34876722,
+            "volume_change_24h": -0.5198,
+            "percent_change_1h": -0.23195993,
+            "percent_change_24h": -0.66585307,
+            "percent_change_7d": 4.07993097,
+            "percent_change_30d": 51.04313993,
+            "percent_change_60d": 45.00608233,
+            "percent_change_90d": 110.57912457,
+            "market_cap": 2901621612.1091433,
+            "market_cap_dominance": 0.1733,
+            "fully_diluted_market_cap": 3259569590.95,
+            "tvl": 23309029821.55016,
+            "last_updated": "2024-01-15T23:36:00.000Z"
+          }
+        }
+      },
+      {
+        "id": 11841,
+        "name": "Arbitrum",
+        "symbol": "ARB",
+        "slug": "arbitrum",
+        "num_market_pairs": 721,
+        "date_added": "2023-03-23T12:50:11.000Z",
+        "tags": [
+          "scaling",
+          "dao",
+          "dapp",
+          "ethereum-ecosystem",
+          "polychain-capital-portfolio",
+          "layer-2",
+          "rollups",
+          "pantera-capital-portfolio",
+          "arbitrum-ecosytem",
+          "modular-blockchain",
+          "egirl-capital-portfolio"
+        ],
+        "max_supply": null,
+        "circulating_supply": 1275000000,
+        "total_supply": 10000000000,
+        "platform": {
+          "id": 11841,
+          "name": "Arbitrum",
+          "symbol": "ARB",
+          "slug": "arbitrum",
+          "token_address": "0x912CE59144191C1204E64559FE8253a0e49E6548"
+        },
+        "is_active": 1,
+        "infinite_supply": false,
+        "cmc_rank": 35,
+        "is_fiat": 0,
+        "self_reported_circulating_supply": null,
+        "self_reported_market_cap": null,
+        "tvl_ratio": null,
+        "last_updated": "2024-01-15T23:36:00.000Z",
+        "quote": {
+          "USD": {
+            "price": 2.112396072781859,
+            "volume_24h": 636566456.3279971,
+            "volume_change_24h": 16.6162,
+            "percent_change_1h": 0.33656364,
+            "percent_change_24h": 3.31455286,
+            "percent_change_7d": 16.12020446,
+            "percent_change_30d": 88.37380746,
+            "percent_change_60d": 96.74857241,
+            "percent_change_90d": 168.79708375,
+            "market_cap": 2693304992.79687,
+            "market_cap_dominance": 0.1608,
+            "fully_diluted_market_cap": 21123960727.82,
+            "tvl": null,
+            "last_updated": "2024-01-15T23:36:00.000Z"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:26:28.045Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "3cm6266sp17",
+      "symbol": "pffsto0eoy",
+      "is_active": 5520,
+      "is_fiat": null,
+      "quotes": [
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.06971313448128957,
+              "volume_24h": 8147,
+              "market_cap": 0.7569931747868732,
+              "circulating_supply": 1002,
+              "total_supply": 7250,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.8144046590993241,
+              "volume_24h": 8689,
+              "market_cap": 0.4583552458129978,
+              "circulating_supply": 8896,
+              "total_supply": 412,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.4386795279686895,
+              "volume_24h": 7361,
+              "market_cap": 0.6693850045039671,
+              "circulating_supply": 9899,
+              "total_supply": 1445,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.7403478141857363,
+              "volume_24h": 5205,
+              "market_cap": 0.8560056554192101,
+              "circulating_supply": 4989,
+              "total_supply": 4482,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.8005386302124076,
+              "volume_24h": 6161,
+              "market_cap": 0.8474735663008084,
+              "circulating_supply": 9463,
+              "total_supply": 1609,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.8733004354781488,
+              "volume_24h": 5359,
+              "market_cap": 0.06290248349555605,
+              "circulating_supply": 9402,
+              "total_supply": 6884,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.6082910127956584,
+              "volume_24h": 7144,
+              "market_cap": 0.477173488330938,
+              "circulating_supply": 7904,
+              "total_supply": 8996,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.7149567134080117,
+              "volume_24h": 1354,
+              "market_cap": 0.007443735499877313,
+              "circulating_supply": 4836,
+              "total_supply": 4570,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.8349454228475153,
+              "volume_24h": 4204,
+              "market_cap": 0.369491800915021,
+              "circulating_supply": 2576,
+              "total_supply": 5504,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.7163656328148957,
+              "volume_24h": 4779,
+              "market_cap": 0.29565805500823195,
+              "circulating_supply": 1070,
+              "total_supply": 2245,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        }
+      ]
+    },
+    "5934": {
+      "id": 5934,
+      "name": "7k7qxh871te",
+      "symbol": "fi2k8oyh5o",
+      "is_active": 2003,
+      "is_fiat": null,
+      "quotes": [
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.5986265858081126,
+              "volume_24h": 9605,
+              "market_cap": 0.6522660004620984,
+              "circulating_supply": 9503,
+              "total_supply": 3318,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.8939916209329797,
+              "volume_24h": 5848,
+              "market_cap": 0.5565861459280486,
+              "circulating_supply": 736,
+              "total_supply": 4691,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.6475678454284208,
+              "volume_24h": 8225,
+              "market_cap": 0.7090438319517147,
+              "circulating_supply": 3691,
+              "total_supply": 4154,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.5412053757532789,
+              "volume_24h": 9183,
+              "market_cap": 0.3045286146855357,
+              "circulating_supply": 7887,
+              "total_supply": 7886,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.4693532549694375,
+              "volume_24h": 6982,
+              "market_cap": 0.5070790403250882,
+              "circulating_supply": 6083,
+              "total_supply": 6358,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.9275525466596029,
+              "volume_24h": 8277,
+              "market_cap": 0.5512470843031347,
+              "circulating_supply": 1821,
+              "total_supply": 3655,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.57434521616913,
+              "volume_24h": 310,
+              "market_cap": 0.11280364171171575,
+              "circulating_supply": 2798,
+              "total_supply": 7979,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.5239799087724912,
+              "volume_24h": 7911,
+              "market_cap": 0.8246111421360514,
+              "circulating_supply": 9258,
+              "total_supply": 8363,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.48824635515395465,
+              "volume_24h": 583,
+              "market_cap": 0.1136682550712611,
+              "circulating_supply": 3192,
+              "total_supply": 7759,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-01-16T13:26:28.045Z",
+          "quote": {
+            "USD": {
+              "price": 0.9552996622506591,
+              "volume_24h": 5867,
+              "market_cap": 0.8648661076315813,
+              "circulating_supply": 2077,
+              "total_supply": 8063,
+              "timestamp": "2024-01-16T13:26:28.045Z"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

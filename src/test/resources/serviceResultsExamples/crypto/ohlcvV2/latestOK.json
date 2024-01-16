@@ -1,0 +1,52 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:25:30.960Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "6i5m4icsa15",
+      "symbol": "3x5p98g5m6v",
+      "last_updated": "2024-01-16T13:25:30.960Z",
+      "time_open": "2024-01-16T13:25:30.960Z",
+      "time_close": null,
+      "time_high": "2024-01-16T13:25:30.960Z",
+      "time_low": "2024-01-16T13:25:30.960Z",
+      "quote": {
+        "USD": {
+          "open": 0.9240667639195039,
+          "high": 0.371370155596767,
+          "low": 0.8122187240232375,
+          "close": 0.12853487585457302,
+          "volume": 4125,
+          "last_updated": "2024-01-16T13:25:30.960Z"
+        }
+      }
+    },
+    "5934": {
+      "id": 5934,
+      "name": "5zfwbrdt5r3",
+      "symbol": "wgkofvp72b7",
+      "last_updated": "2024-01-16T13:25:30.960Z",
+      "time_open": "2024-01-16T13:25:30.960Z",
+      "time_close": null,
+      "time_high": "2024-01-16T13:25:30.960Z",
+      "time_low": "2024-01-16T13:25:30.960Z",
+      "quote": {
+        "USD": {
+          "open": 0.45879777947554934,
+          "high": 0.5018782708153793,
+          "low": 0.287702648286132,
+          "close": 0.8028736134669832,
+          "volume": 851,
+          "last_updated": "2024-01-16T13:25:30.960Z"
+        }
+      }
+    }
+  }
+}

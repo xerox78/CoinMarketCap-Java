@@ -1,0 +1,64 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:57:39.785Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 551,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "quotes": [
+        {
+          "timestamp": "2024-01-16T13:45:00.000Z",
+          "quote": {
+            "USD": {
+              "percent_change_1h": -0.194515980008,
+              "percent_change_24h": 0.498770827999,
+              "percent_change_7d": -7.910404638012,
+              "percent_change_30d": 2.773868061047,
+              "price": 42950.028213550366,
+              "volume_24h": 2.100406356876E10,
+              "market_cap": 8.418261794392832E11,
+              "total_supply": 19600131,
+              "circulating_supply": 19600131,
+              "timestamp": "2024-01-16T13:45:00.000Z"
+            }
+          }
+        }
+      ],
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "is_active": 1,
+      "is_fiat": 0
+    },
+    "2010": {
+      "quotes": [
+        {
+          "timestamp": "2024-01-16T13:45:00.000Z",
+          "quote": {
+            "USD": {
+              "percent_change_1h": 0.341256541648,
+              "percent_change_24h": 1.218543977558,
+              "percent_change_7d": 4.856417211392,
+              "percent_change_30d": -9.299719110361,
+              "price": 0.5407247283238145,
+              "volume_24h": 2.9929769006E8,
+              "market_cap": 1.9139050074667557E10,
+              "total_supply": 3.654269745969E10,
+              "circulating_supply": 3.539518182199E10,
+              "timestamp": "2024-01-16T13:45:00.000Z"
+            }
+          }
+        }
+      ],
+      "id": 2010,
+      "name": "Cardano",
+      "symbol": "ADA",
+      "is_active": 1,
+      "is_fiat": 0
+    }
+  }
+}

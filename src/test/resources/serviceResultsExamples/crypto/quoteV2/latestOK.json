@@ -1,0 +1,297 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T15:05:39.857Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 24,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "slug": "bitcoin",
+      "num_market_pairs": 10711,
+      "date_added": "2010-07-13T00:00:00.000Z",
+      "tags": [
+        {
+          "slug": "mineable",
+          "name": "Mineable",
+          "category": "OTHERS"
+        },
+        {
+          "slug": "pow",
+          "name": "PoW",
+          "category": "ALGORITHM"
+        },
+        {
+          "slug": "sha-256",
+          "name": "SHA-256",
+          "category": "ALGORITHM"
+        },
+        {
+          "slug": "store-of-value",
+          "name": "Store Of Value",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "state-channel",
+          "name": "State Channel",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "coinbase-ventures-portfolio",
+          "name": "Coinbase Ventures Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "three-arrows-capital-portfolio",
+          "name": "Three Arrows Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "polychain-capital-portfolio",
+          "name": "Polychain Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "binance-labs-portfolio",
+          "name": "Binance Labs Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "blockchain-capital-portfolio",
+          "name": "Blockchain Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "boostvc-portfolio",
+          "name": "BoostVC Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "cms-holdings-portfolio",
+          "name": "CMS Holdings Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "dcg-portfolio",
+          "name": "DCG Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "dragonfly-capital-portfolio",
+          "name": "DragonFly Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "electric-capital-portfolio",
+          "name": "Electric Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "fabric-ventures-portfolio",
+          "name": "Fabric Ventures Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "framework-ventures-portfolio",
+          "name": "Framework Ventures Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "galaxy-digital-portfolio",
+          "name": "Galaxy Digital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "huobi-capital-portfolio",
+          "name": "Huobi Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "alameda-research-portfolio",
+          "name": "Alameda Research Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "a16z-portfolio",
+          "name": "a16z Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "1confirmation-portfolio",
+          "name": "1Confirmation Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "winklevoss-capital-portfolio",
+          "name": "Winklevoss Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "usv-portfolio",
+          "name": "USV Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "placeholder-ventures-portfolio",
+          "name": "Placeholder Ventures Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "pantera-capital-portfolio",
+          "name": "Pantera Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "multicoin-capital-portfolio",
+          "name": "Multicoin Capital Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "paradigm-portfolio",
+          "name": "Paradigm Portfolio",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "bitcoin-ecosystem",
+          "name": "Bitcoin Ecosystem",
+          "category": "PLATFORM"
+        },
+        {
+          "slug": "ftx-bankruptcy-estate",
+          "name": "FTX Bankruptcy Estate ",
+          "category": "CATEGORY"
+        }
+      ],
+      "max_supply": 21000000,
+      "circulating_supply": 19600212,
+      "total_supply": 19600212,
+      "is_active": 1,
+      "infinite_supply": false,
+      "platform": null,
+      "cmc_rank": 1,
+      "is_fiat": 0,
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "tvl_ratio": null,
+      "last_updated": "2024-01-16T15:05:00.000Z",
+      "quote": {
+        "USD": {
+          "price": 42592.41978425269,
+          "volume_24h": 2.2429715433778847E10,
+          "volume_change_24h": 0.0455,
+          "percent_change_1h": -0.51450291,
+          "percent_change_24h": 0.77082632,
+          "percent_change_7d": -8.44560737,
+          "percent_change_30d": 2.32802518,
+          "percent_change_60d": 18.42637025,
+          "percent_change_90d": 51.02945695,
+          "market_cap": 8.34820457364347E11,
+          "market_cap_dominance": 49.6599,
+          "fully_diluted_market_cap": 8.9444081546931E11,
+          "tvl": null,
+          "last_updated": "2024-01-16T15:05:00.000Z"
+        }
+      }
+    },
+    "2010": {
+      "id": 2010,
+      "name": "Cardano",
+      "symbol": "ADA",
+      "slug": "cardano",
+      "num_market_pairs": 1028,
+      "date_added": "2017-10-01T00:00:00.000Z",
+      "tags": [
+        {
+          "slug": "dpos",
+          "name": "DPoS",
+          "category": "ALGORITHM"
+        },
+        {
+          "slug": "pos",
+          "name": "PoS",
+          "category": "ALGORITHM"
+        },
+        {
+          "slug": "platform",
+          "name": "Platform",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "research",
+          "name": "Research",
+          "category": "INDUSTRY"
+        },
+        {
+          "slug": "smart-contracts",
+          "name": "Smart Contracts",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "staking",
+          "name": "Staking",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "cardano-ecosystem",
+          "name": "Cardano Ecosystem",
+          "category": "PLATFORM"
+        },
+        {
+          "slug": "cardano",
+          "name": "Cardano",
+          "category": "PLATFORM"
+        },
+        {
+          "slug": "layer-1",
+          "name": "Layer 1",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "sec-security-token",
+          "name": "SEC Security Token",
+          "category": "CATEGORY"
+        },
+        {
+          "slug": "alleged-sec-securities",
+          "name": "Alleged SEC Securities",
+          "category": "CATEGORY"
+        }
+      ],
+      "max_supply": 45000000000,
+      "circulating_supply": 3.5395179543794E10,
+      "total_supply": 3.654269745969E10,
+      "is_active": 1,
+      "infinite_supply": false,
+      "platform": null,
+      "cmc_rank": 8,
+      "is_fiat": 0,
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "tvl_ratio": null,
+      "last_updated": "2024-01-16T15:04:00.000Z",
+      "quote": {
+        "USD": {
+          "price": 0.5336789142804003,
+          "volume_24h": 3.110051829712143E8,
+          "volume_change_24h": -17.4135,
+          "percent_change_1h": -0.73721814,
+          "percent_change_24h": 1.44144945,
+          "percent_change_7d": 4.96412404,
+          "percent_change_30d": -9.19676662,
+          "percent_change_60d": 47.67632853,
+          "percent_change_90d": 117.32040778,
+          "market_cap": 1.8889660989691814E10,
+          "market_cap_dominance": 1.1254,
+          "fully_diluted_market_cap": 2.401555114262E10,
+          "tvl": null,
+          "last_updated": "2024-01-16T15:04:00.000Z"
+        }
+      }
+    }
+  }
+}

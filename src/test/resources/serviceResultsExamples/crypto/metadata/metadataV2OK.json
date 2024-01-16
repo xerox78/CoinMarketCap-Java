@@ -1,0 +1,278 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:13:39.156Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 25,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "category": "coin",
+      "description": "Bitcoin (BTC) is a cryptocurrency launched in 2010. Users are able to generate BTC through the process of mining. Bitcoin has a current supply of 19,600,131. The last known price of Bitcoin is 43,079.45693082 USD and is up 1.06 over the last 24 hours. It is currently trading on 10709 active market(s) with $20,926,697,239.25 traded over the last 24 hours. More information can be found at https://bitcoin.org/.",
+      "slug": "bitcoin",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+      "subreddit": "bitcoin",
+      "notice": "",
+      "tags": [
+        "mineable",
+        "pow",
+        "sha-256",
+        "store-of-value",
+        "state-channel",
+        "coinbase-ventures-portfolio",
+        "three-arrows-capital-portfolio",
+        "polychain-capital-portfolio",
+        "binance-labs-portfolio",
+        "blockchain-capital-portfolio",
+        "boostvc-portfolio",
+        "cms-holdings-portfolio",
+        "dcg-portfolio",
+        "dragonfly-capital-portfolio",
+        "electric-capital-portfolio",
+        "fabric-ventures-portfolio",
+        "framework-ventures-portfolio",
+        "galaxy-digital-portfolio",
+        "huobi-capital-portfolio",
+        "alameda-research-portfolio",
+        "a16z-portfolio",
+        "1confirmation-portfolio",
+        "winklevoss-capital-portfolio",
+        "usv-portfolio",
+        "placeholder-ventures-portfolio",
+        "pantera-capital-portfolio",
+        "multicoin-capital-portfolio",
+        "paradigm-portfolio",
+        "bitcoin-ecosystem",
+        "ftx-bankruptcy-estate"
+      ],
+      "tag-names": [
+        "Mineable",
+        "PoW",
+        "SHA-256",
+        "Store Of Value",
+        "State Channel",
+        "Coinbase Ventures Portfolio",
+        "Three Arrows Capital Portfolio",
+        "Polychain Capital Portfolio",
+        "Binance Labs Portfolio",
+        "Blockchain Capital Portfolio",
+        "BoostVC Portfolio",
+        "CMS Holdings Portfolio",
+        "DCG Portfolio",
+        "DragonFly Capital Portfolio",
+        "Electric Capital Portfolio",
+        "Fabric Ventures Portfolio",
+        "Framework Ventures Portfolio",
+        "Galaxy Digital Portfolio",
+        "Huobi Capital Portfolio",
+        "Alameda Research Portfolio",
+        "a16z Portfolio",
+        "1Confirmation Portfolio",
+        "Winklevoss Capital Portfolio",
+        "USV Portfolio",
+        "Placeholder Ventures Portfolio",
+        "Pantera Capital Portfolio",
+        "Multicoin Capital Portfolio",
+        "Paradigm Portfolio",
+        "Bitcoin Ecosystem",
+        "FTX Bankruptcy Estate "
+      ],
+      "tag-groups": [
+        "OTHERS",
+        "ALGORITHM",
+        "ALGORITHM",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "PLATFORM",
+        "CATEGORY"
+      ],
+      "urls": {
+        "website": [
+          "https://bitcoin.org/"
+        ],
+        "twitter": [],
+        "message_board": [
+          "https://bitcointalk.org"
+        ],
+        "chat": [],
+        "facebook": [],
+        "explorer": [
+          "https://blockchain.info/",
+          "https://live.blockcypher.com/btc/",
+          "https://blockchair.com/bitcoin",
+          "https://explorer.viabtc.com/btc",
+          "https://www.oklink.com/btc"
+        ],
+        "reddit": [
+          "https://reddit.com/r/bitcoin"
+        ],
+        "technical_doc": [
+          "https://bitcoin.org/bitcoin.pdf"
+        ],
+        "source_code": [
+          "https://github.com/bitcoin/bitcoin"
+        ],
+        "announcement": []
+      },
+      "platform": null,
+      "date_added": "2010-07-13T00:00:00.000Z",
+      "twitter_username": "",
+      "is_hidden": 0,
+      "date_launched": "2010-07-13T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_tags": null,
+      "self_reported_market_cap": null,
+      "infinite_supply": false
+    },
+    "2010": {
+      "id": 2010,
+      "name": "Cardano",
+      "symbol": "ADA",
+      "category": "coin",
+      "description": "Cardano (ADA) is a cryptocurrency launched in 2017. Cardano has a current supply of 36,542,697,459.69 with 35,395,181,821.992 in circulation. The last known price of Cardano is 0.54140732 USD and is up 1.34 over the last 24 hours. It is currently trading on 1026 active market(s) with $295,689,971.14 traded over the last 24 hours. More information can be found at https://www.cardano.org.",
+      "slug": "cardano",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png",
+      "subreddit": "cardano",
+      "notice": "",
+      "tags": [
+        "dpos",
+        "pos",
+        "platform",
+        "research",
+        "smart-contracts",
+        "staking",
+        "cardano-ecosystem",
+        "cardano",
+        "layer-1",
+        "sec-security-token",
+        "alleged-sec-securities"
+      ],
+      "tag-names": [
+        "DPoS",
+        "PoS",
+        "Platform",
+        "Research",
+        "Smart Contracts",
+        "Staking",
+        "Cardano Ecosystem",
+        "Cardano",
+        "Layer 1",
+        "SEC Security Token",
+        "Alleged SEC Securities"
+      ],
+      "tag-groups": [
+        "ALGORITHM",
+        "ALGORITHM",
+        "CATEGORY",
+        "INDUSTRY",
+        "CATEGORY",
+        "CATEGORY",
+        "PLATFORM",
+        "PLATFORM",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY"
+      ],
+      "urls": {
+        "website": [
+          "https://www.cardano.org"
+        ],
+        "twitter": [
+          "https://twitter.com/cardano"
+        ],
+        "message_board": [
+          "https://medium.com/feed/cardanorss",
+          "https://forum.cardano.org/"
+        ],
+        "chat": [
+          "https://t.me/Cardano"
+        ],
+        "facebook": [],
+        "explorer": [
+          "https://explorer.cardano.org",
+          "https://cardanoscan.io/",
+          "https://blockchair.com/cardano",
+          "https://bscscan.com/token/0x3ee2200efb3400fabb9aacf31297cbdd1d435d47"
+        ],
+        "reddit": [
+          "https://reddit.com/r/cardano"
+        ],
+        "technical_doc": [
+          "https://docs.cardano.org/en/latest/"
+        ],
+        "source_code": [
+          "https://cardanoupdates.com/"
+        ],
+        "announcement": [
+          "https://t.me/CardanoAnnouncements"
+        ]
+      },
+      "platform": null,
+      "date_added": "2017-10-01T00:00:00.000Z",
+      "twitter_username": "cardano",
+      "is_hidden": 0,
+      "date_launched": "2017-09-01T00:00:00.000Z",
+      "contract_address": [
+        {
+          "contract_address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+          "platform": {
+            "name": "BNB Smart Chain (BEP20)",
+            "coin": {
+              "id": "1839",
+              "name": "BNB",
+              "symbol": "BNB",
+              "slug": "bnb"
+            }
+          }
+        },
+        {
+          "contract_address": "lovelace",
+          "platform": {
+            "name": "Cardano",
+            "coin": {
+              "id": "2010",
+              "name": "Cardano",
+              "symbol": "ADA",
+              "slug": "cardano"
+            }
+          }
+        }
+      ],
+      "self_reported_circulating_supply": null,
+      "self_reported_tags": [
+        "Communications & Social Media"
+      ],
+      "self_reported_market_cap": null,
+      "infinite_supply": false
+    }
+  }
+}

@@ -1,4 +1,4 @@
-package org.cryptodata.models.data;
+package org.cryptodata.models.data.airdrop;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

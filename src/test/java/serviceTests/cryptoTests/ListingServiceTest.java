@@ -1,69 +1,99 @@
 package serviceTests.cryptoTests;
 
+import org.cryptodata.CoinMarketCap;
+import org.cryptodata.exception.CoinMarketCapException;
+import org.cryptodata.models.data.listing.ListingData;
+import org.cryptodata.service.CoinMarketCapUrl;
+import org.cryptodata.service.crypto.ListingService;
+import org.junit.Test;
+import org.mockito.Mockito;
+import serviceTests.ServiceTestHelper;
+
+import java.io.IOException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
 public class ListingServiceTest {
 
-//    @Mock
-//    private CoinMarketCapClient client;
-//
-//    private ResponseDTO createResponseDTO() {
-//        // Mocking the Retrofit call and response
-//        ResponseDTO mockResponseDTO = new ResponseDTO();
-//        TreeMap<String, DataDTO> treeMap = new TreeMap<>();
-//        DataDTO dataDTO = new DataDTO();
-//        dataDTO.setId(1);
-//        dataDTO.setName("Bitcoin");
-//        dataDTO.setSymbol("BTC");
-//        dataDTO.setMaxSupply(2.0);
-//        dataDTO.setCirculatingSupply(2.01);
-//        dataDTO.setTotalSupply(2.01);
-//        dataDTO.setCmcRank(1);
-//        treeMap.put("1", dataDTO);
-//        mockResponseDTO.setData(treeMap);
-//        return mockResponseDTO;
-//    }
-//
-//    @Before
-//    public void setUp() {
-//        MockitoAnnotations.initMocks(this);
-//    }
-//
-//    @Test
-//    public void testGetListing_Success() throws Exception {
-//
-//        URI uri = new URIBuilder().build();
-////        Mockito.when(client.sendRequest(any())).thenReturn(createResponseDTO());
-//
-//        ListingService listingService = new ListingService(client);
-//        Listing actualResponse = listingService.getListing(1);
-//
-//        Assert.assertEquals(Integer.valueOf(1), actualResponse.getId());
-//        Assert.assertEquals(Integer.valueOf(1), actualResponse.getRank());
-//        Assert.assertEquals("Bitcoin", actualResponse.getName());
-//        Assert.assertEquals("BTC", actualResponse.getSymbol());
-//        Assert.assertEquals(2.01, actualResponse.getTotalSupply(), 0);
-//        Assert.assertEquals(2.01, actualResponse.getCirculatingSupply(), 0);
-//        Assert.assertEquals(2.0, actualResponse.getMaxSupply(), 0);
-//    }
-//
-//    @Test
-//    public void testGetListing_Fail() throws Exception {
-//
-////        Mockito.when(client.sendRequest(any())).thenReturn(new ResponseDTO());
-//
-//        ListingService listingService = new ListingService(client);
-//        Listing actualResponse = null;
-//        try
-//        {
-//            actualResponse = listingService.getListing(1);
-//        }catch (CoinMarketCapException e)
-//        {
-//            Assert.assertEquals(e.getMessage(), "Failed to retrieve listing details with id = 1");
-//        }
-//
-//        Assert.assertNull(actualResponse);
-//    }
-//
-//
+
+    @Test
+    public void test_historical_OK() throws IOException, InterruptedException, CoinMarketCapException {
+        // Create a mock of HttpClient
+        HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
+
+        int status = 200;
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/historicalOK.json";
+
+        // Create an instance of MyHttpClientWrapper and set the mock
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        myHttpClientWrapper.setHttpClient(mockHttpClient);
+
+        // Mock the behavior of HttpClient.send()
+        when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
+
+
+        // Perform the actual test
+        List<ListingData> result = myHttpClientWrapper.historical();
+
+        // Verify the result
+        assertEquals(Integer.valueOf(1), result.get(0).getId());
+        assertEquals(Double.valueOf(42265.18565486596), result.get(0).getQuote().get("USD").getPrice());
+        assertEquals(Integer.valueOf(1027), result.get(1).getId());
+        assertEquals(Integer.valueOf(825), result.get(2).getId());
+    }
+    @Test
+    public void test_latest_OK() throws IOException, InterruptedException, CoinMarketCapException {
+        // Create a mock of HttpClient
+        HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
+
+        int status = 200;
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/latestOK.json";
+
+        // Create an instance of MyHttpClientWrapper and set the mock
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        myHttpClientWrapper.setHttpClient(mockHttpClient);
+
+        // Mock the behavior of HttpClient.send()
+        when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
+
+
+        // Perform the actual test
+        List<ListingData> result = myHttpClientWrapper.latest();
+
+        // Verify the result
+        assertEquals(Integer.valueOf(1), result.get(0).getId());
+        assertEquals(Integer.valueOf(1027), result.get(1).getId());
+        assertEquals(Integer.valueOf(825), result.get(2).getId());
+    }
+    @Test
+    public void test_new_OK() throws IOException, InterruptedException, CoinMarketCapException {
+        // Create a mock of HttpClient
+        HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
+
+        int status = 200;
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/newOK.json";
+
+        // Create an instance of MyHttpClientWrapper and set the mock
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        myHttpClientWrapper.setHttpClient(mockHttpClient);
+
+        // Mock the behavior of HttpClient.send()
+        when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
+
+
+        // Perform the actual test
+        List<ListingData> result = myHttpClientWrapper.listNew();
+
+        // Verify the result
+        assertEquals(Integer.valueOf(1), result.get(0).getId());
+        assertEquals(Integer.valueOf(1027), result.get(1).getId());
+    }
+
+
 }

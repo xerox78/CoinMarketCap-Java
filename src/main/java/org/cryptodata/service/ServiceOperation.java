@@ -37,6 +37,7 @@ public abstract class ServiceOperation {
         try {
             responseAPI = fromJson(response, dataClass);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             throw new CoinMarketCapException("Couldn't parse Json", e.getCause());
         }
         if (!responseAPI.getStatus().getErrorCode().equals(0L)) {

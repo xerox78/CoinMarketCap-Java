@@ -4,8 +4,8 @@ import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.models.data.AirdropData;
-import org.cryptodata.models.data.ListingData;
+import org.cryptodata.models.data.airdrop.AirdropData;
+import org.cryptodata.models.data.listing.ListingData;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class TrendingService extends ServiceOperation
      *
      * @return instance of CoinMarketCapFilter
      */
-    public List<AirdropData> latest() throws CoinMarketCapException {
+    public List<ListingData> latest() throws CoinMarketCapException {
         return sendRequest(urlBuilder.trending().latest().build(), coinMarketCap.getApiKey(), getJavaTypeList(ListingData.class));
     }
 
@@ -40,7 +40,7 @@ public class TrendingService extends ServiceOperation
      *
      * @return instance of CoinMarketCapFilter
      */
-    public List<AirdropData> mostVisited() throws CoinMarketCapException {
+    public List<ListingData> mostVisited() throws CoinMarketCapException {
         return sendRequest(urlBuilder.trending().mostVisited().build(), coinMarketCap.getApiKey(), getJavaTypeList(ListingData.class));
     }
 }

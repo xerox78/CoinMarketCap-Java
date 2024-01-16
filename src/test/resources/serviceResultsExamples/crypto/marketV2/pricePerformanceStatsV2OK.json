@@ -1,0 +1,52 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:23:44.477Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "open_timestamp": "2024-01-16T13:23:44.477Z",
+      "high_timestamp": "2024-01-16T13:23:44.477Z",
+      "low_timestamp": "2024-01-16T13:23:44.477Z",
+      "close_timestamp": "2024-01-16T13:23:44.477Z",
+      "quote": {
+        "USD": {
+          "open": 0.426389882911546,
+          "open_timestamp": "2024-01-16T13:23:44.477Z",
+          "high": 0.5781003479409452,
+          "high_timestamp": "2024-01-16T13:23:44.477Z",
+          "low": 0.7955723057736916,
+          "low_timestamp": "2024-01-16T13:23:44.477Z",
+          "close": 0.7663931382825888,
+          "close_timestamp": "2024-01-16T13:23:44.477Z",
+          "percent_change": 0.3800615588320855,
+          "price_change": 0.9862238583165914
+        }
+      }
+    },
+    "5934": {
+      "open_timestamp": "2024-01-16T13:23:44.477Z",
+      "high_timestamp": "2024-01-16T13:23:44.477Z",
+      "low_timestamp": "2024-01-16T13:23:44.477Z",
+      "close_timestamp": "2024-01-16T13:23:44.477Z",
+      "quote": {
+        "USD": {
+          "open": 0.11410558879083332,
+          "open_timestamp": "2024-01-16T13:23:44.477Z",
+          "high": 0.7221701419901057,
+          "high_timestamp": "2024-01-16T13:23:44.477Z",
+          "low": 0.7667333342229938,
+          "low_timestamp": "2024-01-16T13:23:44.477Z",
+          "close": 0.466043954667958,
+          "close_timestamp": "2024-01-16T13:23:44.477Z",
+          "percent_change": 0.515103720527841,
+          "price_change": 0.5438793299993625
+        }
+      }
+    }
+  }
+}

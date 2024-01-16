@@ -1,10 +1,12 @@
-package org.cryptodata.models.data;
+package org.cryptodata.models.data.listing;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.cryptodata.models.data.PlatformData;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 @Data
@@ -24,7 +26,7 @@ public class ListingData {
     private List<String> tags;
 
     @JsonProperty("max_supply")
-    private Double maxSupply;
+    private Long maxSupply;
 
     @JsonProperty("circulating_supply")
     private Double circulatingSupply;
@@ -52,5 +54,5 @@ public class ListingData {
     @JsonProperty("last_update")
     private Date lastUpdate;
 
-    private TreeMap<String, QuoteData> quote;
+    private Map<String, ListingQuoteData> quote;
 }

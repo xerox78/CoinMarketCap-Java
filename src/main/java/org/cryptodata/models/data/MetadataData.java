@@ -48,10 +48,10 @@ public class MetadataData {
         public String category;
 
         @JsonProperty("self_reported_circulating_supply")
-        public String selfReportedCirculatingSupply;
+        public Double selfReportedCirculatingSupply;
 
         @JsonProperty("self_reported_market_cap")
-        public String selfReportedMarketCap;
+        public Double selfReportedMarketCap;
 
         @JsonProperty("self_reported_tags")
         public List<String> selfReportedTags;

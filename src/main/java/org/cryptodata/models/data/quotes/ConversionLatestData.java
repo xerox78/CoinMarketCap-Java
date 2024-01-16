@@ -1,4 +1,4 @@
-package org.cryptodata.models.data;
+package org.cryptodata.models.data.quotes;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -6,15 +6,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class QuoteData {
-    @JsonProperty("price")
-    private Double price;
-
-    @JsonProperty("volume_24h")
-    private Double volume24h;
-
-    @JsonProperty("volume_change_24h")
-    private Double volumeChange24h;
+public class ConversionLatestData {
 
     @JsonProperty("percent_change_1h")
     private Double percentChange1h;
@@ -33,6 +25,15 @@ public class QuoteData {
 
     @JsonProperty("percent_change_90d")
     private Double percentChange90d;
+
+    @JsonProperty("price")
+    private Double price;
+
+    @JsonProperty("volume_24h")
+    private Double volume24h;
+
+    @JsonProperty("volume_change_24h")
+    private Double volumeChange24h;
 
     @JsonProperty("market_cap")
     private Double marketCap;

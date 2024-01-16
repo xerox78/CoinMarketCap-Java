@@ -3,6 +3,8 @@ package org.cryptodata.models.data;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class CategoryData {
 
@@ -37,5 +39,5 @@ public class CategoryData {
     private Double volumeChange;
 
     @JsonProperty("last_updated")
-    private Long lastUpdated;
+    private Date lastUpdated;
 }
