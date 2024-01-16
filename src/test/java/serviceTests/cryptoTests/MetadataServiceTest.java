@@ -42,7 +42,7 @@ public class MetadataServiceTest {
         List<MetadataMapData> result = myHttpClientWrapper.map();
 
         // Verify the result
-        assertEquals(1469, result.get(0).getId());
+        assertEquals(1469, result.get(0).id());
         assertEquals(10, result.size());
     }
 
@@ -65,7 +65,7 @@ public class MetadataServiceTest {
         Map<String, MetadataInfoData> result = myHttpClientWrapper.info();
 
         // Verify the result
-        assertEquals(1, result.get("1").getId());
+        assertEquals(1, result.get("1").id());
         assertEquals(2, result.size());
     }
 

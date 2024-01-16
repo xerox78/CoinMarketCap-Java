@@ -1,18 +1,16 @@
 package org.cryptodata.service.crypto.quote.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
-@Data
-public class QuotePlatform {
-    private Integer id;
+public record QuotePlatform(
+        Integer id,
 
-    private String name;
+        String name,
 
-    private String symbol;
+        String symbol,
 
-    private String slug;
+        String slug,
 
-    @JsonProperty("token_address")
-    private String tokenAddress;
+        @JsonProperty("token_address") String tokenAddress
+) {
 }

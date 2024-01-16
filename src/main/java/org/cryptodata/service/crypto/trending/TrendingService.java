@@ -2,15 +2,17 @@ package org.cryptodata.service.crypto.trending;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.trending.models.TrendingData;
 
 import java.util.List;
 
 public class TrendingService extends ServiceOperation {
-    public TrendingService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+    private final CoinMarketCapUrlBuilder urlBuilder;
+
+    public TrendingService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -20,7 +22,7 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> gainersLosers() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().gainersLosers().build(), coinMarketCap.apiKey(), getJavaTypeList(TrendingData.class));
+        return sendRequest(urlBuilder.trending().gainersLosers().build(), getJavaTypeList(TrendingData.class));
 
     }
 
@@ -30,7 +32,7 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().latest().build(), coinMarketCap.apiKey(), getJavaTypeList(TrendingData.class));
+        return sendRequest(urlBuilder.trending().latest().build(), getJavaTypeList(TrendingData.class));
     }
 
     /**
@@ -39,6 +41,6 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> mostVisited() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().mostVisited().build(), coinMarketCap.apiKey(), getJavaTypeList(TrendingData.class));
+        return sendRequest(urlBuilder.trending().mostVisited().build(), getJavaTypeList(TrendingData.class));
     }
 }

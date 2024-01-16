@@ -1,20 +1,16 @@
 package org.cryptodata.service.crypto.marketPairs.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.List;
 
-@Data
-public class MarketPairsData {
+public record MarketPairsData(
+        Integer id,
+        String name,
+        String symbol,
+        @JsonProperty("num_market_pairs") Integer numMarketPairs,
+        @JsonProperty("market_pairs") List<MarketPairsPairs> marketPairs
+) {
 
-    private Integer id;
-    private String name;
-    private String symbol;
 
-    @JsonProperty("num_market_pairs")
-    private Integer numMarketPairs;
-
-    @JsonProperty("market_pairs")
-    private List<MarketPairsPairs> marketPairs;
 }

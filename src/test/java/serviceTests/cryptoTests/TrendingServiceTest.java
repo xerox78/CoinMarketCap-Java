@@ -41,8 +41,8 @@ public class TrendingServiceTest {
         List<TrendingData> result = myHttpClientWrapper.gainersLosers();
 
         // Verify the result
-        assertEquals("7ndcd0cx44a", result.get(0).getName());
-        assertEquals(Double.valueOf(7791), result.get(0).getQuote().get("USD").getVolume24h());
+        assertEquals("7ndcd0cx44a", result.get(0).name());
+        assertEquals(Double.valueOf(7791), result.get(0).quote().get("USD").volume24h());
         assertEquals(10, result.size());
     }
 
@@ -66,9 +66,9 @@ public class TrendingServiceTest {
         List<TrendingData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals("zl0703ku71", result.get(0).getName());
+        assertEquals("zl0703ku71", result.get(0).name());
 
-        assertEquals("v7ztqlju0g", result.get(1).getName());
+        assertEquals("v7ztqlju0g", result.get(1).name());
         assertEquals(10, result.size());
     }
 
@@ -91,9 +91,9 @@ public class TrendingServiceTest {
         List<TrendingData> result = myHttpClientWrapper.mostVisited();
 
         // Verify the result
-        assertEquals("6do5unsmgis", result.get(0).getName());
+        assertEquals("6do5unsmgis", result.get(0).name());
 
-        assertEquals("u8vzyptbeif", result.get(1).getName());
+        assertEquals("u8vzyptbeif", result.get(1).name());
         assertEquals(10, result.size());
     }
 }

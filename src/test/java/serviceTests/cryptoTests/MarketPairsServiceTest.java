@@ -40,9 +40,9 @@ public class MarketPairsServiceTest {
         MarketPairsData result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals("i2t13gjemt", result.getName());
-        assertEquals("tn3iyg7cwtn", result.getMarketPairs().get(0).getMarketPairQuote().getExchangeSymbol());
-        assertEquals(Double.valueOf(0.8980449996846589), result.getMarketPairs().get(0).getQuote().get("USD").getVolume24h());
+        assertEquals("i2t13gjemt", result.name());
+        assertEquals("tn3iyg7cwtn", result.marketPairs().get(0).marketPairQuote().exchangeSymbol());
+        assertEquals(Double.valueOf(0.8980449996846589), result.marketPairs().get(0).quote().get("USD").volume24h());
     }
 
 

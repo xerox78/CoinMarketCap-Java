@@ -1,52 +1,36 @@
 package org.cryptodata.service.crypto.quote.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.Date;
 
-@Data
-public class ConversionLatestData {
+public record ConversionLatestData(
+        @JsonProperty("percent_change_1h") Double percentChange1h,
 
-    @JsonProperty("percent_change_1h")
-    private Double percentChange1h;
+        @JsonProperty("percent_change_24h") Double percentChange24h,
 
-    @JsonProperty("percent_change_24h")
-    private Double percentChange24h;
+        @JsonProperty("percent_change_7d") Double percentChange7d,
 
-    @JsonProperty("percent_change_7d")
-    private Double percentChange7d;
+        @JsonProperty("percent_change_30d") Double percentChange30d,
 
-    @JsonProperty("percent_change_30d")
-    private Double percentChange30d;
+        @JsonProperty("percent_change_60d") Double percentChange60d,
 
-    @JsonProperty("percent_change_60d")
-    private Double percentChange60d;
+        @JsonProperty("percent_change_90d") Double percentChange90d,
 
-    @JsonProperty("percent_change_90d")
-    private Double percentChange90d;
+        @JsonProperty("price") Double price,
 
-    @JsonProperty("price")
-    private Double price;
+        @JsonProperty("volume_24h") Double volume24h,
 
-    @JsonProperty("volume_24h")
-    private Double volume24h;
+        @JsonProperty("volume_change_24h") Double volumeChange24h,
 
-    @JsonProperty("volume_change_24h")
-    private Double volumeChange24h;
+        @JsonProperty("market_cap") Double marketCap,
 
-    @JsonProperty("market_cap")
-    private Double marketCap;
+        @JsonProperty("market_cap_dominance") Double marketCapDominance,
 
-    @JsonProperty("market_cap_dominance")
-    private Double marketCapDominance;
+        @JsonProperty("fully_diluted_market_cap") Double fullyDilutedMarketCap,
 
-    @JsonProperty("fully_diluted_market_cap")
-    private Double fullyDilutedMarketCap;
+        @JsonProperty("tvl") Double tvl,
 
-    @JsonProperty("tvl")
-    private Double tvl;
-
-    @JsonProperty("last_updated")
-    private Date lastUpdated;
+        @JsonProperty("last_updated") Date lastUpdated
+) {
 }

@@ -1,19 +1,16 @@
 package org.cryptodata.service.crypto.trending.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
-@Data
-public class TrendingPlatform {
+public record TrendingPlatform(
+        Integer id,
 
-    private Integer id;
+        String name,
 
-    private String name;
+        String symbol,
 
-    private String symbol;
+        String slug,
 
-    private String slug;
-
-    @JsonProperty("token_address")
-    private String tokenAddress;
+        @JsonProperty("token_address") String tokenAddress
+) {
 }

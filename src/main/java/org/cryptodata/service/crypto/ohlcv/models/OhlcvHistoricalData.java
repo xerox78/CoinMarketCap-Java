@@ -1,15 +1,13 @@
 package org.cryptodata.service.crypto.ohlcv.models;
 
-import lombok.Data;
-
 import java.util.List;
 
-@Data
-public class OhlcvHistoricalData {
+public record OhlcvHistoricalData(
+        Integer id,
+        String name,
+        String symbol,
+        List<OhlcvQuotes> quotes
+) {
 
-    private Integer id;
-    private String name;
-    private String symbol;
-    private List<OhlcvQuotes> quotes;
 
 }

@@ -11,8 +11,10 @@ import java.util.Map;
 
 public class OhlcvService extends ServiceOperation {
 
+    private final CoinMarketCapUrl.CoinMarketCapUrlBuilder urlBuilder;
+
     public OhlcvService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -22,7 +24,7 @@ public class OhlcvService extends ServiceOperation {
      * @return OhlcvData
      */
     public Map<String, OhlcvHistoricalData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().historical().build(), coinMarketCap.apiKey(), getJavaTypeMap(OhlcvHistoricalData.class));
+        return sendRequest(urlBuilder.ohlcv().historical().build(), getJavaTypeMap(OhlcvHistoricalData.class));
     }
 
     /**
@@ -31,6 +33,6 @@ public class OhlcvService extends ServiceOperation {
      * @return OhlcvData
      */
     public Map<String, OhlcvLatestData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().latest().build(), coinMarketCap.apiKey(), getJavaTypeMap(OhlcvLatestData.class));
+        return sendRequest(urlBuilder.ohlcv().latest().build(), getJavaTypeMap(OhlcvLatestData.class));
     }
 }

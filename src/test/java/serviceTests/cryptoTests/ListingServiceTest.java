@@ -21,7 +21,6 @@ import static org.mockito.Mockito.when;
 
 public class ListingServiceTest {
 
-
     @Test
     public void test_historical_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -42,10 +41,10 @@ public class ListingServiceTest {
         List<ListingData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get(0).getId());
-        assertEquals(Double.valueOf(42265.18565486596), result.get(0).getQuote().get("USD").getPrice());
-        assertEquals(Integer.valueOf(1027), result.get(1).getId());
-        assertEquals(Integer.valueOf(825), result.get(2).getId());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Double.valueOf(42265.18565486596), result.get(0).quote().get("USD").price());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
+        assertEquals(Integer.valueOf(825), result.get(2).id());
     }
 
     @Test
@@ -68,9 +67,9 @@ public class ListingServiceTest {
         List<ListingData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get(0).getId());
-        assertEquals(Integer.valueOf(1027), result.get(1).getId());
-        assertEquals(Integer.valueOf(825), result.get(2).getId());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
+        assertEquals(Integer.valueOf(825), result.get(2).id());
     }
 
     @Test
@@ -93,8 +92,8 @@ public class ListingServiceTest {
         List<ListingData> result = myHttpClientWrapper.listNew();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get(0).getId());
-        assertEquals(Integer.valueOf(1027), result.get(1).getId());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
     }
 
 

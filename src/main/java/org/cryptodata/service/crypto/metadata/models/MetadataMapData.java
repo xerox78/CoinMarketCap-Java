@@ -1,36 +1,26 @@
 package org.cryptodata.service.crypto.metadata.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 
 import java.util.Date;
 
-@Data
-public class MetadataMapData {
-    @JsonProperty("id")
-    public int id;
+public record MetadataMapData(
+        @JsonProperty("id") int id,
 
-    @JsonProperty("rank")
-    public int rank;
+        @JsonProperty("rank") int rank,
 
-    @JsonProperty("name")
-    public String name;
+        @JsonProperty("name") String name,
 
-    @JsonProperty("symbol")
-    public String symbol;
+        @JsonProperty("symbol") String symbol,
 
-    @JsonProperty("slug")
-    public String slug;
+        @JsonProperty("slug") String slug,
 
-    @JsonProperty("is_active")
-    public Boolean isActive;
+        @JsonProperty("is_active") Boolean isActive,
 
-    @JsonProperty("first_historical_data")
-    public Date firstHistoricalData;
+        @JsonProperty("first_historical_data") Date firstHistoricalData,
 
-    @JsonProperty("last_historical_data")
-    public Date lastHistoricalData;
+        @JsonProperty("last_historical_data") Date lastHistoricalData,
 
-    @JsonProperty("platform")
-    public MetadataPlatform platform;
+        @JsonProperty("platform") MetadataPlatform platform
+) {
 }

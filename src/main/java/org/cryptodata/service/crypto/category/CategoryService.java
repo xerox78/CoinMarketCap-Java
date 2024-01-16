@@ -9,8 +9,10 @@ import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import java.util.List;
 
 public class CategoryService extends ServiceOperation {
+    private final CoinMarketCapUrlBuilder urlBuilder;
+
     public CategoryService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -20,7 +22,7 @@ public class CategoryService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public CategoryData get() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.category().build(), coinMarketCap.apiKey(), getJavaType(CategoryData.class));
+        return sendRequest(urlBuilder.category().build(), getJavaType(CategoryData.class));
     }
 
     /**
@@ -29,7 +31,7 @@ public class CategoryService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<CategoryData> list() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.categories().build(), coinMarketCap.apiKey(), getJavaTypeList(CategoryData.class));
+        return sendRequest(urlBuilder.categories().build(), getJavaTypeList(CategoryData.class));
     }
 
 

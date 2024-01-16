@@ -41,7 +41,7 @@ public class PricePerformanceStatsServiceTest {
         Map<String, PricePerformanceStatsData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(Double.valueOf(0.426389882911546), result.get("1").getQuote().get("USD").getOpen());
+        assertEquals(Double.valueOf(0.426389882911546), result.get("1").quote().get("USD").open());
         assertEquals(2, result.size());
     }
 }

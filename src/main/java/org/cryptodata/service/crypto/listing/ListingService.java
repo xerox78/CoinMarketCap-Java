@@ -10,8 +10,10 @@ import java.util.List;
 
 public class ListingService extends ServiceOperation {
 
+    private final CoinMarketCapUrlBuilder urlBuilder;
+
     public ListingService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
+        super(coinMarketCap, cryptocurrencyUrl);
         this.urlBuilder = cryptocurrencyUrl;
     }
 
@@ -22,7 +24,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().latest().build(), coinMarketCap.apiKey(), getJavaTypeList(ListingData.class));
+        return sendRequest(urlBuilder.listings().latest().build(), getJavaTypeList(ListingData.class));
     }
 
 
@@ -32,7 +34,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().historical().build(), coinMarketCap.apiKey(), getJavaTypeList(ListingData.class));
+        return sendRequest(urlBuilder.listings().historical().build(), getJavaTypeList(ListingData.class));
     }
 
 
@@ -42,7 +44,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> listNew() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().newPath().build(), coinMarketCap.apiKey(), getJavaTypeList(ListingData.class));
+        return sendRequest(urlBuilder.listings().newPath().build(), getJavaTypeList(ListingData.class));
 
     }
 }
