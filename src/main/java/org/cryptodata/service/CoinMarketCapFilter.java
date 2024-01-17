@@ -423,6 +423,17 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
     }
 
     /**
+     * Adds the "include_metals" parameter to the filter.
+     *
+     * @param value The value of the "include_metals" parameter.
+     * @return This CoinMarketCapFilter instance for method chaining.
+     */
+    public CoinMarketCapFilter<R> includeMetals(boolean value) {
+        instance.getUrlBuilder().addParameter(INCLUDE_METALS.value, String.valueOf(value));
+        return this;
+    }
+
+    /**
      * Builds and returns the original service operation instance with the applied filter.
      *
      * @return The original service operation instance with the applied filter.
@@ -470,6 +481,7 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
         TIME_END("time_end"),
         COUNT("count"),
         INTERVAL("interval"),
+        INCLUDE_METALS("include_metals"),
         TIME_PERIOD("time_period");
 
         /**

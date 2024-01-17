@@ -1,10 +1,12 @@
-package org.cryptodata;
+package org.cryptodata.service.crypto;
 
+import org.cryptodata.CoinMarketCap;
 import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.crypto.airdrop.AirdropService;
 import org.cryptodata.service.crypto.category.CategoryService;
 import org.cryptodata.service.crypto.listing.ListingService;
+import org.cryptodata.service.crypto.marketpairs.MarketPairsService;
 import org.cryptodata.service.crypto.metadata.MetadataService;
 import org.cryptodata.service.crypto.ohlcv.OhlcvService;
 import org.cryptodata.service.crypto.priceperformance.PricePerformanceStatsService;
@@ -24,7 +26,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for AirdropService.
      */
-    CoinMarketCapFilter<AirdropService> airdrop() {
+    public CoinMarketCapFilter<AirdropService> airdrop() {
         return new CoinMarketCapFilter<>(new AirdropService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -34,7 +36,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for ListingService.
      */
-    CoinMarketCapFilter<ListingService> listing() {
+    public CoinMarketCapFilter<ListingService> listing() {
         return new CoinMarketCapFilter<>(new ListingService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -43,7 +45,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for QuoteService.
      */
-    CoinMarketCapFilter<QuoteService> quote() {
+    public CoinMarketCapFilter<QuoteService> quote() {
         return new CoinMarketCapFilter<>(new QuoteService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -52,7 +54,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for CategoryService.
      */
-    CoinMarketCapFilter<CategoryService> category() {
+    public CoinMarketCapFilter<CategoryService> category() {
         return new CoinMarketCapFilter<>(new CategoryService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -61,7 +63,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for MetadataService.
      */
-    CoinMarketCapFilter<MetadataService> metadata() {
+    public CoinMarketCapFilter<MetadataService> metadata() {
         return new CoinMarketCapFilter<>(new MetadataService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -70,7 +72,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for TrendingService.
      */
-    CoinMarketCapFilter<TrendingService> trending() {
+    public CoinMarketCapFilter<TrendingService> trending() {
         return new CoinMarketCapFilter<>(new TrendingService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -79,7 +81,7 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for OhlcvService.
      */
-    CoinMarketCapFilter<OhlcvService> ohlcv() {
+    public CoinMarketCapFilter<OhlcvService> ohlcv() {
         return new CoinMarketCapFilter<>(new OhlcvService(coinMarketCap, cryptocurrencyUrl));
     }
 
@@ -88,8 +90,17 @@ public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUr
      *
      * @return CoinMarketCapFilter for PricePerformanceStatsService.
      */
-    CoinMarketCapFilter<PricePerformanceStatsService> pricePerformanceStats() {
+    public CoinMarketCapFilter<PricePerformanceStatsService> pricePerformanceStats() {
         return new CoinMarketCapFilter<>(new PricePerformanceStatsService(coinMarketCap, cryptocurrencyUrl));
+    }
+
+    /**
+     * Creates a CoinMarketCapFilter for MarketPairsService operations.
+     *
+     * @return CoinMarketCapFilter for MarketPairsService.
+     */
+    public CoinMarketCapFilter<MarketPairsService> marketPairs() {
+        return new CoinMarketCapFilter<>(new MarketPairsService(coinMarketCap, cryptocurrencyUrl));
     }
 
 }

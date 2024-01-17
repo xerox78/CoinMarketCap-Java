@@ -1,6 +1,8 @@
 package org.cryptodata;
 
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.crypto.CryptocurrencyService;
+import org.cryptodata.service.fiat.FiatService;
 
 /*
  * This class provides methods to create instances of services groups.
@@ -32,6 +34,15 @@ public record CoinMarketCap(String apiKey) {
      */
     public CryptocurrencyService cryptocurrencyV3() {
         return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v3().cryptocurrency());
+    }
+
+    /**
+     * Creates an instance of FiatService for version 1 of the CoinMarketCap API.
+     *
+     * @return FiatService instance for version 1.
+     */
+    public FiatService fiatV1() {
+        return new FiatService(this, new CoinMarketCapUrlBuilder().v1().fiat());
     }
 
 }

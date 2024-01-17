@@ -27,7 +27,7 @@ public class PricePerformanceStatsServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/marketV2/pricePerformanceStatsV2OK.json";
+        String path = "src/test/resources/results/crypto/marketV2/pricePerformanceStatsV2OK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         PricePerformanceStatsService myHttpClientWrapper = new PricePerformanceStatsService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

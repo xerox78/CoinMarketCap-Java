@@ -27,7 +27,7 @@ public class ListingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/listing/historicalOK.json";
+        String path = "src/test/resources/results/crypto/listing/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -53,7 +53,7 @@ public class ListingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/listing/latestOK.json";
+        String path = "src/test/resources/results/crypto/listing/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -78,7 +78,7 @@ public class ListingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/listing/newOK.json";
+        String path = "src/test/resources/results/crypto/listing/newOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

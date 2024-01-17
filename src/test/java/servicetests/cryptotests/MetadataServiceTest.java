@@ -29,7 +29,7 @@ public class MetadataServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/idMapOK.json";
+        String path = "src/test/resources/results/crypto/metadata/idMapOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -52,7 +52,7 @@ public class MetadataServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/metadataV2OK.json";
+        String path = "src/test/resources/results/crypto/metadata/metadataV2OK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

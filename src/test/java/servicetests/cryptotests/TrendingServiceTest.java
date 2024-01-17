@@ -27,7 +27,7 @@ public class TrendingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/trending/gainersLosersOK.json";
+        String path = "src/test/resources/results/crypto/trending/gainersLosersOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -52,7 +52,7 @@ public class TrendingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/trending/latestOK.json";
+        String path = "src/test/resources/results/crypto/trending/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -78,7 +78,7 @@ public class TrendingServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/trending/mostVisitedOK.json";
+        String path = "src/test/resources/results/crypto/trending/mostVisitedOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

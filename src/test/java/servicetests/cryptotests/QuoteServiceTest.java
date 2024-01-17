@@ -28,7 +28,7 @@ public class QuoteServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV2/historicalOK.json";
+        String path = "src/test/resources/results/crypto/quoteV2/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -52,7 +52,7 @@ public class QuoteServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV2/latestOK.json";
+        String path = "src/test/resources/results/crypto/quoteV2/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -77,7 +77,7 @@ public class QuoteServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV3/historicalOK.json";
+        String path = "src/test/resources/results/crypto/quoteV3/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

@@ -28,7 +28,7 @@ public class CategoryServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/category/categoryOK.json";
+        String path = "src/test/resources/results/crypto/category/categoryOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -52,7 +52,7 @@ public class CategoryServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/category/categoriesOK.json";
+        String path = "src/test/resources/results/crypto/category/categoriesOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());

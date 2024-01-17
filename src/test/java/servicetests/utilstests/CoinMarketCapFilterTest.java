@@ -383,6 +383,16 @@ public class CoinMarketCapFilterTest {
     }
 
     @Test
+    public void filter_include_metals_OK() {
+        AirdropService build = filter.includeMetals(true).build();
+        try {
+            Assert.assertEquals("https://pro-api.coinmarketcap.com?include_metals=true", build.getUrlBuilder().build().toString());
+        } catch (CoinMarketCapException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
     public void filter_all_OK() {
         AirdropService build = filter
                 .id("value")

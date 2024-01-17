@@ -28,7 +28,7 @@ public class AirdropServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropOK.json";
+        String path = "src/test/resources/results/crypto/airdrop/airdropOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
@@ -52,7 +52,7 @@ public class AirdropServiceTest {
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropsOK.json";
+        String path = "src/test/resources/results/crypto/airdrop/airdropsOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
         AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
