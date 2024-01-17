@@ -70,6 +70,7 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 ### Filters Available
 <details>
 <summary>Implemented Filters</summary>
+
 1. **`id(String value)`**: Filter by cryptocurrency ID.
 2. **`symbol(String value)`**: Filter by cryptocurrency symbol.
 3. **`slug(String value)`**: Filter by cryptocurrency slug.
@@ -106,6 +107,7 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 34. **`timeEnd(String value)`**: Filter by end time.
 35. **`count(String value)`**: Filter by count.
 36. **`interval(String value)`**: Filter by interval.
+
 </details>
 
 ## Getting Started
