@@ -6,67 +6,70 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 
 ## CoinMarketCap API Supported Endpoints
 
-### Cryptocurrency
+<details>
+<summary>Cryptocurrency Endpoints</summary>
 
-<span style="color: green;">[**/v1/cryptocurrency/map**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyMap)</span>
+1. [**/v1/cryptocurrency/map**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyMap)
     - Description: CoinMarketCap ID map.
 
-<span style="color: green;">[**/v2/cryptocurrency/info**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyInfo)</span>
+2. [**/v2/cryptocurrency/info**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyInfo)
     - Description: Metadata.
 
-<span style="color: green;">[**/v1/cryptocurrency/listings/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest)</span>
+3. [**/v1/cryptocurrency/listings/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsLatest)
     - Description: Latest listings.
 
-<span style="color: green;">[**/v1/cryptocurrency/listings/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical)</span>
+4. [**/v1/cryptocurrency/listings/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical)
     - Description: Historical listings.
 
-<span style="color: green;">[**/v1/cryptocurrency/listings/new**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsNew)</span>
+5. [**/v1/cryptocurrency/listings/new**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsNew)
     - Description: New listings.
 
-<span style="color: green;">[**/v2/cryptocurrency/quotes/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyQuotesLatest)</span>
+6. [**/v2/cryptocurrency/quotes/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyQuotesLatest)
     - Description: Latest quotes.
 
-<span style="color: green;">[**/v2/cryptocurrency/quotes/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyQuotesHistorical)</span>
+7. [**/v2/cryptocurrency/quotes/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyQuotesHistorical)
     - Description: Historical quotes.
 
-<span style="color: green;">[**/v3/cryptocurrency/quotes/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV3CryptocurrencyQuotesHistorical)</span>
+8. [**/v3/cryptocurrency/quotes/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV3CryptocurrencyQuotesHistorical)
     - Description: Historical quotes.
 
-<span style="color: green;">[**/v2/cryptocurrency/market-pairs/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyMarketpairsLatest)</span>
+9. [**/v2/cryptocurrency/market-pairs/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyMarketpairsLatest)
     - Description: Latest market pairs.
 
-<span style="color: green;">[**/v2/cryptocurrency/ohlcv/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvLatest)</span>
+10. [**/v2/cryptocurrency/ohlcv/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvLatest)
     - Description: Latest OHLCV (Open, High, Low, Close, Volume).
 
-<span style="color: green;">[**/v2/cryptocurrency/ohlcv/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvHistorical)</span>
+11. [**/v2/cryptocurrency/ohlcv/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvHistorical)
     - Description: Historical OHLCV.
 
-<span style="color: green;">[**/v2/cryptocurrency/price-performance-stats/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyPriceperformancestatsLatest)</span>
+12. [**/v2/cryptocurrency/price-performance-stats/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyPriceperformancestatsLatest)
     - Description: Latest Price Performance Stats.
 
-<span style="color: green;">[**/v1/cryptocurrency/categories**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyCategories)</span>
+13. [**/v1/cryptocurrency/categories**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyCategories)
     - Description: Categories.
 
-<span style="color: green;">[**/v1/cryptocurrency/category**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyCategory)</span>
+14. [**/v1/cryptocurrency/category**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyCategory)
     - Description: Category.
 
-<span style="color: green;">[**/v1/cryptocurrency/airdrops**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyAirdrops)</span>
+15. [**/v1/cryptocurrency/airdrops**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyAirdrops)
     - Description: Airdrops.
 
-<span style="color: green;">[**/v1/cryptocurrency/airdrop**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyAirdrop)</span>
+16. [**/v1/cryptocurrency/airdrop**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyAirdrop)
     - Description: Airdrop.
 
-<span style="color: green;">[**/v1/cryptocurrency/trending/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest)</span>
+17. [**/v1/cryptocurrency/trending/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingLatest)
     - Description: Trending Latest.
 
-<span style="color: green;">[**/v1/cryptocurrency/trending/most-visited**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingMostvisited)</span>
+18. [**/v1/cryptocurrency/trending/most-visited**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingMostvisited)
     - Description: Trending Most Visited.
 
-<span style="color: green;">[**/v1/cryptocurrency/trending/gainers-losers**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingGainerslosers)</span>
+19. [**/v1/cryptocurrency/trending/gainers-losers**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyTrendingGainerslosers)
     - Description: Trending Gainers & Losers.
+</details>
 
 ### Filters Available
-
+<details>
+<summary>Implemented Filters</summary>
 1. **`id(String value)`**: Filter by cryptocurrency ID.
 2. **`symbol(String value)`**: Filter by cryptocurrency symbol.
 3. **`slug(String value)`**: Filter by cryptocurrency slug.
@@ -103,6 +106,7 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 34. **`timeEnd(String value)`**: Filter by end time.
 35. **`count(String value)`**: Filter by count.
 36. **`interval(String value)`**: Filter by interval.
+</details>
 
 ## Getting Started
 
