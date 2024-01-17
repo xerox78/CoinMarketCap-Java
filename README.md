@@ -130,16 +130,16 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 ## Getting Started
 
 ```java 
-// Step 1: Create an instance of the CoinMarketCap API service and specify the API key.
-MetadataService service=new CoinMarketCap("apiKey")
-        // Step 2: Choose the cryptocurrency endpoint with version (V2 in this case).
-        .cryptocurrencyV2() // Choose the cryptocurrency endpoint with version
-        // Step 3: Choose the specific data to query, in this case, metadata.
-        .metadata() // Choose the data to query
-        // Step 4: Add necessary filters to the query, in this case, specifying the cryptocurrency IDs (1).
-        .id("1") // Add the necessary filters
-        // Step 5: Build the metadata service with the specified configuration.
-        .build();
+        // Step 1: Create an instance of the CoinMarketCap API service and specify the API key.
+        MetadataService service = new CoinMarketCap("apiKey")
+            // Step 2: Choose the cryptocurrency endpoint with version (V2 in this case).
+            .cryptocurrencyV2() // Choose the cryptocurrency endpoint with version
+            // Step 3: Choose the specific data to query, in this case, metadata.
+            .metadata() // Choose the data to query
+            // Step 4: Add necessary filters to the query, in this case, specifying the cryptocurrency IDs (1).
+            .id("1") // Add the necessary filters
+            // Step 5: Build the metadata service with the specified configuration.
+            .build();
 
         // Step 6: Try to execute the service-specific endpoint to retrieve metadata.
         try{
