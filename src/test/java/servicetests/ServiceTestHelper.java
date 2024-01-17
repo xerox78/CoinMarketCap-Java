@@ -1,4 +1,4 @@
-package serviceTests;
+package servicetests;
 
 import javax.net.ssl.SSLSession;
 import java.io.IOException;
@@ -11,8 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Optional;
 
-public class ServiceTestHelper
-{
+public class ServiceTestHelper {
     public static HttpResponse<String> createMockedResponse(String body, int status) {
 
         return new HttpResponse<>() {
@@ -50,7 +49,6 @@ public class ServiceTestHelper
             public HttpClient.Version version() {
                 return null;
             }
-
 
 
             // Implementing the missing method

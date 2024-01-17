@@ -1,4 +1,4 @@
-package serviceTests.utilsTests;
+package servicetests.utilstests;
 
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
@@ -8,11 +8,9 @@ import org.junit.Test;
 
 import java.net.URI;
 
-public class CoinMarketCapUrlTest
-{
-    private CoinMarketCapUrl.CoinMarketCapUrlBuilder urlBuilder;
-
+public class CoinMarketCapUrlTest {
     private final String urlBase = "https://pro-api.coinmarketcap.com";
+    private CoinMarketCapUrl.CoinMarketCapUrlBuilder urlBuilder;
 
     @Before
     public void initialize() {

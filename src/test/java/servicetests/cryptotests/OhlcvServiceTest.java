@@ -1,72 +1,76 @@
-package serviceTests.cryptoTests;
+package servicetests.cryptotests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.metadata.models.MetadataInfoData;
-import org.cryptodata.service.crypto.metadata.models.MetadataMapData;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvHistoricalData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.metadata.MetadataService;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvLatestData;
+import org.cryptodata.service.crypto.ohlcv.OhlcvService;
 import org.junit.Test;
 import org.mockito.Mockito;
-import serviceTests.ServiceTestHelper;
+import servicetests.ServiceTestHelper;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class MetadataServiceTest {
+public class OhlcvServiceTest {
+
 
     @Test
-    public void test_map_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_latest_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/idMapOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/ohlcvV2/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        OhlcvService myHttpClientWrapper = new OhlcvService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
 
         // Perform the actual test
-        List<MetadataMapData> result = myHttpClientWrapper.map();
+        Map<String, OhlcvLatestData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(1469, result.get(0).id());
-        assertEquals(10, result.size());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Double.valueOf(0.9240667639195039), result.get("1").quote().get("USD").open());
+        assertNotNull(result.get("1").quote().get("USD").timestamp());
     }
 
+
     @Test
-    public void test_info_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_historical_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/metadataV2OK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/ohlcvV2/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        OhlcvService myHttpClientWrapper = new OhlcvService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
 
         // Perform the actual test
-        Map<String, MetadataInfoData> result = myHttpClientWrapper.info();
+        Map<String, OhlcvHistoricalData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(1, result.get("1").id());
-        assertEquals(2, result.size());
+        assertEquals(Integer.valueOf(1), result.get("1").id());
+        assertEquals(Double.valueOf(0.24158101162792245), result.get("1").quotes().get(0).quote().get("USD").open());
+        assertNotNull(result.get("1").quotes().get(0).quote().get("USD").timestamp());
     }
 
 

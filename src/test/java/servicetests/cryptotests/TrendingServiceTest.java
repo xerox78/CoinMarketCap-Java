@@ -1,4 +1,4 @@
-package serviceTests.cryptoTests;
+package servicetests.cryptotests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
@@ -7,7 +7,7 @@ import org.cryptodata.service.crypto.trending.TrendingService;
 import org.cryptodata.service.crypto.trending.models.TrendingData;
 import org.junit.Test;
 import org.mockito.Mockito;
-import serviceTests.ServiceTestHelper;
+import servicetests.ServiceTestHelper;
 
 import java.io.IOException;
 import java.net.http.HttpClient;

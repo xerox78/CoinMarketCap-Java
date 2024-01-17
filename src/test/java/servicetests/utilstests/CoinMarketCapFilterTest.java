@@ -1,4 +1,4 @@
-package serviceTests.utilsTests;
+package servicetests.utilstests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;

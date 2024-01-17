@@ -1,13 +1,13 @@
-package serviceTests.cryptoTests;
+package servicetests.cryptotests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.category.models.CategoryData;
+import org.cryptodata.service.crypto.airdrop.models.AirdropData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.category.CategoryService;
+import org.cryptodata.service.crypto.airdrop.AirdropService;
 import org.junit.Test;
 import org.mockito.Mockito;
-import serviceTests.ServiceTestHelper;
+import servicetests.ServiceTestHelper;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
@@ -19,19 +19,19 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class CategoryServiceTest {
+public class AirdropServiceTest {
 
 
     @Test
-    public void test_category_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_airdrop_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/category/categoryOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -39,23 +39,23 @@ public class CategoryServiceTest {
 
 
         // Perform the actual test
-        CategoryData result = myHttpClientWrapper.get();
+        AirdropData result = myHttpClientWrapper.get();
 
         // Verify the result
-        assertEquals("655c563a19d020516fba113a", result.id());
-        assertEquals("eGirl Capital Portfolio", result.name());
+        assertEquals("635facd06f4bfc7d9bee85d8", result.id());
+        assertEquals(18519, result.airdropCoin().id());
     }
 
     @Test
-    public void test_categories_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_airdrops_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/category/categoriesOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropsOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -63,14 +63,14 @@ public class CategoryServiceTest {
 
 
         // Perform the actual test
-        List<CategoryData> result = myHttpClientWrapper.list();
+        List<AirdropData> result = myHttpClientWrapper.list();
 
         // Verify the result
-        assertEquals("659f3fbb4c5ab81dba4bb8ba", result.get(0).id());
+        assertEquals("6343e82fca2d8657a887878d", result.get(0).id());
+        assertEquals(5804, result.get(0).airdropCoin().id());
 
-        assertEquals("659392fd54b2742440bf0dde", result.get(1).id());
-
-        assertEquals("658e1127598b0275bafcb61c", result.get(2).id());
+        assertEquals("633ff5e0558c5024ac5f2e5d", result.get(1).id());
+        assertEquals(11198, result.get(1).airdropCoin().id());
     }
 
 

@@ -1,76 +1,72 @@
-package serviceTests.cryptoTests;
+package servicetests.cryptotests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.airdrop.models.AirdropData;
+import org.cryptodata.service.crypto.metadata.models.MetadataInfoData;
+import org.cryptodata.service.crypto.metadata.models.MetadataMapData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.airdrop.AirdropService;
+import org.cryptodata.service.crypto.metadata.MetadataService;
 import org.junit.Test;
 import org.mockito.Mockito;
-import serviceTests.ServiceTestHelper;
+import servicetests.ServiceTestHelper;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class AirdropServiceTest {
-
+public class MetadataServiceTest {
 
     @Test
-    public void test_airdrop_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_map_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/idMapOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
 
-
         // Perform the actual test
-        AirdropData result = myHttpClientWrapper.get();
+        List<MetadataMapData> result = myHttpClientWrapper.map();
 
         // Verify the result
-        assertEquals("635facd06f4bfc7d9bee85d8", result.id());
-        assertEquals(18519, result.airdropCoin().id());
+        assertEquals(1469, result.get(0).id());
+        assertEquals(10, result.size());
     }
 
     @Test
-    public void test_airdrops_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_info_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/airdrop/airdropsOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/metadata/metadataV2OK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(ServiceTestHelper.createMockedResponse(ServiceTestHelper.convertJsonFileToString(path), status));
 
-
         // Perform the actual test
-        List<AirdropData> result = myHttpClientWrapper.list();
+        Map<String, MetadataInfoData> result = myHttpClientWrapper.info();
 
         // Verify the result
-        assertEquals("6343e82fca2d8657a887878d", result.get(0).id());
-        assertEquals(5804, result.get(0).airdropCoin().id());
-
-        assertEquals("633ff5e0558c5024ac5f2e5d", result.get(1).id());
-        assertEquals(11198, result.get(1).airdropCoin().id());
+        assertEquals(1, result.get("1").id());
+        assertEquals(2, result.size());
     }
 
 

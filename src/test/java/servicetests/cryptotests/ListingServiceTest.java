@@ -1,37 +1,36 @@
-package serviceTests.cryptoTests;
+package servicetests.cryptotests;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.quote.models.QuoteHistoricalData;
-import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
+import org.cryptodata.service.crypto.listing.models.ListingData;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.quote.QuoteService;
+import org.cryptodata.service.crypto.listing.ListingService;
 import org.junit.Test;
 import org.mockito.Mockito;
-import serviceTests.ServiceTestHelper;
+import servicetests.ServiceTestHelper;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Map;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class QuoteServiceTest {
+public class ListingServiceTest {
 
     @Test
-    public void test_historicalV2_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_historical_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV2/historicalOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -39,23 +38,25 @@ public class QuoteServiceTest {
 
 
         // Perform the actual test
-        Map<String, QuoteHistoricalData> result = myHttpClientWrapper.historical();
+        List<ListingData> result = myHttpClientWrapper.historical();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").id());
-        assertEquals(Integer.valueOf(2010), result.get("2010").id());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Double.valueOf(42265.18565486596), result.get(0).quote().get("USD").price());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
+        assertEquals(Integer.valueOf(825), result.get(2).id());
     }
 
     @Test
-    public void test_latestV2_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_latest_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV2/latestOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -63,24 +64,24 @@ public class QuoteServiceTest {
 
 
         // Perform the actual test
-        Map<String, QuoteLatestData> result = myHttpClientWrapper.latest();
+        List<ListingData> result = myHttpClientWrapper.latest();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").id());
-        assertEquals(Integer.valueOf(2010), result.get("2010").id());
-        assertEquals(Double.valueOf(117.32040778), result.get("2010").quote().get("USD").percentChange90d());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
+        assertEquals(Integer.valueOf(825), result.get(2).id());
     }
 
     @Test
-    public void test_historicalV3_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_new_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/serviceResultsExamples/crypto/quoteV3/historicalOK.json";
+        String path = "src/test/resources/serviceResultsExamples/crypto/listing/newOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -88,12 +89,11 @@ public class QuoteServiceTest {
 
 
         // Perform the actual test
-        Map<String, QuoteHistoricalData> result = myHttpClientWrapper.historical();
+        List<ListingData> result = myHttpClientWrapper.listNew();
 
         // Verify the result
-        assertEquals(Integer.valueOf(1), result.get("1").id());
-        assertEquals(Integer.valueOf(5934), result.get("5934").id());
-        assertEquals(10, result.get("5934").quotes().size());
+        assertEquals(Integer.valueOf(1), result.get(0).id());
+        assertEquals(Integer.valueOf(1027), result.get(1).id());
     }
 
 
