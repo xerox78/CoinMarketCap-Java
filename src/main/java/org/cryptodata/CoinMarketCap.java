@@ -1,6 +1,7 @@
 package org.cryptodata;
 
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.blockchain.BlockchainService;
 import org.cryptodata.service.crypto.CryptocurrencyService;
 import org.cryptodata.service.fiat.FiatService;
 
@@ -43,6 +44,16 @@ public record CoinMarketCap(String apiKey) {
      */
     public FiatService fiatV1() {
         return new FiatService(this, new CoinMarketCapUrlBuilder().v1().fiat());
+    }
+
+
+    /**
+     * Creates an instance of BlockchainService for version 1 of the CoinMarketCap API.
+     *
+     * @return BlockchainService instance for version 1.
+     */
+    public BlockchainService blockchainV1() {
+        return new BlockchainService(this, new CoinMarketCapUrlBuilder().v1().blockchain());
     }
 
 }

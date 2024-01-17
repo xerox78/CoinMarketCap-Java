@@ -296,5 +296,10 @@ public class CoinMarketCapUrl {
             url.append("/fiat");
             return this;
         }
+
+        public CoinMarketCapUrlBuilder blockchain() {
+            url.append("/blockchain");
+            return this;
+        }
     }
 }

@@ -1,0 +1,42 @@
+{
+  "status": {
+    "timestamp": "2024-01-17T19:03:17.440Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 0,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "slug": "vtou1ai706g",
+      "symbol": "2unngip66y5",
+      "block_reward_static": 0.3003284609479737,
+      "consensus_mechanism": "ygxjn2qovra",
+      "difficulty": "r02fe6gpe38",
+      "hashrate_24h": "uf7dh6ply9n",
+      "pending_transactions": 503,
+      "reduction_rate": "8kvho8ycn48",
+      "total_blocks": 7999,
+      "total_transactions": "c502ibqy708",
+      "tps_24h": 0.8187816492548838,
+      "first_block_timestamp": "2024-01-17T19:03:17.440Z"
+    },
+    "2": {
+      "id": 2,
+      "slug": "b2n5ep9aa54",
+      "symbol": "5ih6t8v2x9",
+      "block_reward_static": 0.3480991351374261,
+      "consensus_mechanism": "mufuyg3mcm",
+      "difficulty": "qqst08d3bv",
+      "hashrate_24h": "h7rzmjkgt6a",
+      "pending_transactions": 7726,
+      "reduction_rate": "eocr106xib",
+      "total_blocks": 5958,
+      "total_transactions": "79c1r3qm26",
+      "tps_24h": 0.4592442356662514,
+      "first_block_timestamp": "2024-01-17T19:03:17.440Z"
+    }
+  }
+}

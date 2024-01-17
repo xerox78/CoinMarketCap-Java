@@ -75,6 +75,14 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
     - Description: CoinMarketCap ID map.
 </details>
 
+
+<details>
+<summary>Blockchain Endpoints</summary>
+
+1. [**/v1/blockchain/statistics/latest**](https://coinmarketcap.com/api/documentation/v1/#tag/blockchain)
+    - Description:  Latest statistics.
+</details>
+
 ### Filters Available
 <details>
 <summary>Implemented Filters</summary>
@@ -133,11 +141,11 @@ MetadataService service=new CoinMarketCap("apiKey")
         // Step 5: Build the metadata service with the specified configuration.
         .build();
 
-// Step 6: Try to execute the service-specific endpoint to retrieve metadata.
+        // Step 6: Try to execute the service-specific endpoint to retrieve metadata.
         try{
         // Step 7: Call the service specific endpoint and store the result in the 'serviceResult' Map.
         Map<String, MetadataData> serviceResult=service.info();
-        }catch(CoinMarketCapException e){
+        }catch(CoinMarketCapException e) {
         // Step 8: Handle exceptions that may occur during the API call.
         // For example, log the exception or take appropriate action.
         // Note: The specific exception type is CoinMarketCapException.
