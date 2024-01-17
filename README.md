@@ -1,10 +1,22 @@
 ﻿# CoinMarketCap-Java
 
-#### A comprehensive Java library for interacting with the CoinMarketCap API and retrieving data.
+This Java library provides a convenient way to interact with the CoinMarketCap API. It includes various service methods to retrieve information about cryptocurrencies, market data, and more.
+Please refer to  **CoinMarketCap Api official documentation**
 
- Please refer to  **CoinMarketCap Api official documentation**
- 
-### How to use:
+## Services 
+
+### Methods:
+- Airdrop Vx
+- 
+### Filters
+- `id(String value)`: Filter by cryptocurrency ID.
+- `symbol(String value)`: Filter by cryptocurrency symbol.
+- `start(String value)`: Set the start index for results.
+- `limit(String value)`: Limit the number of results.
+- `date(String value)`: Filter by date.
+- `status(String value)`: Filter by status.
+  
+## Getting Started
 
 ```java 
 // Step 1: Create an instance of the CoinMarketCap API service and specify the API key.
@@ -35,3 +47,11 @@ try {
 // Step 9: The 'serviceResult' Map now contains the metadata information retrieved from the CoinMarketCap API.
 // You can proceed to use this information in your application as needed. 
 ```
+
+For detailed examples and additional features, refer to the Javadoc provided with the library.
+
+## Dependencies
+- Jackson library for JSON processing
+- SLF4J for logging
+- Mockito & JUnit for Unit Tests
+- Apache HttpClient for Interacting with CoinMarketCap API
