@@ -1,4 +1,4 @@
-package org.cryptodata.service.crypto.marketPairs.models;
+package org.cryptodata.service.crypto.marketpairs.models;
 
 
 public record MarketPairsExchange(

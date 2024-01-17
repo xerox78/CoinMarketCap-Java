@@ -1,10 +1,10 @@
-package org.cryptodata.service.crypto.pricePerformance;
+package org.cryptodata.service.crypto.priceperformance;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.crypto.pricePerformance.models.PricePerformanceStatsData;
+import org.cryptodata.service.crypto.priceperformance.models.PricePerformanceStatsData;
 
 import java.util.Map;
 

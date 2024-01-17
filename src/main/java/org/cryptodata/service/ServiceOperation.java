@@ -33,7 +33,6 @@ public class ServiceOperation {
     private final ObjectMapper objectMapper;
     private HttpClient httpClient;
 
-
     /**
      * Constructs a ServiceOperation instance.
      *
@@ -86,10 +85,6 @@ public class ServiceOperation {
 
             if (responseAPI.status().errorCode() != 0L) {
                 throw new CoinMarketCapException(responseAPI.status().errorCode(), responseAPI.status().errorMessage());
-            }
-
-            if (responseAPI.data() == null) {
-                throw new CoinMarketCapException(responseAPI.status().errorCode(), "No data found in the response");
             }
 
             return responseAPI.data();

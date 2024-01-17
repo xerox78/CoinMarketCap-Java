@@ -1,4 +1,4 @@
-package org.cryptodata.service.crypto.pricePerformance.models;
+package org.cryptodata.service.crypto.priceperformance.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package org.cryptodata.service.crypto.marketPairs.models;
+package org.cryptodata.service.crypto.marketpairs.models;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -7,7 +7,7 @@ import org.cryptodata.service.crypto.category.CategoryService;
 import org.cryptodata.service.crypto.listing.ListingService;
 import org.cryptodata.service.crypto.metadata.MetadataService;
 import org.cryptodata.service.crypto.ohlcv.OhlcvService;
-import org.cryptodata.service.crypto.pricePerformance.PricePerformanceStatsService;
+import org.cryptodata.service.crypto.priceperformance.PricePerformanceStatsService;
 import org.cryptodata.service.crypto.quote.QuoteService;
 import org.cryptodata.service.crypto.trending.TrendingService;
 

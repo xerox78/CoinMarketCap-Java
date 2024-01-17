@@ -1,10 +1,10 @@
-package org.cryptodata.service.crypto.marketPairs;
+package org.cryptodata.service.crypto.marketpairs;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.crypto.marketPairs.models.MarketPairsData;
+import org.cryptodata.service.crypto.marketpairs.models.MarketPairsData;
 
 public class MarketPairsService extends ServiceOperation {
 
