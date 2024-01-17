@@ -42,13 +42,13 @@ public class CoinMarketCapUrl {
             try {
                 builder = new URIBuilder(url.toString());
             } catch (URISyntaxException e) {
-                throw new CoinMarketCapException(e.getMessage());
+                throw new CoinMarketCapException("Error building URI", e);
             }
             builder.addParameters(parameterList);
             try {
                 return builder.build();
             } catch (URISyntaxException e) {
-                throw new CoinMarketCapException(e.getMessage());
+                throw new CoinMarketCapException("Error building URI", e);
             }
         }
 

@@ -89,7 +89,7 @@ public class ServiceOperation {
             }
 
             if (responseAPI.data() == null) {
-                throw new CoinMarketCapException("No data found in the response");
+                throw new CoinMarketCapException(responseAPI.status().errorCode(), "No data found in the response");
             }
 
             return responseAPI.data();
