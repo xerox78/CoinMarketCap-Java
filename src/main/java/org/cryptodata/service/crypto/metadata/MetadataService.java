@@ -25,7 +25,7 @@ public class MetadataService extends ServiceOperation {
      * @return list of MetadataData
      */
     public List<MetadataMapData> map() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.map().build(), getJavaTypeList(MetadataMapData.class));
+        return sendHttpRequest(urlBuilder.map().build(), getJavaTypeList(MetadataMapData.class));
     }
 
 
@@ -35,6 +35,6 @@ public class MetadataService extends ServiceOperation {
      * @return map with id as Key and MetadataData
      */
     public Map<String, MetadataInfoData> info() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.info().build(), getJavaTypeMap(MetadataInfoData.class));
+        return sendHttpRequest(urlBuilder.info().build(), getJavaTypeMap(MetadataInfoData.class));
     }
 }

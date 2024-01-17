@@ -23,7 +23,7 @@ public class PricePerformanceStatsService extends ServiceOperation {
      * @return PricePerformanceStatsData
      */
     public Map<String, PricePerformanceStatsData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.pricePerformanceStats().latest().build(), getJavaTypeMap(PricePerformanceStatsData.class));
+        return sendHttpRequest(urlBuilder.pricePerformanceStats().latest().build(), getJavaTypeMap(PricePerformanceStatsData.class));
 
     }
 }

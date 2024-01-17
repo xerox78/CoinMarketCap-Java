@@ -24,7 +24,7 @@ public class OhlcvService extends ServiceOperation {
      * @return OhlcvData
      */
     public Map<String, OhlcvHistoricalData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().historical().build(), getJavaTypeMap(OhlcvHistoricalData.class));
+        return sendHttpRequest(urlBuilder.ohlcv().historical().build(), getJavaTypeMap(OhlcvHistoricalData.class));
     }
 
     /**
@@ -33,6 +33,6 @@ public class OhlcvService extends ServiceOperation {
      * @return OhlcvData
      */
     public Map<String, OhlcvLatestData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.ohlcv().latest().build(), getJavaTypeMap(OhlcvLatestData.class));
+        return sendHttpRequest(urlBuilder.ohlcv().latest().build(), getJavaTypeMap(OhlcvLatestData.class));
     }
 }

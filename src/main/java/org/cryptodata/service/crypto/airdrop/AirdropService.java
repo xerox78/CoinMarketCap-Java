@@ -23,7 +23,7 @@ public class AirdropService extends ServiceOperation {
      * @return AirdropData
      */
     public AirdropData get() throws CoinMarketCapException {
-        return sendRequest(cryptocurrencyUrl.airdrop().build(), getJavaType(AirdropData.class));
+        return sendHttpRequest(cryptocurrencyUrl.airdrop().build(), getJavaType(AirdropData.class));
 
     }
 
@@ -33,6 +33,6 @@ public class AirdropService extends ServiceOperation {
      * @return list of AirdropData
      */
     public List<AirdropData> list() throws CoinMarketCapException {
-        return sendRequest(cryptocurrencyUrl.airdrops().build(), getJavaTypeList(AirdropData.class));
+        return sendHttpRequest(cryptocurrencyUrl.airdrops().build(), getJavaTypeList(AirdropData.class));
     }
 }

@@ -2,7 +2,6 @@ package org.cryptodata.service.crypto.quote;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.quote.models.QuoteHistoricalData;
@@ -26,7 +25,7 @@ public class QuoteService extends ServiceOperation {
      * @return QuoteData
      */
     public Map<String, QuoteHistoricalData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.quotes().historical().build(), getJavaTypeMap(QuoteHistoricalData.class));
+        return sendHttpRequest(urlBuilder.quotes().historical().build(), getJavaTypeMap(QuoteHistoricalData.class));
     }
 
 
@@ -36,7 +35,7 @@ public class QuoteService extends ServiceOperation {
      * @return QuoteData
      */
     public Map<String, QuoteLatestData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.quotes().latest().build(), getJavaTypeMap(QuoteLatestData.class));
+        return sendHttpRequest(urlBuilder.quotes().latest().build(), getJavaTypeMap(QuoteLatestData.class));
     }
 
 }

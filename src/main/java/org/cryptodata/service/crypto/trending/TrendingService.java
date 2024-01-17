@@ -22,7 +22,7 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> gainersLosers() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().gainersLosers().build(), getJavaTypeList(TrendingData.class));
+        return sendHttpRequest(urlBuilder.trending().gainersLosers().build(), getJavaTypeList(TrendingData.class));
 
     }
 
@@ -32,7 +32,7 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().latest().build(), getJavaTypeList(TrendingData.class));
+        return sendHttpRequest(urlBuilder.trending().latest().build(), getJavaTypeList(TrendingData.class));
     }
 
     /**
@@ -41,6 +41,6 @@ public class TrendingService extends ServiceOperation {
      * @return instance of CoinMarketCapFilter
      */
     public List<TrendingData> mostVisited() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.trending().mostVisited().build(), getJavaTypeList(TrendingData.class));
+        return sendHttpRequest(urlBuilder.trending().mostVisited().build(), getJavaTypeList(TrendingData.class));
     }
 }

@@ -11,20 +11,18 @@ import org.cryptodata.service.crypto.pricePerformance.PricePerformanceStatsServi
 import org.cryptodata.service.crypto.quote.QuoteService;
 import org.cryptodata.service.crypto.trending.TrendingService;
 
-public class CryptocurrencyService {
-
-    private final CoinMarketCapUrlBuilder cryptocurrencyUrl;
-    private final CoinMarketCap coinMarketCap;
-
-    CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
-        this.coinMarketCap = coinMarketCap;
-        this.cryptocurrencyUrl = cryptocurrencyUrl;
-    }
+/**
+ * Represents a service for handling cryptocurrency-related operations using CoinMarketCap API.
+ *
+ * @param coinMarketCap     The CoinMarketCap instance for API communication.
+ * @param cryptocurrencyUrl The CoinMarketCapUrlBuilder instance for building related URLs.
+ */
+public record CryptocurrencyService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for AirdropService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for AirdropService.
      */
     CoinMarketCapFilter<AirdropService> airdrop() {
         return new CoinMarketCapFilter<>(new AirdropService(coinMarketCap, cryptocurrencyUrl));
@@ -32,63 +30,63 @@ public class CryptocurrencyService {
 
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for ListingService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for ListingService.
      */
     CoinMarketCapFilter<ListingService> listing() {
         return new CoinMarketCapFilter<>(new ListingService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for QuoteService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for QuoteService.
      */
     CoinMarketCapFilter<QuoteService> quote() {
         return new CoinMarketCapFilter<>(new QuoteService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for CategoryService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for CategoryService.
      */
     CoinMarketCapFilter<CategoryService> category() {
         return new CoinMarketCapFilter<>(new CategoryService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for MetadataService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for MetadataService.
      */
     CoinMarketCapFilter<MetadataService> metadata() {
         return new CoinMarketCapFilter<>(new MetadataService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for TrendingService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for TrendingService.
      */
     CoinMarketCapFilter<TrendingService> trending() {
         return new CoinMarketCapFilter<>(new TrendingService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for OhlcvService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for OhlcvService.
      */
     CoinMarketCapFilter<OhlcvService> ohlcv() {
         return new CoinMarketCapFilter<>(new OhlcvService(coinMarketCap, cryptocurrencyUrl));
     }
 
     /**
-     * CoinMarketCapFilter class
+     * Creates a CoinMarketCapFilter for PricePerformanceStatsService operations.
      *
-     * @return CoinMarketCapFilter
+     * @return CoinMarketCapFilter for PricePerformanceStatsService.
      */
     CoinMarketCapFilter<PricePerformanceStatsService> pricePerformanceStats() {
         return new CoinMarketCapFilter<>(new PricePerformanceStatsService(coinMarketCap, cryptocurrencyUrl));

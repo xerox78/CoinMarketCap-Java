@@ -24,7 +24,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> latest() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().latest().build(), getJavaTypeList(ListingData.class));
+        return sendHttpRequest(urlBuilder.listings().latest().build(), getJavaTypeList(ListingData.class));
     }
 
 
@@ -34,7 +34,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> historical() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().historical().build(), getJavaTypeList(ListingData.class));
+        return sendHttpRequest(urlBuilder.listings().historical().build(), getJavaTypeList(ListingData.class));
     }
 
 
@@ -44,7 +44,7 @@ public class ListingService extends ServiceOperation {
      * @return list of ListingData
      */
     public List<ListingData> listNew() throws CoinMarketCapException {
-        return sendRequest(urlBuilder.listings().newPath().build(), getJavaTypeList(ListingData.class));
+        return sendHttpRequest(urlBuilder.listings().newPath().build(), getJavaTypeList(ListingData.class));
 
     }
 }
