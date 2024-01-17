@@ -67,6 +67,14 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
     - Description: Trending Gainers & Losers.
 </details>
 
+
+<details>
+<summary>Fiat Endpoints</summary>
+
+1. [**/v1/fiat/map**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1FiatMap)
+    - Description: CoinMarketCap ID map.
+</details>
+
 ### Filters Available
 <details>
 <summary>Implemented Filters</summary>
@@ -107,6 +115,7 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 34. **`timeEnd(String value)`**: Filter by end time.
 35. **`count(String value)`**: Filter by count.
 36. **`interval(String value)`**: Filter by interval.
+37. **`includeMetals(String value)`**: Include precious metals.
 
 </details>
 
