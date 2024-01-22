@@ -20,7 +20,7 @@ public class ListingService extends ServiceOperation {
      * Returns the exchange assets in the form of token holdings.
      */
     public List<ListingLatestData> latest() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.latest().build(), getJavaTypeList(ListingLatestData.class));
+        return sendHttpRequest(urlBuilder.listings().latest().build(), getJavaTypeList(ListingLatestData.class));
     }
 
 }

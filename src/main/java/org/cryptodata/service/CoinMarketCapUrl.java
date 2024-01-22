@@ -301,5 +301,25 @@ public class CoinMarketCapUrl {
             url.append("/blockchain");
             return this;
         }
+
+        public CoinMarketCapUrlBuilder tools() {
+            url.append("/tools");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder priceConversion() {
+            url.append("/price-conversion");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder statistics() {
+            url.append("/statistics");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder key() {
+            url.append("/key");
+            return this;
+        }
     }
 }

@@ -17,7 +17,7 @@ public class MarketPairService extends ServiceOperation {
     }
 
     public Map<String, MarketLatestData> latest() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.latest().build(), getJavaTypeMap(MarketLatestData.class));
+        return sendHttpRequest(urlBuilder.marketPairs().latest().build(), getJavaTypeMap(MarketLatestData.class));
     }
 
 

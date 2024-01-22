@@ -18,11 +18,11 @@ public class QuoteService extends ServiceOperation {
     }
 
     public Map<String, QuoteLatestData> latest() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.latest().build(), getJavaTypeMap(QuoteLatestData.class));
+        return sendHttpRequest(urlBuilder.quotes().latest().build(), getJavaTypeMap(QuoteLatestData.class));
     }
 
     public Map<String, QuoteHistoricalData> historical() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.latest().build(), getJavaTypeMap(QuoteHistoricalData.class));
+        return sendHttpRequest(urlBuilder.quotes().latest().build(), getJavaTypeMap(QuoteHistoricalData.class));
     }
 
 }

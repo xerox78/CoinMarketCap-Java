@@ -14,9 +14,9 @@ import org.cryptodata.service.key.info.KeyInfoService;
 public record KeyService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
 
     /**
-     * Creates a CoinMarketCapFilter for MapService operations.
+     * Creates a CoinMarketCapFilter for KeyInfoService operations.
      *
-     * @return CoinMarketCapFilter for MapService.
+     * @return CoinMarketCapFilter for KeyInfoService.
      */
     public CoinMarketCapFilter<KeyInfoService> info() {
         return new CoinMarketCapFilter<>(new KeyInfoService(coinMarketCap, cryptocurrencyUrl));

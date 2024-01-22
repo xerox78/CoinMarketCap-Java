@@ -456,6 +456,17 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
     }
 
     /**
+     * Adds the "amount" parameter to the filter.
+     *
+     * @param value The value of the "amount" parameter.
+     * @return This CoinMarketCapFilter instance for method chaining.
+     */
+    public CoinMarketCapFilter<R> amount(String value) {
+        instance.getUrlBuilder().addParameter(AMOUNT.value, value);
+        return this;
+    }
+
+    /**
      * Builds and returns the original service operation instance with the applied filter.
      *
      * @return The original service operation instance with the applied filter.
@@ -506,7 +517,8 @@ public class CoinMarketCapFilter<R extends ServiceOperation> {
         INCLUDE_METALS("include_metals"),
         TIME_PERIOD("time_period"),
         CRYPTO_ID("crypto_id"),
-        MARKET_TYPE("market_type");
+        MARKET_TYPE("market_type"),
+        AMOUNT("amount");
 
         /**
          * The value of the parameter.

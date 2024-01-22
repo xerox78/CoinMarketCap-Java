@@ -413,6 +413,16 @@ public class CoinMarketCapFilterTest {
     }
 
     @Test
+    public void filter_amount_OK() {
+        AirdropService build = filter.amount("value").build();
+        try {
+            Assert.assertEquals("https://pro-api.coinmarketcap.com?amount=value", build.getUrlBuilder().build().toString());
+        } catch (CoinMarketCapException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
     public void filter_all_OK() {
         AirdropService build = filter
                 .id("value")

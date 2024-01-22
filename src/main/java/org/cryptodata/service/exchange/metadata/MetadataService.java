@@ -22,13 +22,13 @@ public class MetadataService extends ServiceOperation {
      * Returns all static metadata for one or more exchanges.
      */
     public Map<String, InfoData> info() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.trending().gainersLosers().build(), getJavaTypeMap(InfoData.class));
+        return sendHttpRequest(urlBuilder.info().build(), getJavaTypeMap(InfoData.class));
     }
 
     /**
      * Returns a paginated list of all active cryptocurrency exchanges by CoinMarketCap ID.
      */
     public List<MapData> map() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.trending().gainersLosers().build(), getJavaTypeList(MapData.class));
+        return sendHttpRequest(urlBuilder.map().build(), getJavaTypeList(MapData.class));
     }
 }
