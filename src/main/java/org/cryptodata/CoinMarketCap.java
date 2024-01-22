@@ -1,44 +1,59 @@
 package org.cryptodata;
 
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.blockchain.BlockchainService;
+import org.cryptodata.service.crypto.CryptocurrencyService;
+import org.cryptodata.service.fiat.FiatService;
 
-public class CoinMarketCap {
-
-    private final String apiKey;
-
-    public CoinMarketCap(String apiKey) {
-        this.apiKey = apiKey;
-    }
-
-    public String getApiKey() {
-        return apiKey;
-    }
+/*
+ * This class provides methods to create instances of services groups.
+ */
+public record CoinMarketCap(String apiKey) {
 
     /**
-     * AirdropService class
+     * Creates an instance of CryptocurrencyService for version 1 of the CoinMarketCap API.
      *
-     * @return AirdropService
+     * @return CryptocurrencyService instance for version 1.
      */
     public CryptocurrencyService cryptocurrencyV1() {
         return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v1().cryptocurrency());
     }
 
     /**
-     * CryptocurrencyService class
+     * Creates an instance of CryptocurrencyService for version 2 of the CoinMarketCap API.
      *
-     * @return CryptocurrencyService
+     * @return CryptocurrencyService instance for version 2.
      */
     public CryptocurrencyService cryptocurrencyV2() {
         return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v2().cryptocurrency());
     }
 
     /**
-     * CryptocurrencyService class
+     * Creates an instance of CryptocurrencyService for version 3 of the CoinMarketCap API.
      *
-     * @return CryptocurrencyService
+     * @return CryptocurrencyService instance for version 3.
      */
     public CryptocurrencyService cryptocurrencyV3() {
         return new CryptocurrencyService(this, new CoinMarketCapUrlBuilder().v3().cryptocurrency());
+    }
+
+    /**
+     * Creates an instance of FiatService for version 1 of the CoinMarketCap API.
+     *
+     * @return FiatService instance for version 1.
+     */
+    public FiatService fiatV1() {
+        return new FiatService(this, new CoinMarketCapUrlBuilder().v1().fiat());
+    }
+
+
+    /**
+     * Creates an instance of BlockchainService for version 1 of the CoinMarketCap API.
+     *
+     * @return BlockchainService instance for version 1.
+     */
+    public BlockchainService blockchainV1() {
+        return new BlockchainService(this, new CoinMarketCapUrlBuilder().v1().blockchain());
     }
 
 }

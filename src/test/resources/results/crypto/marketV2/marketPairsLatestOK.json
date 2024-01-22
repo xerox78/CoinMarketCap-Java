@@ -1,0 +1,378 @@
+{
+  "status": {
+    "timestamp": "2024-01-16T13:22:30.480Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "id": 5934,
+    "name": "i2t13gjemt",
+    "symbol": "z4xpoc0x75n",
+    "num_market_pairs": 8222,
+    "market_pairs": [
+      {
+        "exchange": {
+          "id": 6316,
+          "name": "ryu6v6jv19o",
+          "slug": "rmea9k767sr"
+        },
+        "market_id": 488,
+        "market_pair": "42qb1op9f89",
+        "category": "voudsjppbe",
+        "fee_type": "uwv9ca9t8t",
+        "market_pair_base": {
+          "currency_id": 1761,
+          "currency_symbol": "utoshz4jyy",
+          "exchange_symbol": "mv5vpgv4fim",
+          "currency_type": "l0i3l46bju"
+        },
+        "market_pair_quote": {
+          "currency_id": 6574,
+          "currency_symbol": "rtx1q5cppx",
+          "exchange_symbol": "tn3iyg7cwtn",
+          "currency_type": "yje72y8bcfc"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 9743,
+            "volume_24h_base": 0.3008002349928398,
+            "volume_24h_quote": 0.5256933211320349,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 802,
+            "volume_24h": 0.8980449996846589,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 7727,
+          "name": "uin2ibwp9r8",
+          "slug": "gqwak0gv3s"
+        },
+        "market_id": 687,
+        "market_pair": "s7jhkxtda5",
+        "category": "x6wngyc7m3",
+        "fee_type": "e1sbs1eab0n",
+        "market_pair_base": {
+          "currency_id": 6562,
+          "currency_symbol": "fbzezb1cw8",
+          "exchange_symbol": "p8zc6d6hha",
+          "currency_type": "8obm6ypfwy8"
+        },
+        "market_pair_quote": {
+          "currency_id": 63,
+          "currency_symbol": "s3r2pbu8g2o",
+          "exchange_symbol": "wxlp9i6wj",
+          "currency_type": "9fbc2mekrda"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 6714,
+            "volume_24h_base": 0.36161371528454755,
+            "volume_24h_quote": 0.3113125230939011,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 4885,
+            "volume_24h": 0.39597420021304885,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 278,
+          "name": "hw4sdc76g7s",
+          "slug": "twp5rxvxts"
+        },
+        "market_id": 4,
+        "market_pair": "h6573fy074",
+        "category": "0y3zyic1za5k",
+        "fee_type": "vufkaolw82",
+        "market_pair_base": {
+          "currency_id": 3886,
+          "currency_symbol": "opwr1jkrrqk",
+          "exchange_symbol": "wwcxu9vhgg8",
+          "currency_type": "8wcrkdyyl6u"
+        },
+        "market_pair_quote": {
+          "currency_id": 3574,
+          "currency_symbol": "tg30hv16ds",
+          "exchange_symbol": "fgwsmpigxuu",
+          "currency_type": "h061s1z2n9"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 6452,
+            "volume_24h_base": 0.7044164434037223,
+            "volume_24h_quote": 0.4793339277644857,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 6372,
+            "volume_24h": 0.7091407087299484,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 546,
+          "name": "6f6x226boh6",
+          "slug": "fmlj877lyyr"
+        },
+        "market_id": 9711,
+        "market_pair": "sl7m3lz2xid",
+        "category": "eqm4hh70dqh",
+        "fee_type": "505efhu6sml",
+        "market_pair_base": {
+          "currency_id": 365,
+          "currency_symbol": "qbwbhe3zawl",
+          "exchange_symbol": "v8sh0uc28jj",
+          "currency_type": "ots9u6hvpbn"
+        },
+        "market_pair_quote": {
+          "currency_id": 4355,
+          "currency_symbol": "kan6v5rmtkq",
+          "exchange_symbol": "mbqmix2amsd",
+          "currency_type": "ndrjkaqrjx"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 5986,
+            "volume_24h_base": 0.0003681478033281671,
+            "volume_24h_quote": 0.046295592094115046,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 5022,
+            "volume_24h": 0.8963101423051212,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 1765,
+          "name": "s473ki89h6o",
+          "slug": "t6jdfi372j"
+        },
+        "market_id": 255,
+        "market_pair": "tr38v3bkftg",
+        "category": "zxq6b6yci",
+        "fee_type": "2py7mjkjzmc",
+        "market_pair_base": {
+          "currency_id": 3371,
+          "currency_symbol": "97f01lup87c",
+          "exchange_symbol": "qx09k20l4p8",
+          "currency_type": "e1nsgn2y9nk"
+        },
+        "market_pair_quote": {
+          "currency_id": 2433,
+          "currency_symbol": "pb4xf5fl6e",
+          "exchange_symbol": "41qvyez6nra",
+          "currency_type": "9h5avg16qdq"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 3055,
+            "volume_24h_base": 0.267232690578753,
+            "volume_24h_quote": 0.27749768520076534,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 1796,
+            "volume_24h": 0.5192955648531268,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 5407,
+          "name": "u7052n3dq6",
+          "slug": "8uhk7wd8022"
+        },
+        "market_id": 8840,
+        "market_pair": "s1ou43vwaxf",
+        "category": "nrlnke73zf",
+        "fee_type": "v3223iu9ld",
+        "market_pair_base": {
+          "currency_id": 1389,
+          "currency_symbol": "2fu7s8wv4fo",
+          "exchange_symbol": "rxgy46dvzxc",
+          "currency_type": "aowm5dzuyaa"
+        },
+        "market_pair_quote": {
+          "currency_id": 8580,
+          "currency_symbol": "8vphghasmu",
+          "exchange_symbol": "smaifz66cf",
+          "currency_type": "j67x0f4gdy"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 6621,
+            "volume_24h_base": 0.3341136520552581,
+            "volume_24h_quote": 0.7180683966025307,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 6314,
+            "volume_24h": 0.4902934338709586,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 5552,
+          "name": "gnhfsd4rf3",
+          "slug": "3j7tj6z6cl8"
+        },
+        "market_id": 3125,
+        "market_pair": "k0ka0un5eak",
+        "category": "muxl02fthy",
+        "fee_type": "c39vqx1zaeh",
+        "market_pair_base": {
+          "currency_id": 8045,
+          "currency_symbol": "v23zttin4n8",
+          "exchange_symbol": "edc5wf37f6g",
+          "currency_type": "fs7vjft9vqk"
+        },
+        "market_pair_quote": {
+          "currency_id": 464,
+          "currency_symbol": "wv58cnhkain",
+          "exchange_symbol": "o5bh5yq1ygf",
+          "currency_type": "fgqh8eqv9x"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 1817,
+            "volume_24h_base": 0.43595709506682834,
+            "volume_24h_quote": 0.09580032229879731,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 5949,
+            "volume_24h": 0.9591488192138637,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 1668,
+          "name": "brmzjyehihr",
+          "slug": "lib5t2hbew"
+        },
+        "market_id": 5346,
+        "market_pair": "78k9weoovyd",
+        "category": "pyi5zssi5zg",
+        "fee_type": "gdsj46e34ca",
+        "market_pair_base": {
+          "currency_id": 3468,
+          "currency_symbol": "7cl66aewyq",
+          "exchange_symbol": "o0ge5je2dz8",
+          "currency_type": "1ic858nfd8z"
+        },
+        "market_pair_quote": {
+          "currency_id": 3918,
+          "currency_symbol": "m0tfvgawtxr",
+          "exchange_symbol": "eu4q2gjr5kq",
+          "currency_type": "7eyfrp23vp8"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 9054,
+            "volume_24h_base": 0.07221362043923518,
+            "volume_24h_quote": 0.49915022146419985,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 7786,
+            "volume_24h": 0.6394357604827254,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 1841,
+          "name": "bvqpt8n0kvw",
+          "slug": "prhtpehi4hs"
+        },
+        "market_id": 4893,
+        "market_pair": "jg8z830qu7",
+        "category": "lrjelus8py",
+        "fee_type": "ypdgtpxh8zp",
+        "market_pair_base": {
+          "currency_id": 3428,
+          "currency_symbol": "vtiwar8spzp",
+          "exchange_symbol": "wfh0sk6ojf",
+          "currency_type": "brr19z6vc1f"
+        },
+        "market_pair_quote": {
+          "currency_id": 9243,
+          "currency_symbol": "idn1l3upmck",
+          "exchange_symbol": "9ky2g895nkh",
+          "currency_type": "rkisll9dakc"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 964,
+            "volume_24h_base": 0.3846842939290276,
+            "volume_24h_quote": 0.049035723486510197,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 4013,
+            "volume_24h": 0.9832095585356118,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      },
+      {
+        "exchange": {
+          "id": 9815,
+          "name": "qeaz17vel7",
+          "slug": "mm6xawzny4"
+        },
+        "market_id": 5260,
+        "market_pair": "57yzd6moygr",
+        "category": "kmsae0v1tcq",
+        "fee_type": "mi35qvrtmyh",
+        "market_pair_base": {
+          "currency_id": 2855,
+          "currency_symbol": "l9dxopu81a",
+          "exchange_symbol": "1clum9v9u0q",
+          "currency_type": "01i0imfcvhtu"
+        },
+        "market_pair_quote": {
+          "currency_id": 3950,
+          "currency_symbol": "uqmzr6jv33",
+          "exchange_symbol": "z8vh7c1bt4k",
+          "currency_type": "35g1vawbqq"
+        },
+        "quote": {
+          "exchange_reported": {
+            "price": 2484,
+            "volume_24h_base": 0.23002959187096716,
+            "volume_24h_quote": 0.8570456346908524,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          },
+          "USD": {
+            "price": 2426,
+            "volume_24h": 0.5773509101490386,
+            "last_updated": "2024-01-16T13:22:30.480Z"
+          }
+        }
+      }
+    ]
+  }
+}

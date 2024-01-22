@@ -1,0 +1,51 @@
+{
+  "status": {
+    "timestamp": "2024-01-15T23:38:40.390Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 341,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": [
+    {
+      "id": "659f3fbb4c5ab81dba4bb8ba",
+      "name": "Restaking",
+      "title": "Restaking",
+      "description": "Restaking",
+      "num_tokens": 3,
+      "avg_price_change": -3.77589058,
+      "market_cap": 0,
+      "market_cap_change": 0,
+      "volume": 1161703.50538112,
+      "volume_change": -52.356449999999995,
+      "last_updated": "2024-01-11T01:09:29.946Z"
+    },
+    {
+      "id": "659392fd54b2742440bf0dde",
+      "name": "Inscriptions",
+      "title": "Inscriptions",
+      "description": "Inscriptions",
+      "num_tokens": 46,
+      "avg_price_change": 2.3340140070731703,
+      "market_cap": 1526053864,
+      "market_cap_change": 0.7845658536585366,
+      "volume": 226357187.0419075,
+      "volume_change": -0.11709512195121922,
+      "last_updated": "2024-01-02T04:37:48.373Z"
+    },
+    {
+      "id": "658e1127598b0275bafcb61c",
+      "name": "MultiversX Ecosystem",
+      "title": "MultiversX Ecosystem",
+      "description": "MultiversX Ecosystem",
+      "num_tokens": 18,
+      "avg_price_change": 1.2713181311764705,
+      "market_cap": 1467816316.8600001,
+      "market_cap_change": 0.19044117647058825,
+      "volume": 34443604.63574777,
+      "volume_change": 449.8555,
+      "last_updated": "2023-12-29T00:24:48.582Z"
+    }
+  ]
+}
