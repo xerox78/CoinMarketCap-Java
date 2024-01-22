@@ -2,7 +2,7 @@
 
 This Java library provides a convenient way to interact with the CoinMarketCap API. It includes various service methods
 to retrieve information about cryptocurrencies, market data, and more.
-Please refer to  **[CoinMarketCap Api official documentation](https://coinmarketcap.com/api/documentation/v1/)**
+Please refer to  **[CoinMarketCap API Official Documentation](https://coinmarketcap.com/api/documentation/v1/)**
 
 ## CoinMarketCap API Supported Endpoints
 
@@ -83,6 +83,26 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
     - Description:  Latest statistics.
 </details>
 
+
+<details>
+<summary>Exchange Endpoints</summary>
+
+1. [**/v1/exchange/map**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeMap)
+    - Description:  CoinMarketCap ID map.
+2. [**/v1/exchange/info**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeInfo)
+    - Description:  Metadata.
+3. [**/v1/exchange/listings/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeListingsLatest)
+    - Description:   Latest listings.
+4. [**/v1/exchange/quotes/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeQuotesLatest)
+    - Description:    Latest quotes.
+5. [**/v1/exchange/quotes/historical**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeQuotesHistorical)
+    - Description:    Historical quotes.
+6. [**/v1/exchange/market-pairs/latest**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeMarketpairsLatest)
+    - Description:    Latest market pairs.
+7. [**/v1/exchange/assets**](https://coinmarketcap.com/api/documentation/v1/#operation/getV1ExchangeAssets)
+    - Description:    Exchange Assets.
+</details>
+
 ### Filters Available
 <details>
 <summary>Implemented Filters</summary>
@@ -123,7 +143,9 @@ Please refer to  **[CoinMarketCap Api official documentation](https://coinmarket
 34. **`timeEnd(String value)`**: Filter by end time.
 35. **`count(String value)`**: Filter by count.
 36. **`interval(String value)`**: Filter by interval.
-37. **`includeMetals(String value)`**: Include precious metals.
+37. **`includeMetals(String value)`**: Filter by precious metals.
+38. **`cryptoId(String value)`**: Filter by crypto id.
+39. **`marketType(String value)`**: Filter by market type.
 
 </details>
 

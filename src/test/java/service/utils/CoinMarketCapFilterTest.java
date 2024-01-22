@@ -393,6 +393,26 @@ public class CoinMarketCapFilterTest {
     }
 
     @Test
+    public void filter_cryptoId_OK() {
+        AirdropService build = filter.cryptoId("value").build();
+        try {
+            Assert.assertEquals("https://pro-api.coinmarketcap.com?crypto_id=value", build.getUrlBuilder().build().toString());
+        } catch (CoinMarketCapException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void filter_marketType_OK() {
+        AirdropService build = filter.marketType("value").build();
+        try {
+            Assert.assertEquals("https://pro-api.coinmarketcap.com?market_type=value", build.getUrlBuilder().build().toString());
+        } catch (CoinMarketCapException e) {
+            Assert.fail();
+        }
+    }
+
+    @Test
     public void filter_all_OK() {
         AirdropService build = filter
                 .id("value")
