@@ -19,7 +19,7 @@ public class AssetService extends ServiceOperation {
     /**
      * Returns the exchange assets in the form of token holdings.
      */
-    public List<AssetData> get() throws CoinMarketCapException {
+    public List<AssetData> list() throws CoinMarketCapException {
         return sendHttpRequest(urlBuilder.assets().build(), getJavaTypeList(AssetData.class));
     }
 

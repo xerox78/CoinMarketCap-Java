@@ -1,0 +1,382 @@
+{
+  "status": {
+    "timestamp": "2024-01-19T16:40:29.558Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": [
+    {
+      "id": 8453,
+      "name": "9sz9x6hxmd",
+      "slug": "vc3ff5vxtfe",
+      "num_market_pairs": 4576,
+      "fiats": [
+        "suhu2tum3n",
+        "0ushr9fcw55",
+        "92gdwbb27ze",
+        "w9iq5k3eei",
+        "hsoe2g9e8h",
+        "7qxzvjbjveq",
+        "vvfg5vwe58",
+        "duydh9jkaa",
+        "vix40p8hdw",
+        "najyrpcb3te"
+      ],
+      "traffic_score": 3381,
+      "rank": 3392,
+      "exchange_score": 0.5284219417271909,
+      "liquidity_score": 0.8702910017893593,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.6479136926651143,
+          "volume_24h_adjusted": 0.1893158310012013,
+          "volume_7d": 7629,
+          "volume_30d": 5287,
+          "percent_change_volume_24h": 0.7815542873362451,
+          "percent_change_volume_7d": 0.8259609458366346,
+          "percent_change_volume_30d": 0.628121760240614,
+          "effective_liquidity_24h": 0.9233163147600261,
+          "derivative_volume_usd": 0.44391086567862637,
+          "spot_volume_usd": 0.9677756327332321
+        }
+      }
+    },
+    {
+      "id": 2204,
+      "name": "7mtsbgfxhqn",
+      "slug": "4z9av1qbh9p",
+      "num_market_pairs": 61,
+      "fiats": [
+        "kyfrbrgcvsp",
+        "2ksbj8ff0nu",
+        "t0lt6qgqh6a",
+        "dt0suyqtzbj",
+        "1k8tjn9c9jr",
+        "40edkbprnq4",
+        "09tze22dds0g",
+        "7jjlk0omqfp",
+        "xa02bm9o7sl",
+        "gt5sbeucbr"
+      ],
+      "traffic_score": 4399,
+      "rank": 1363,
+      "exchange_score": 0.9101469193129634,
+      "liquidity_score": 0.5879108144914844,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.35792245244147547,
+          "volume_24h_adjusted": 0.5896823833838223,
+          "volume_7d": 4765,
+          "volume_30d": 6882,
+          "percent_change_volume_24h": 0.5349883144479972,
+          "percent_change_volume_7d": 0.14424063089065187,
+          "percent_change_volume_30d": 0.7311974871984046,
+          "effective_liquidity_24h": 0.07080716541363152,
+          "derivative_volume_usd": 0.1945887323807689,
+          "spot_volume_usd": 0.19570828318157374
+        }
+      }
+    },
+    {
+      "id": 5425,
+      "name": "kv3cxgdayl",
+      "slug": "0gi358kf2dy4",
+      "num_market_pairs": 6266,
+      "fiats": [
+        "hk046wwhcu4",
+        "qjderq4op2g",
+        "0afxm6jg71ub",
+        "fkbyeyzmb0g",
+        "x0mdchc3b8",
+        "agr7h4d1ts",
+        "a6fl7gsk2od",
+        "4dcf7v71h9h",
+        "bipfe5ka95v",
+        "pcmeegls5ob"
+      ],
+      "traffic_score": 4594,
+      "rank": 1463,
+      "exchange_score": 0.4807799067076015,
+      "liquidity_score": 0.717748274023843,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.9344449209121686,
+          "volume_24h_adjusted": 0.21720140384285846,
+          "volume_7d": 6187,
+          "volume_30d": 9843,
+          "percent_change_volume_24h": 0.7698283943079332,
+          "percent_change_volume_7d": 0.18185449410221466,
+          "percent_change_volume_30d": 0.911123396192882,
+          "effective_liquidity_24h": 0.9860177318817995,
+          "derivative_volume_usd": 0.5944487515244814,
+          "spot_volume_usd": 0.2951481564823921
+        }
+      }
+    },
+    {
+      "id": 4667,
+      "name": "lbdsn13gpk",
+      "slug": "pj6u9tq6j7",
+      "num_market_pairs": 1652,
+      "fiats": [
+        "pnhnaecwgqi",
+        "1x620of9zdu",
+        "q7lgvs6xt8r",
+        "vvjkgp03dp",
+        "n2azh7n7bk",
+        "r5etm71pyln",
+        "5bnflbhssum",
+        "kpnfmrrao2j",
+        "igi1rg9vsr",
+        "ho8d31imbpq"
+      ],
+      "traffic_score": 4085,
+      "rank": 7989,
+      "exchange_score": 0.22755058032882114,
+      "liquidity_score": 0.05760109073723685,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.6699689177280528,
+          "volume_24h_adjusted": 0.26397918474974125,
+          "volume_7d": 6314,
+          "volume_30d": 8036,
+          "percent_change_volume_24h": 0.8593579194897358,
+          "percent_change_volume_7d": 0.22248973637499936,
+          "percent_change_volume_30d": 0.009768948678708034,
+          "effective_liquidity_24h": 0.11144556428654728,
+          "derivative_volume_usd": 0.9569226405572759,
+          "spot_volume_usd": 0.7093615969199556
+        }
+      }
+    },
+    {
+      "id": 3800,
+      "name": "6k94xn759kg",
+      "slug": "lmn6j72o8qe",
+      "num_market_pairs": 6901,
+      "fiats": [
+        "zongkt1acu8",
+        "qr021br158q",
+        "hzm22wrpww",
+        "5bvqnnpk01o",
+        "wscba25zef",
+        "73v3svwzyta",
+        "3gwqjajlgli",
+        "z5x6zvxd57",
+        "7aky6qivd6i",
+        "1pspvwfjdcw"
+      ],
+      "traffic_score": 2541,
+      "rank": 5092,
+      "exchange_score": 0.28535050636455117,
+      "liquidity_score": 0.2909222250743553,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.9442920623264708,
+          "volume_24h_adjusted": 0.8213285699134041,
+          "volume_7d": 3163,
+          "volume_30d": 8147,
+          "percent_change_volume_24h": 0.5516988101164937,
+          "percent_change_volume_7d": 0.9507433990040899,
+          "percent_change_volume_30d": 0.7674579295124397,
+          "effective_liquidity_24h": 0.714058102034731,
+          "derivative_volume_usd": 0.10134415853296597,
+          "spot_volume_usd": 0.6014514224477532
+        }
+      }
+    },
+    {
+      "id": 5399,
+      "name": "07ihspr6jn8r",
+      "slug": "ebqyo6435ej",
+      "num_market_pairs": 7148,
+      "fiats": [
+        "9du754kpuvk",
+        "qbavcyt3wxm",
+        "7dr984b7pwh",
+        "s7emi5nmu7p",
+        "94pzg5qcya",
+        "043ip2sz9mu5",
+        "ai369qithen",
+        "9mlajv1izd",
+        "rjqh3y5q41s",
+        "om9d3pruo5c"
+      ],
+      "traffic_score": 9595,
+      "rank": 1672,
+      "exchange_score": 0.9952279486121409,
+      "liquidity_score": 0.7201952246552867,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.7573353682990738,
+          "volume_24h_adjusted": 0.16232077041771897,
+          "volume_7d": 4515,
+          "volume_30d": 8486,
+          "percent_change_volume_24h": 0.268907777042235,
+          "percent_change_volume_7d": 0.2482925215870555,
+          "percent_change_volume_30d": 0.008812364668314032,
+          "effective_liquidity_24h": 0.46323410201696746,
+          "derivative_volume_usd": 0.017801813944223976,
+          "spot_volume_usd": 0.7425049301470983
+        }
+      }
+    },
+    {
+      "id": 1288,
+      "name": "xaq73q57aqh",
+      "slug": "t1iaunf6dis",
+      "num_market_pairs": 5380,
+      "fiats": [
+        "wxt0v0vsvml",
+        "cw71ddngycn",
+        "65wy3m23u4k",
+        "gcy4a99i48f",
+        "ev1wcdysg8w",
+        "u7ergg5bji9",
+        "s3azjq1ibrq",
+        "ckvemsgscuq",
+        "jj1pa31ekig",
+        "pnh6cohn1v9"
+      ],
+      "traffic_score": 4848,
+      "rank": 2645,
+      "exchange_score": 0.8651605708720465,
+      "liquidity_score": 0.5121570964494973,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.24699942831084454,
+          "volume_24h_adjusted": 0.03941449066166691,
+          "volume_7d": 1369,
+          "volume_30d": 67,
+          "percent_change_volume_24h": 0.49983040862317973,
+          "percent_change_volume_7d": 0.24774733240405533,
+          "percent_change_volume_30d": 0.5990227282765217,
+          "effective_liquidity_24h": 0.6148832120770498,
+          "derivative_volume_usd": 0.7373389866903362,
+          "spot_volume_usd": 0.9411904594654199
+        }
+      }
+    },
+    {
+      "id": 2136,
+      "name": "3qfi2ncj06o",
+      "slug": "mbfaj0qxpud",
+      "num_market_pairs": 6170,
+      "fiats": [
+        "mf5y6f7qja",
+        "gklo5vmr79a",
+        "eu1cpyaoved",
+        "w80g7ur265d",
+        "3o8blq2iawp",
+        "3s1yuriznve",
+        "7m2j24o9ypr",
+        "swumm7xurgn",
+        "pyy1w0mx7sq",
+        "sb7ocyplzx"
+      ],
+      "traffic_score": 1194,
+      "rank": 8624,
+      "exchange_score": 0.22372781998122204,
+      "liquidity_score": 0.9687963861743403,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.3750464475130575,
+          "volume_24h_adjusted": 0.36657507809134726,
+          "volume_7d": 7170,
+          "volume_30d": 8320,
+          "percent_change_volume_24h": 0.5187072634092045,
+          "percent_change_volume_7d": 0.7005216938537493,
+          "percent_change_volume_30d": 0.7417708088036574,
+          "effective_liquidity_24h": 0.1290641053266055,
+          "derivative_volume_usd": 0.5737549132013353,
+          "spot_volume_usd": 0.9391706304284573
+        }
+      }
+    },
+    {
+      "id": 4097,
+      "name": "w7xh780c0rg",
+      "slug": "y79fo431qi9",
+      "num_market_pairs": 2807,
+      "fiats": [
+        "1flwsbtzuln",
+        "8puen5jm2v5",
+        "iq6u808gxs",
+        "gr11ts3nxer",
+        "z6dtbcqeb8",
+        "qkn6zqyd2do",
+        "x4ykip67odq",
+        "7pp4zuesqyn",
+        "u41fkwi8btg",
+        "c6nuy4zqju7"
+      ],
+      "traffic_score": 9159,
+      "rank": 2922,
+      "exchange_score": 0.3882707077263272,
+      "liquidity_score": 0.5390840338857705,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.8549118282956569,
+          "volume_24h_adjusted": 0.4986058694746811,
+          "volume_7d": 4968,
+          "volume_30d": 3421,
+          "percent_change_volume_24h": 0.284422084894143,
+          "percent_change_volume_7d": 0.8880995493461523,
+          "percent_change_volume_30d": 0.5932402891545698,
+          "effective_liquidity_24h": 0.6743085198607184,
+          "derivative_volume_usd": 0.7358812723019332,
+          "spot_volume_usd": 0.42082625407511
+        }
+      }
+    },
+    {
+      "id": 9099,
+      "name": "f96vjz8qhbc",
+      "slug": "34fx2ont20e",
+      "num_market_pairs": 8350,
+      "fiats": [
+        "2dgnvzdkxs3",
+        "lbvd30doqzl",
+        "men6ww0pn1",
+        "bhznm08ursq",
+        "ig1gb2d3ly8",
+        "4anufmj4t22",
+        "eas1263updj",
+        "qe9bkjwspk",
+        "jui5vk1y4s",
+        "twucffef2ys"
+      ],
+      "traffic_score": 7533,
+      "rank": 9897,
+      "exchange_score": 0.9156296066389991,
+      "liquidity_score": 0.8945814307006132,
+      "last_updated": "2024-01-19T16:40:29.558Z",
+      "quote": {
+        "USD": {
+          "volume_24h": 0.7111440568268441,
+          "volume_24h_adjusted": 0.5896308151948424,
+          "volume_7d": 6280,
+          "volume_30d": 3765,
+          "percent_change_volume_24h": 0.41422410804370235,
+          "percent_change_volume_7d": 0.18976691131866108,
+          "percent_change_volume_30d": 0.0859637617242226,
+          "effective_liquidity_24h": 0.1621469329535168,
+          "derivative_volume_usd": 0.7841389138457275,
+          "spot_volume_usd": 0.5341769177152544
+        }
+      }
+    }
+  ]
+}

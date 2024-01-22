@@ -1,0 +1,226 @@
+{
+  "status": {
+    "timestamp": "2024-01-19T16:24:56.864Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "24": {
+      "id": 24,
+      "name": "o0625nhbh6",
+      "slug": "vqhvvevti0s",
+      "quotes": [
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 3201,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6250
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 9339,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6550
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 4473,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 883
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 9072,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 8490
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 6500,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 3193
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 9083,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6024
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 3931,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 5258
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 7993,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 2344
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 6504,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 7986
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 5236,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 5040
+        }
+      ]
+    },
+    "270": {
+      "id": 270,
+      "name": "anb54zn4yje",
+      "slug": "cm8q5jrmnd",
+      "quotes": [
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 7480,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 1564
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 3590,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 9508
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 7441,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 1573
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 8986,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 1657
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 6126,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6158
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 3399,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 8490
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 2727,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6096
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 2080,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 1955
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 3804,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 6775
+        },
+        {
+          "timestamp": "2024-01-19T16:24:56.864Z",
+          "quote": {
+            "USD": {
+              "volume_24h": 5787,
+              "timestamp": "2024-01-19T16:24:56.864Z"
+            }
+          },
+          "num_market_pairs": 2096
+        }
+      ]
+    }
+  }
+}

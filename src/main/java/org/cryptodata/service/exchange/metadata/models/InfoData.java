@@ -23,6 +23,6 @@ public record InfoData(
         @JsonProperty("weekly_visits") Integer weeklyVisitors,
         @JsonProperty("spot_volume_usd") Double spotVolumeUsd,
         @JsonProperty("spot_volume_last_updated") Date spotVolumeLastUpdated,
-        @JsonProperty("spot_volume_last_updated") Map<String, List<String>> urls
+        Map<String, List<String>> urls
 ) {
 }

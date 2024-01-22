@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public record MarketLatestData(
-        String id,
+        Integer id,
         String name,
         String slug,
         Integer numMarketPairs,

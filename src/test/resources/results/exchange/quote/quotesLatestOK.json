@@ -1,0 +1,80 @@
+{
+  "status": {
+    "timestamp": "2024-01-19T16:26:30.834Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 2,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "w5lasumlglo",
+      "slug": "bw5jrpoyfvf",
+      "num_coins": 2143,
+      "num_market_pairs": 1200,
+      "last_updated": "2024-01-19T16:26:30.833Z",
+      "traffic_score": 4027,
+      "rank": 8384,
+      "exchange_score": 0.028407897307447527,
+      "liquidity_score": 0.7222141516522957,
+      "quote": {
+        "EUR": {
+          "volume_24h": 0.5601732957900376,
+          "volume_24h_adjusted": 0.5124029762379096,
+          "volume_7d": 2746,
+          "volume_30d": 616,
+          "percent_change_volume_24h": 0.5910832727542503,
+          "percent_change_volume_7d": 0.7388886388868914,
+          "percent_change_volume_30d": 0.8500503245341307,
+          "effective_liquidity_24h": 0.7142666365856796
+        },
+        "USD": {
+          "volume_24h": 0.5601732957900376,
+          "volume_24h_adjusted": 0.5124029762379096,
+          "volume_7d": 2746,
+          "volume_30d": 616,
+          "percent_change_volume_24h": 0.5910832727542503,
+          "percent_change_volume_7d": 0.7388886388868914,
+          "percent_change_volume_30d": 0.8500503245341307,
+          "effective_liquidity_24h": 0.7142666365856796
+        }
+      }
+    },
+    "2": {
+      "id": 2,
+      "name": "orc50faeey",
+      "slug": "r7mj0ip8axp",
+      "num_coins": 3702,
+      "num_market_pairs": 5889,
+      "last_updated": "2024-01-19T16:26:30.833Z",
+      "traffic_score": 7404,
+      "rank": 7171,
+      "exchange_score": 0.3939476528963308,
+      "liquidity_score": 0.6108774315466459,
+      "quote": {
+        "EUR": {
+          "volume_24h": 0.8608129196326675,
+          "volume_24h_adjusted": 0.4672751685779031,
+          "volume_7d": 8050,
+          "volume_30d": 6073,
+          "percent_change_volume_24h": 0.25707794196427036,
+          "percent_change_volume_7d": 0.300565193532748,
+          "percent_change_volume_30d": 0.6058986886093907,
+          "effective_liquidity_24h": 0.6357384274348392
+        },
+        "USD": {
+          "volume_24h": 0.8608129196326675,
+          "volume_24h_adjusted": 0.4672751685779031,
+          "volume_7d": 8050,
+          "volume_30d": 6073,
+          "percent_change_volume_24h": 0.25707794196427036,
+          "percent_change_volume_7d": 0.300565193532748,
+          "percent_change_volume_30d": 0.6058986886093907,
+          "effective_liquidity_24h": 0.6357384274348392
+        }
+      }
+    }
+  }
+}
