@@ -103,6 +103,43 @@ Please refer to  **[CoinMarketCap API Official Documentation](https://coinmarket
     - Description:    Exchange Assets.
 </details>
 
+
+
+<details>
+<summary>Key Endpoints</summary>
+
+1. [**XXX**](xxx)
+    - Description:  Not yet.
+</details>
+
+<details>
+<summary>Content Endpoints</summary>
+
+1. [**XXX**](xxx)
+    - Description:  Not yet.
+</details>
+
+<details>
+<summary>Global Metrics Endpoints</summary>
+
+1. [**XXX**](xxx)
+    - Description:  Not yet.
+</details>
+
+<details>
+<summary>Tools Endpoints</summary>
+
+1. [**XXX**](xxx)
+    - Description:  Not yet.
+</details>
+
+<details>
+<summary>Community Endpoints</summary>
+
+1. [**XXX**](xxx)
+    - Description:  Not yet.
+</details>
+
 ### Filters Available
 <details>
 <summary>Implemented Filters</summary>

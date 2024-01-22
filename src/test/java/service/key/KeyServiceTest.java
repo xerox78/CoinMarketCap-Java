@@ -1,10 +1,10 @@
-package service.fiat;
+package service.key;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.fiat.map.MapService;
-import org.cryptodata.service.fiat.map.models.FiatMapData;
+import org.cryptodata.service.key.info.KeyInfoService;
+import org.cryptodata.service.key.info.models.KeyInfoData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -13,25 +13,24 @@ import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class MapServiceTest {
+public class KeyServiceTest {
 
 
     @Test
-    public void test_map_OK() throws IOException, InterruptedException, CoinMarketCapException {
+    public void test_info_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
         HttpClient mockHttpClient = Mockito.mock(HttpClient.class);
 
         int status = 200;
-        String path = "src/test/resources/results/fiat/map/mapResponseOK.json";
+        String path = "src/test/resources/results/key/info/keyInfoOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MapService myHttpClientWrapper = new MapService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        KeyInfoService myHttpClientWrapper = new KeyInfoService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -39,9 +38,9 @@ public class MapServiceTest {
 
 
         // Perform the actual test
-        List<FiatMapData> result = myHttpClientWrapper.map();
+        KeyInfoData result = myHttpClientWrapper.info();
 
         // Verify the result
-        assertEquals("United States Dollar", result.getFirst().name());
+        assertEquals(Integer.valueOf(110000), result.plan().creditLimitMonthly());
     }
 }
