@@ -20,9 +20,9 @@ public class CoinMarketCapUrl {
      */
     public static class CoinMarketCapUrlBuilder {
 
-        private StringBuilder url;
+        private final StringBuilder url;
 
-        private List<NameValuePair> parameterList = new ArrayList<>();
+        private final List<NameValuePair> parameterList = new ArrayList<>();
 
         /**
          * Constructs a new CoinMarketCapUrlBuilder with the base URL.
@@ -319,6 +319,46 @@ public class CoinMarketCapUrl {
 
         public CoinMarketCapUrlBuilder key() {
             url.append("/key");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder globalMetrics() {
+            url.append("/global-metrics");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder content() {
+            url.append("/content");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder community() {
+            url.append("/community");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder top() {
+            url.append("/top");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder comments() {
+            url.append("/comments");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder posts() {
+            url.append("/posts");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder topic() {
+            url.append("/topic");
+            return this;
+        }
+
+        public CoinMarketCapUrlBuilder token() {
+            url.append("/token");
             return this;
         }
     }

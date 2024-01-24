@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "topic": "Tether"
+    },
+    {
+      "rank": 2,
+      "topic": "DebtCeiling"
+    },
+    {
+      "rank": 3,
+      "topic": "HongKong"
+    },
+    {
+      "rank": 4,
+      "topic": "AI"
+    },
+    {
+      "rank": 5,
+      "topic": "MIEX"
+    }
+  ],
+  "status": {
+    "timestamp": "2022-09-08T16:08:52.641Z",
+    "error_code": "0",
+    "error_message": "SUCCESS",
+    "elapsed": "0",
+    "credit_count": 0
+  }
+}

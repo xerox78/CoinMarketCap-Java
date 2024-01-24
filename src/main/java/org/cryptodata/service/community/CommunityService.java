@@ -1,7 +1,9 @@
 package org.cryptodata.service.community;
 
 import org.cryptodata.CoinMarketCap;
+import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.community.trending.TrendingService;
 
 /**
  * Represents a service for handling community-related operations using CoinMarketCap API.
@@ -11,7 +13,12 @@ import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
  */
 public record CommunityService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
 
-    //TODO need to implement
-    // /v1/community/trending/topic - Community Trending Topics
-    // /v1/community/trending/token - Community Trending Tokens
+    /**
+     * Creates a CoinMarketCapFilter for TrendingService operations.
+     *
+     * @return CoinMarketCapFilter for TrendingService.
+     */
+    public CoinMarketCapFilter<TrendingService> trending() {
+        return new CoinMarketCapFilter<>(new TrendingService(coinMarketCap, cryptocurrencyUrl));
+    }
 }

@@ -2,7 +2,6 @@ package service.exchange;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.exchange.quote.QuoteService;
 import org.cryptodata.service.exchange.quote.models.QuoteHistoricalData;
 import org.cryptodata.service.exchange.quote.models.QuoteLatestData;
@@ -30,7 +29,11 @@ public class QuoteServiceTest {
         String path = "src/test/resources/results/exchange/quote/quotesLatestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        QuoteService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .quote()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -45,6 +48,8 @@ public class QuoteServiceTest {
         assertEquals(Double.valueOf(0.5601732957900376), result.get("1").quote().get("EUR").volume24h());
 
         assertEquals(2, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/quotes/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -56,7 +61,11 @@ public class QuoteServiceTest {
         String path = "src/test/resources/results/exchange/quote/quotesHistoricalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        QuoteService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .quote()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -70,5 +79,7 @@ public class QuoteServiceTest {
         assertEquals(Integer.valueOf(24), result.get("24").id());
         assertEquals(Double.valueOf(3201), result.get("24").quotes().getFirst().quote().get("USD").volume24h());
         assertEquals(2, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/quotes/historical?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 }

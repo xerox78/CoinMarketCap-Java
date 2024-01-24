@@ -2,8 +2,7 @@ package service.fiat;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.fiat.map.MapService;
+import org.cryptodata.service.fiat.map.MetadataService;
 import org.cryptodata.service.fiat.map.models.FiatMapData;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -21,7 +20,6 @@ import static org.mockito.Mockito.when;
 
 public class MapServiceTest {
 
-
     @Test
     public void test_map_OK() throws IOException, InterruptedException, CoinMarketCapException {
         // Create a mock of HttpClient
@@ -31,7 +29,11 @@ public class MapServiceTest {
         String path = "src/test/resources/results/fiat/map/mapResponseOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MapService myHttpClientWrapper = new MapService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new CoinMarketCap("")
+                .fiatV1()
+                .metadata()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -43,5 +45,8 @@ public class MapServiceTest {
 
         // Verify the result
         assertEquals("United States Dollar", result.getFirst().name());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/fiat/map?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 }

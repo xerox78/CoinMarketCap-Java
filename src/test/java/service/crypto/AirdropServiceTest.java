@@ -2,9 +2,8 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.airdrop.models.AirdropData;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.airdrop.AirdropService;
+import org.cryptodata.service.crypto.airdrop.models.AirdropData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -31,7 +30,11 @@ public class AirdropServiceTest {
         String path = "src/test/resources/results/crypto/airdrop/airdropOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        AirdropService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .airdrop()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -44,6 +47,7 @@ public class AirdropServiceTest {
         // Verify the result
         assertEquals("635facd06f4bfc7d9bee85d8", result.id());
         assertEquals(18519, result.airdropCoin().id());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/airdrop?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -55,7 +59,11 @@ public class AirdropServiceTest {
         String path = "src/test/resources/results/crypto/airdrop/airdropsOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        AirdropService myHttpClientWrapper = new AirdropService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        AirdropService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .airdrop()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -71,6 +79,8 @@ public class AirdropServiceTest {
 
         assertEquals("633ff5e0558c5024ac5f2e5d", result.get(1).id());
         assertEquals(11198, result.get(1).airdropCoin().id());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/airdrops?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
 

@@ -2,7 +2,6 @@ package service.exchange;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.exchange.asset.AssetService;
 import org.cryptodata.service.exchange.asset.models.AssetData;
 import org.junit.Test;
@@ -30,7 +29,11 @@ public class AssetsServiceTest {
         String path = "src/test/resources/results/exchange/asset/assetsOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        AssetService myHttpClientWrapper = new AssetService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        AssetService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .assets()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -45,5 +48,8 @@ public class AssetsServiceTest {
         assertEquals("Polygon", result.getFirst().platform().name());
         assertEquals(Double.valueOf(0.9992710989426461), result.getFirst().currency().priceUsd());
         assertEquals(754, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/assets?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 }

@@ -2,10 +2,9 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
+import org.cryptodata.service.crypto.quote.QuoteService;
 import org.cryptodata.service.crypto.quote.models.QuoteHistoricalData;
 import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
-import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.quote.QuoteService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -31,7 +30,11 @@ public class QuoteServiceTest {
         String path = "src/test/resources/results/crypto/quoteV2/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        QuoteService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .quote()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -44,6 +47,9 @@ public class QuoteServiceTest {
         // Verify the result
         assertEquals(Integer.valueOf(1), result.get("1").id());
         assertEquals(Integer.valueOf(2010), result.get("2010").id());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/historical?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
     @Test
@@ -55,7 +61,11 @@ public class QuoteServiceTest {
         String path = "src/test/resources/results/crypto/quoteV2/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        QuoteService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .quote()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -69,6 +79,8 @@ public class QuoteServiceTest {
         assertEquals(Integer.valueOf(1), result.get("1").id());
         assertEquals(Integer.valueOf(2010), result.get("2010").id());
         assertEquals(Double.valueOf(117.32040778), result.get("2010").quote().get("USD").percentChange90d());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -80,7 +92,11 @@ public class QuoteServiceTest {
         String path = "src/test/resources/results/crypto/quoteV3/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        QuoteService myHttpClientWrapper = new QuoteService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        QuoteService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV3()
+                .quote()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -94,6 +110,8 @@ public class QuoteServiceTest {
         assertEquals(Integer.valueOf(1), result.get("1").id());
         assertEquals(Integer.valueOf(5934), result.get("5934").id());
         assertEquals(10, result.get("5934").quotes().size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v3/cryptocurrency/quotes/historical?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
 

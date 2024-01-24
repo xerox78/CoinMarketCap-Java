@@ -2,9 +2,8 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.listing.models.ListingData;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.listing.ListingService;
+import org.cryptodata.service.crypto.listing.models.ListingData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -30,7 +29,11 @@ public class ListingServiceTest {
         String path = "src/test/resources/results/crypto/listing/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .listing()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -45,6 +48,8 @@ public class ListingServiceTest {
         assertEquals(Double.valueOf(42265.18565486596), result.get(0).quote().get("USD").price());
         assertEquals(Integer.valueOf(1027), result.get(1).id());
         assertEquals(Integer.valueOf(825), result.get(2).id());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/historical?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -56,7 +61,11 @@ public class ListingServiceTest {
         String path = "src/test/resources/results/crypto/listing/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .listing()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -70,6 +79,9 @@ public class ListingServiceTest {
         assertEquals(Integer.valueOf(1), result.get(0).id());
         assertEquals(Integer.valueOf(1027), result.get(1).id());
         assertEquals(Integer.valueOf(825), result.get(2).id());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
     @Test
@@ -81,7 +93,11 @@ public class ListingServiceTest {
         String path = "src/test/resources/results/crypto/listing/newOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .listing()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -94,6 +110,7 @@ public class ListingServiceTest {
         // Verify the result
         assertEquals(Integer.valueOf(1), result.get(0).id());
         assertEquals(Integer.valueOf(1027), result.get(1).id());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/new?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
 

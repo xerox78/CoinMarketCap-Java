@@ -2,10 +2,10 @@ package org.cryptodata.service.crypto.metadata;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.metadata.models.MetadataMapData;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.metadata.models.MetadataInfoData;
-import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.crypto.metadata.models.MetadataMapData;
 
 import java.util.List;
 import java.util.Map;

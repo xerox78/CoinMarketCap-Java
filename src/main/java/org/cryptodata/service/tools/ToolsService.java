@@ -18,7 +18,7 @@ public record ToolsService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder 
      *
      * @return CoinMarketCapFilter for ConvertService.
      */
-    public CoinMarketCapFilter<ConvertService> convert() {
+    public CoinMarketCapFilter<ConvertService> priceConversion() {
         return new CoinMarketCapFilter<>(new ConvertService(coinMarketCap, cryptocurrencyUrl));
     }
 }

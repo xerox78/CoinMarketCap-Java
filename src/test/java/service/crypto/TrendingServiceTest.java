@@ -2,7 +2,6 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.trending.TrendingService;
 import org.cryptodata.service.crypto.trending.models.TrendingData;
 import org.junit.Test;
@@ -30,7 +29,11 @@ public class TrendingServiceTest {
         String path = "src/test/resources/results/crypto/trending/gainersLosersOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        TrendingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .trending()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -44,6 +47,9 @@ public class TrendingServiceTest {
         assertEquals("7ndcd0cx44a", result.get(0).name());
         assertEquals(Double.valueOf(7791), result.get(0).quote().get("USD").volume24h());
         assertEquals(10, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/gainers-losers?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
     @Test
@@ -55,7 +61,11 @@ public class TrendingServiceTest {
         String path = "src/test/resources/results/crypto/trending/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        TrendingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .trending()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -70,6 +80,8 @@ public class TrendingServiceTest {
 
         assertEquals("v7ztqlju0g", result.get(1).name());
         assertEquals(10, result.size());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
     @Test
@@ -81,7 +93,11 @@ public class TrendingServiceTest {
         String path = "src/test/resources/results/crypto/trending/mostVisitedOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        TrendingService myHttpClientWrapper = new TrendingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        TrendingService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .trending()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -95,5 +111,7 @@ public class TrendingServiceTest {
 
         assertEquals("u8vzyptbeif", result.get(1).name());
         assertEquals(10, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/most-visited?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 }

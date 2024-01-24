@@ -3,7 +3,7 @@ package org.cryptodata.service.fiat;
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.fiat.map.MapService;
+import org.cryptodata.service.fiat.map.MetadataService;
 
 /**
  * Represents a service for handling fiat-related operations using CoinMarketCap API.
@@ -18,7 +18,7 @@ public record FiatService(CoinMarketCap coinMarketCap, CoinMarketCapUrl.CoinMark
      *
      * @return CoinMarketCapFilter for MapService.
      */
-    public CoinMarketCapFilter<MapService> map() {
-        return new CoinMarketCapFilter<>(new MapService(coinMarketCap, cryptocurrencyUrl));
+    public CoinMarketCapFilter<MetadataService> metadata() {
+        return new CoinMarketCapFilter<>(new MetadataService(coinMarketCap, cryptocurrencyUrl));
     }
 }

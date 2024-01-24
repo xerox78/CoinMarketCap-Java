@@ -18,7 +18,7 @@ public record BlockchainService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBui
      *
      * @return CoinMarketCapFilter for StatisticsService.
      */
-    public CoinMarketCapFilter<StatisticsService> map() {
+    public CoinMarketCapFilter<StatisticsService> statistics() {
         return new CoinMarketCapFilter<>(new StatisticsService(coinMarketCap, cryptocurrencyUrl));
     }
 }

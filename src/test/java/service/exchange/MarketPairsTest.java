@@ -2,7 +2,6 @@ package service.exchange;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.exchange.market.MarketPairService;
 import org.cryptodata.service.exchange.market.models.MarketLatestData;
 import org.junit.Test;
@@ -29,7 +28,11 @@ public class MarketPairsTest {
         String path = "src/test/resources/results/exchange/market/pairsOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MarketPairService myHttpClientWrapper = new MarketPairService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MarketPairService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .marketPairs()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -47,5 +50,7 @@ public class MarketPairsTest {
         assertEquals(1, result.size());
 
         assertEquals(10, result.get("1").marketPairsList().size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/market-pairs/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 }

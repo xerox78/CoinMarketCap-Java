@@ -2,9 +2,8 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.category.models.CategoryData;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.category.CategoryService;
+import org.cryptodata.service.crypto.category.models.CategoryData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -31,7 +30,11 @@ public class CategoryServiceTest {
         String path = "src/test/resources/results/crypto/category/categoryOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        CategoryService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .category()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -44,6 +47,8 @@ public class CategoryServiceTest {
         // Verify the result
         assertEquals("655c563a19d020516fba113a", result.id());
         assertEquals("eGirl Capital Portfolio", result.name());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/category?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
     @Test
@@ -55,7 +60,11 @@ public class CategoryServiceTest {
         String path = "src/test/resources/results/crypto/category/categoriesOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        CategoryService myHttpClientWrapper = new CategoryService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        CategoryService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .category()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -71,6 +80,8 @@ public class CategoryServiceTest {
         assertEquals("659392fd54b2742440bf0dde", result.get(1).id());
 
         assertEquals("658e1127598b0275bafcb61c", result.get(2).id());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/categories?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
 

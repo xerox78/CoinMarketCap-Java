@@ -1,7 +1,5 @@
 package org.cryptodata.service;
 
-import org.cryptodata.service.crypto.airdrop.models.AirdropStatus;
-
 import static org.cryptodata.service.CoinMarketCapFilter.CoinMarketCapFilterEnum.*;
 
 

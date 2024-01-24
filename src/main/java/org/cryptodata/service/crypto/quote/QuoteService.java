@@ -2,10 +2,10 @@ package org.cryptodata.service.crypto.quote;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.quote.models.QuoteHistoricalData;
-import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.crypto.quote.models.QuoteLatestData;
 
 import java.util.Map;
 

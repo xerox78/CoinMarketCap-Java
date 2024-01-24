@@ -1,8 +1,8 @@
 package org.cryptodata.service.crypto.listing;
 
 import org.cryptodata.CoinMarketCap;
-import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.exception.CoinMarketCapException;
+import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
 import org.cryptodata.service.crypto.listing.models.ListingData;
 

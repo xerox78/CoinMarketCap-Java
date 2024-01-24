@@ -2,10 +2,9 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.ohlcv.models.OhlcvHistoricalData;
-import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.ohlcv.models.OhlcvLatestData;
 import org.cryptodata.service.crypto.ohlcv.OhlcvService;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvHistoricalData;
+import org.cryptodata.service.crypto.ohlcv.models.OhlcvLatestData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -33,7 +32,11 @@ public class OhlcvServiceTest {
         String path = "src/test/resources/results/crypto/ohlcvV2/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        OhlcvService myHttpClientWrapper = new OhlcvService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        OhlcvService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .ohlcv()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -46,6 +49,8 @@ public class OhlcvServiceTest {
         assertEquals(Integer.valueOf(1), result.get("1").id());
         assertEquals(Double.valueOf(0.9240667639195039), result.get("1").quote().get("USD").open());
         assertNotNull(result.get("1").quote().get("USD").timestamp());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
 
@@ -58,7 +63,11 @@ public class OhlcvServiceTest {
         String path = "src/test/resources/results/crypto/ohlcvV2/historicalOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        OhlcvService myHttpClientWrapper = new OhlcvService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        OhlcvService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .ohlcv()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -71,6 +80,8 @@ public class OhlcvServiceTest {
         assertEquals(Integer.valueOf(1), result.get("1").id());
         assertEquals(Double.valueOf(0.24158101162792245), result.get("1").quotes().get(0).quote().get("USD").open());
         assertNotNull(result.get("1").quotes().get(0).quote().get("USD").timestamp());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/ohlcv/historical?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
 

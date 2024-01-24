@@ -1,24 +1,23 @@
 package org.cryptodata.service.key;
 
 import org.cryptodata.CoinMarketCap;
-import org.cryptodata.service.CoinMarketCapFilter;
+import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
-import org.cryptodata.service.key.info.KeyInfoService;
+import org.cryptodata.service.ServiceOperation;
+import org.cryptodata.service.key.info.models.KeyInfoData;
 
 /**
  * Represents a service for handling key-related operations using CoinMarketCap API.
- *
- * @param coinMarketCap     The CoinMarketCap instance for API communication.
- * @param cryptocurrencyUrl The CoinMarketCapUrlBuilder instance for building related URLs.
  */
-public record KeyService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+public class KeyService extends ServiceOperation {
+    private final CoinMarketCapUrlBuilder cryptocurrencyUrl;
 
-    /**
-     * Creates a CoinMarketCapFilter for KeyInfoService operations.
-     *
-     * @return CoinMarketCapFilter for KeyInfoService.
-     */
-    public CoinMarketCapFilter<KeyInfoService> info() {
-        return new CoinMarketCapFilter<>(new KeyInfoService(coinMarketCap, cryptocurrencyUrl));
+    public KeyService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
+        super(coinMarketCap, cryptocurrencyUrl);
+        this.cryptocurrencyUrl = cryptocurrencyUrl;
+    }
+
+    public KeyInfoData info() throws CoinMarketCapException {
+        return sendHttpRequest(cryptocurrencyUrl.info().build(), getJavaType(KeyInfoData.class));
     }
 }

@@ -2,7 +2,6 @@ package service.blockchain;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.blockchain.statistics.StatisticsService;
 import org.cryptodata.service.blockchain.statistics.models.StatisticsData;
 import org.junit.Test;
@@ -29,7 +28,11 @@ public class StatisticsServiceTest {
         String path = "src/test/resources/results/blockchain/statistics/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        StatisticsService myHttpClientWrapper = new StatisticsService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        StatisticsService myHttpClientWrapper = new CoinMarketCap("")
+                .blockchainV1()
+                .statistics()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -42,5 +45,6 @@ public class StatisticsServiceTest {
         // Verify the result
         assertEquals(1, result.get("1").id());
         assertEquals(2, result.get("2").id());
+        assertEquals("https://pro-api.coinmarketcap.com/v1/blockchain/statistics/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 }

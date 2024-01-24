@@ -2,10 +2,9 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
+import org.cryptodata.service.crypto.metadata.MetadataService;
 import org.cryptodata.service.crypto.metadata.models.MetadataInfoData;
 import org.cryptodata.service.crypto.metadata.models.MetadataMapData;
-import org.cryptodata.service.CoinMarketCapUrl;
-import org.cryptodata.service.crypto.metadata.MetadataService;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -32,7 +31,11 @@ public class MetadataServiceTest {
         String path = "src/test/resources/results/crypto/metadata/idMapOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV1()
+                .metadata()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -44,6 +47,8 @@ public class MetadataServiceTest {
         // Verify the result
         assertEquals(1469, result.get(0).id());
         assertEquals(10, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -55,7 +60,11 @@ public class MetadataServiceTest {
         String path = "src/test/resources/results/crypto/metadata/metadataV2OK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .metadata()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -67,6 +76,9 @@ public class MetadataServiceTest {
         // Verify the result
         assertEquals(1, result.get("1").id());
         assertEquals(2, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 
 

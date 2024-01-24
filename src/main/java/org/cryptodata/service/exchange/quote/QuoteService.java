@@ -22,7 +22,7 @@ public class QuoteService extends ServiceOperation {
     }
 
     public Map<String, QuoteHistoricalData> historical() throws CoinMarketCapException {
-        return sendHttpRequest(urlBuilder.quotes().latest().build(), getJavaTypeMap(QuoteHistoricalData.class));
+        return sendHttpRequest(urlBuilder.quotes().historical().build(), getJavaTypeMap(QuoteHistoricalData.class));
     }
 
 }

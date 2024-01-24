@@ -2,7 +2,6 @@ package service.exchange;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.exchange.listing.ListingService;
 import org.cryptodata.service.exchange.listing.models.ListingLatestData;
 import org.junit.Test;
@@ -29,7 +28,11 @@ public class ListingServiceTest {
         String path = "src/test/resources/results/exchange/listing/latestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        ListingService myHttpClientWrapper = new ListingService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        ListingService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .listing()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -45,5 +48,8 @@ public class ListingServiceTest {
         assertEquals(Double.valueOf(0.5284219417271909), result.getFirst().exchangeScore());
         assertEquals(Double.valueOf(0.44391086567862637), result.getFirst().quote().get("USD").derivativeVolumeUsd());
         assertEquals(10, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/listings/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 }

@@ -2,7 +2,6 @@ package service.exchange;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.exchange.metadata.MetadataService;
 import org.cryptodata.service.exchange.metadata.models.InfoData;
 import org.cryptodata.service.exchange.metadata.models.MapData;
@@ -32,7 +31,11 @@ public class MetadataServiceTest {
         String path = "src/test/resources/results/exchange/metadata/infoOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .metadata()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -47,6 +50,8 @@ public class MetadataServiceTest {
         assertEquals(List.of("https://twitter.com/WEXnz"), result.get("2").urls().get("twitter"));
 
         assertEquals(2, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/info?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
     @Test
@@ -58,7 +63,11 @@ public class MetadataServiceTest {
         String path = "src/test/resources/results/exchange/metadata/mapOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MetadataService myHttpClientWrapper = new MetadataService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MetadataService myHttpClientWrapper = new CoinMarketCap("")
+                .exchangeV1()
+                .metadata()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -72,5 +81,7 @@ public class MetadataServiceTest {
         assertEquals(16, result.get(0).id());
         assertTrue(result.get(0).isActive());
         assertEquals(695, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v1/exchange/map?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 }

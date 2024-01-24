@@ -2,9 +2,8 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.marketpairs.models.MarketPairsData;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.marketpairs.MarketPairsService;
+import org.cryptodata.service.crypto.marketpairs.models.MarketPairsData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -30,7 +29,11 @@ public class MarketPairsServiceTest {
         String path = "src/test/resources/results/crypto/marketV2/marketPairsLatestOK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        MarketPairsService myHttpClientWrapper = new MarketPairsService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        MarketPairsService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .marketPairs()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -43,6 +46,8 @@ public class MarketPairsServiceTest {
         assertEquals("i2t13gjemt", result.name());
         assertEquals("tn3iyg7cwtn", result.marketPairs().get(0).marketPairQuote().exchangeSymbol());
         assertEquals(Double.valueOf(0.8980449996846589), result.marketPairs().get(0).quote().get("USD").volume24h());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/market-pairs/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
     }
 
 

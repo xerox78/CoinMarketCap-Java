@@ -1,7 +1,10 @@
 package org.cryptodata.service.content;
 
 import org.cryptodata.CoinMarketCap;
+import org.cryptodata.service.CoinMarketCapFilter;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
+import org.cryptodata.service.content.data.ContentDataService;
+import org.cryptodata.service.content.posts.PostsService;
 
 /**
  * Represents a service for handling Content-related operations using CoinMarketCap API.
@@ -11,9 +14,21 @@ import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
  */
 public record ContentService(CoinMarketCap coinMarketCap, CoinMarketCapUrlBuilder cryptocurrencyUrl) {
 
-    //TODO need to implement
-    // /v1/content/latest - Content latest
-    // /v1/content/posts/top - Content top posts
-    // /v1/content/posts/latest - Content latest posts
-    // /v1/content/posts/comments - Content post comments
+    /**
+     * Creates a CoinMarketCapFilter for PostsService operations.
+     *
+     * @return CoinMarketCapFilter for PostsService.
+     */
+    public CoinMarketCapFilter<PostsService> posts() {
+        return new CoinMarketCapFilter<>(new PostsService(coinMarketCap, cryptocurrencyUrl));
+    }
+
+    /**
+     * Creates a CoinMarketCapFilter for ContentDataService operations.
+     *
+     * @return CoinMarketCapFilter for ContentDataService.
+     */
+    public CoinMarketCapFilter<ContentDataService> data() {
+        return new CoinMarketCapFilter<>(new ContentDataService(coinMarketCap, cryptocurrencyUrl));
+    }
 }

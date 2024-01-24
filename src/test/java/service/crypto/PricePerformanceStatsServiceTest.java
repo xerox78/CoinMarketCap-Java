@@ -2,9 +2,8 @@ package service.crypto;
 
 import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
-import org.cryptodata.service.crypto.priceperformance.models.PricePerformanceStatsData;
-import org.cryptodata.service.CoinMarketCapUrl;
 import org.cryptodata.service.crypto.priceperformance.PricePerformanceStatsService;
+import org.cryptodata.service.crypto.priceperformance.models.PricePerformanceStatsData;
 import org.junit.Test;
 import org.mockito.Mockito;
 import service.ServiceTestHelper;
@@ -30,7 +29,11 @@ public class PricePerformanceStatsServiceTest {
         String path = "src/test/resources/results/crypto/marketV2/pricePerformanceStatsV2OK.json";
 
         // Create an instance of MyHttpClientWrapper and set the mock
-        PricePerformanceStatsService myHttpClientWrapper = new PricePerformanceStatsService(new CoinMarketCap(""), new CoinMarketCapUrl.CoinMarketCapUrlBuilder());
+        PricePerformanceStatsService myHttpClientWrapper = new CoinMarketCap("")
+                .cryptocurrencyV2()
+                .pricePerformanceStats()
+                .id("value")
+                .build();
         myHttpClientWrapper.setHttpClient(mockHttpClient);
 
         // Mock the behavior of HttpClient.send()
@@ -43,5 +46,8 @@ public class PricePerformanceStatsServiceTest {
         // Verify the result
         assertEquals(Double.valueOf(0.426389882911546), result.get("1").quote().get("USD").open());
         assertEquals(2, result.size());
+
+        assertEquals("https://pro-api.coinmarketcap.com/v2/cryptocurrency/price-performance-stats/latest?id=value", myHttpClientWrapper.getUrlBuilder().build().toString());
+
     }
 }

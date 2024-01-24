@@ -4,7 +4,7 @@ import org.cryptodata.CoinMarketCap;
 import org.cryptodata.exception.CoinMarketCapException;
 import org.cryptodata.service.CoinMarketCapUrl.CoinMarketCapUrlBuilder;
 import org.cryptodata.service.ServiceOperation;
-import org.cryptodata.service.key.info.models.KeyInfoData;
+import org.cryptodata.service.tools.convert.models.ConvertData;
 
 public class ConvertService extends ServiceOperation {
 
@@ -15,8 +15,7 @@ public class ConvertService extends ServiceOperation {
         this.cryptocurrencyUrl = cryptocurrencyUrl;
     }
 
-    //TODO create the POJO
-    public KeyInfoData convert() throws CoinMarketCapException {
-        return sendHttpRequest(cryptocurrencyUrl.tools().priceConversion().build(), getJavaType(KeyInfoData.class));
+    public ConvertData convert() throws CoinMarketCapException {
+        return sendHttpRequest(cryptocurrencyUrl.priceConversion().build(), getJavaType(ConvertData.class));
     }
 }

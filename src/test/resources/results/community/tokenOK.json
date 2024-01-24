@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "id": 7102,
+      "name": "Linear Finance",
+      "symbol": "LINA",
+      "slug": "linear",
+      "cmc_rank": 461,
+      "rank": 1
+    },
+    {
+      "id": 26265,
+      "name": "NiHao",
+      "symbol": "NIHAO",
+      "slug": "nihao",
+      "cmc_rank": 5000,
+      "rank": 2
+    },
+    {
+      "id": 22538,
+      "name": "T-mac DAO",
+      "symbol": "TMG",
+      "slug": "t-mac-dao",
+      "cmc_rank": 4802,
+      "rank": 3
+    },
+    {
+      "id": 2398,
+      "name": "SelfKey",
+      "symbol": "KEY",
+      "slug": "selfkey",
+      "cmc_rank": 753,
+      "rank": 4
+    },
+    {
+      "id": 3437,
+      "name": "ABBC Coin",
+      "symbol": "ABBC",
+      "slug": "abbc-coin",
+      "cmc_rank": 178,
+      "rank": 5
+    }
+  ],
+  "status": {
+    "timestamp": "2022-09-08T16:08:52.641Z",
+    "error_code": "0",
+    "error_message": "SUCCESS",
+    "elapsed": "0",
+    "credit_count": 0
+  }
+}
